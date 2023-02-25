@@ -1,0 +1,69 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LostWordDataDecrypter.DataTypes
+{
+    [Serializable]
+    public class PictureRecord : MasterRecord<int> // TypeDefIndex: 6900
+    {
+        // Fields
+        public int id; // 0x8
+        public string name; // 0xC
+        public int album_id; // 0x10
+        public int type; // 0x14
+        public int rare; // 0x18
+        public string illustrator_name; // 0x1C
+        public string circle_name; // 0x20
+        public string flavor_text1; // 0x24
+        public string flavor_text2; // 0x28
+        public string flavor_text3; // 0x2C
+        public string flavor_text4; // 0x30
+        public string flavor_text5; // 0x34
+        public int correction1_type; // 0x38
+        public int correction1_value; // 0x3C
+        public int correction1_diff; // 0x40
+        public int correction2_type; // 0x44
+        public int correction2_value; // 0x48
+        public int correction2_diff; // 0x4C
+        public int picture_characteristic1_effect_type; // 0x50
+        public int picture_characteristic1_effect_subtype; // 0x54
+        public int picture_characteristic1_effect_value; // 0x58
+        public int picture_characteristic1_effect_value_max; // 0x5C
+        public int picture_characteristic1_effect_turn; // 0x60
+        public int picture_characteristic1_effect_range; // 0x64
+        public int picture_characteristic2_effect_type; // 0x68
+        public int picture_characteristic2_effect_subtype; // 0x6C
+        public int picture_characteristic2_effect_value; // 0x70
+        public int picture_characteristic2_effect_value_max; // 0x74
+        public int picture_characteristic2_effect_turn; // 0x78
+        public int picture_characteristic2_effect_range; // 0x7C
+        public int picture_characteristic3_effect_type; // 0x80
+        public int picture_characteristic3_effect_subtype; // 0x84
+        public int picture_characteristic3_effect_value; // 0x88
+        public int picture_characteristic3_effect_value_max; // 0x8C
+        public int picture_characteristic3_effect_turn; // 0x90
+        public int picture_characteristic3_effect_range; // 0x94
+        public string picture_characteristic_text; // 0x98
+        public string picture_characteristic_text_max; // 0x9C
+        public int recycle_id; // 0xA0
+        public int is_show; // 0xA4
+    }
+    
+    [Serializable]
+    public class PictureTable : MasterTable<int, PictureRecord>
+    {
+    }
+
+    public class PictureMaster
+    {
+        public const int CORRECTION_TYPE_LIFE_POINT = 1;
+        public const int CORRECTION_TYPE_YANG_ATTACK = 2;
+        public const int CORRECTION_TYPE_YANG_DEFENSE = 3;
+        public const int CORRECTION_TYPE_YIN_ATTACK = 4;
+        public const int CORRECTION_TYPE_YIN_DEFENSE = 5;
+        public const int CORRECTION_TYPE_SPEED = 6;
+    }
+}
