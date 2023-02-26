@@ -78,6 +78,7 @@
     <Compile Include="DataTypes\MasterTable.cs" />
     <Compile Include="DataTypes\PictureMaster.cs" />
     <Compile Include="DataTypes\ShotMaster.cs" />
+    <Compile Include="DataTypes\SpellcardMaster.cs" />
     <Compile Include="DataTypes\UnitMaster.cs" />
     <Compile Include="DataTypes\UnitPhantasmCostMaster.cs" />
     <Compile Include="DataTypes\UnitRaceMaster.cs" />
@@ -90,9 +91,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="original_files\" />
-    <Folder Include="output_files\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

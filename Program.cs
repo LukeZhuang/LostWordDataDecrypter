@@ -17,7 +17,7 @@ namespace LostWordDataDecrypter
 {
     internal class Program
     {
-        public const string ROOT_DIR = @"D:\workspace\LostWordDataDecrypter";
+        public const string ROOT_DIR = @".\";
         public const string INPUT_DIR = @"original_files";
         public const string OUTPUT_DIR = @"output_files";
 
@@ -136,40 +136,62 @@ namespace LostWordDataDecrypter
         {
             MasterMsgPack.Initialize();  // not sure if it's needed
 
-            List<(string, string)> validTableNames = new List<(string, string)>();
-            
-            using (StreamReader r = new StreamReader(Path.Combine(ROOT_DIR, Path.Combine(INPUT_DIR, Path.Combine("master", "Manifest.json")))))
+            string[] dirs = Directory.GetDirectories(Path.Combine(ROOT_DIR, INPUT_DIR), "*", SearchOption.TopDirectoryOnly);
+
+            foreach (string dir in dirs)
             {
-                string json = r.ReadToEnd();
-                ManifestJSON manifestJSON = JsonConvert.DeserializeObject<ManifestJSON>(json);
-                foreach (AssestInfo assestInfo in manifestJSON.AssetInfos)
+                string apkVersionName = new DirectoryInfo(dir).Name;
+
+                string masterDir = Path.Combine(dir, "master");
+                Console.WriteLine("Processing: " + masterDir);
+
+                string outputDir = Path.Combine(ROOT_DIR, Path.Combine(OUTPUT_DIR, apkVersionName));
+                bool outputDirExists = Directory.Exists(outputDir);
+                if (!outputDirExists)
                 {
-                    if (assestInfo.IsMasterData())
+                    Console.WriteLine("creating output directory: " + outputDir);
+                    Directory.CreateDirectory(outputDir);
+                }
+
+
+                List<(string, string)> validTableNames = new List<(string, string)>();
+
+                using (StreamReader r = new StreamReader(Path.Combine(masterDir, "Manifest.json")))
+                {
+                    string json = r.ReadToEnd();
+                    ManifestJSON manifestJSON = JsonConvert.DeserializeObject<ManifestJSON>(json);
+                    foreach (AssestInfo assestInfo in manifestJSON.AssetInfos)
                     {
-                        string tableName = assestInfo.GetTableName();
-                        Type MasterDataType = Type.GetType("LostWordDataDecrypter.DataTypes." + tableName);
-                        if (MasterDataType != null)
+                        if (assestInfo.IsMasterData())
                         {
-                            validTableNames.Add((tableName, assestInfo.Name));
+                            string tableName = assestInfo.GetTableName();
+                            Type MasterDataType = Type.GetType("LostWordDataDecrypter.DataTypes." + tableName);
+                            if (MasterDataType != null)
+                            {
+                                validTableNames.Add((tableName, assestInfo.Name));
+                            }
                         }
                     }
                 }
+
+                foreach ((string tableName, string fileName) in validTableNames)
+                {
+                    Console.WriteLine("Decoding " + tableName + ": " + fileName);
+                    Type TableType = Type.GetType("LostWordDataDecrypter.DataTypes." + tableName, true);
+                    byte[] src = TestDecoder.FileToBytes(Path.Combine(masterDir, fileName));
+                    //TestDecoder.DecryptToFile(Path.Combine(outputDir, tableName + "_decrypted"), src);
+
+                    // One example of the following code is like this:
+                    // UnitTable st = MasterMsgPack.Unpack<UnitTable>(src);
+                    // st.to_csv(Path.Combine(ROOT_DIR, Path.Combine(OUTPUT_DIR, table_name + ".csv")));
+                    var st = typeof(MasterMsgPack).GetMethod("Unpack").MakeGenericMethod(TableType).Invoke(null, new Object[] { src });
+                    TableType.GetMethod("to_csv").Invoke(st, new Object[] { Path.Combine(outputDir, tableName + ".csv") });
+                }
+                Console.WriteLine();
             }
 
-            foreach ((string tableName, string fileName) in validTableNames)
-            {
-                Console.WriteLine("Decoding " + tableName + ": " + fileName);
-                Type TableType = Type.GetType("LostWordDataDecrypter.DataTypes." + tableName, true);
-                byte[] src = TestDecoder.FileToBytes(Path.Combine(ROOT_DIR, Path.Combine(INPUT_DIR, Path.Combine("master", fileName))));
-                //TestDecoder.DecryptToFile(Path.Combine(ROOT_DIR, Path.Combine(OUTPUT_DIR, tableName + "_decrypted")), src);
-
-                // One example of the following code is like this:
-                // UnitTable st = MasterMsgPack.Unpack<UnitTable>(src);
-                // st.to_csv(Path.Combine(ROOT_DIR, Path.Combine(OUTPUT_DIR, table_name + ".csv")));
-                var st = typeof(MasterMsgPack).GetMethod("Unpack").MakeGenericMethod(TableType).Invoke(null, new Object[] { src });
-                TableType.GetMethod("to_csv").Invoke(st, new Object[] { Path.Combine(ROOT_DIR, Path.Combine(OUTPUT_DIR, tableName + ".csv")) });
-            }
-
+            Console.WriteLine("\npress any key to exit the process...");
+            Console.ReadKey();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using static LostWordDataDecrypter.Program;
 
@@ -46,8 +47,25 @@ namespace LostWordDataDecrypter.DataTypes
                     foreach (FieldInfo field in fields)
                     {
                         var value = field.GetValue(record);
+                        Type type = field.FieldType;
                         string s = value.ToString();
-                        s = s.Replace("\n", "\\n");
+                        if (type == typeof(string))
+                        {
+                            s = s.Replace("\r\n", "<ret>");
+                            s = s.Replace("\n", "<ret>");
+                            s = s.Replace(",", "|");
+                            
+                            
+                            
+                            
+                            
+                            string emptyPattern = @"^\s*$";
+                            Match m = Regex.Match(s, emptyPattern, RegexOptions.IgnoreCase);
+                            if (m.Success)
+                            {
+                                s = "(empty)";
+                            }
+                        }
                         record_strs.Add(s);
                     }
                     string record_str = string.Join(",", record_strs);
