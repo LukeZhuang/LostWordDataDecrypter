@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LostWordDataDecrypter.DataTypes
+{
+    [Serializable]
+    public class CharacteristicRecord : MasterRecord<int> // TypeDefIndex: 6669
+    {
+        public int id; // 0x8
+        public string characteristic1_name; // 0xC
+        public string characteristic1_description; // 0x10
+        public int characteristic1_type; // 0x14
+        public int characteristic1_effect_type; // 0x18
+        public int characteristic1_effect_subtype; // 0x1C
+        public int characteristic1_rate; // 0x20
+        public int characteristic1_effect_value; // 0x24
+        public string characteristic1_icon_filename; // 0x28
+        public string characteristic2_name; // 0x2C
+        public string characteristic2_description; // 0x30
+        public int characteristic2_type; // 0x34
+        public int characteristic2_effect_type; // 0x38
+        public int characteristic2_effect_subtype; // 0x3C
+        public int characteristic2_rate; // 0x40
+        public int characteristic2_effect_value; // 0x44
+        public string characteristic2_icon_filename; // 0x48
+        public string characteristic3_name; // 0x4C
+        public string characteristic3_description; // 0x50
+        public int characteristic3_type; // 0x54
+        public int characteristic3_effect_type; // 0x58
+        public int characteristic3_effect_subtype; // 0x5C
+        public int characteristic3_rate; // 0x60
+        public int characteristic3_effect_value; // 0x64
+        public string characteristic3_icon_filename; // 0x68
+        public string trust_characteristic_name; // 0x6C
+        public string trust_characteristic_description; // 0x70
+        public int trust_characteristic_rear_effect_type; // 0x74
+        public int trust_characteristic_rear_effect_subtype; // 0x78
+        public int trust_characteristic_avent_effect_type; // 0x7C
+        public int trust_characteristic_avent_effect_subtype; // 0x80
+    }
+    
+    [Serializable]
+    public class CharacteristicTable : MasterTable<int, CharacteristicRecord>
+    {
+
+    }
+    public class CharacteristicMaster
+    {
+    }
+}

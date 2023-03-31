@@ -74,10 +74,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTypes\AbilityMaster.cs" />
+    <Compile Include="DataTypes\BulletAddonMaster.cs" />
+    <Compile Include="DataTypes\BulletExtraEffectMaster.cs" />
+    <Compile Include="DataTypes\BulletMaster.cs" />
+    <Compile Include="DataTypes\CharacteristicMaster.cs" />
     <Compile Include="DataTypes\ManifestJSON.cs" />
     <Compile Include="DataTypes\MasterTable.cs" />
+    <Compile Include="DataTypes\PersonRelationMaster.cs" />
     <Compile Include="DataTypes\PictureMaster.cs" />
+    <Compile Include="DataTypes\RaceMaster.cs" />
+    <Compile Include="DataTypes\ResistMaster.cs" />
     <Compile Include="DataTypes\ShotMaster.cs" />
+    <Compile Include="DataTypes\SkillEffectMaster.cs" />
+    <Compile Include="DataTypes\SkillMaster.cs" />
     <Compile Include="DataTypes\SpellcardMaster.cs" />
     <Compile Include="DataTypes\UnitMaster.cs" />
     <Compile Include="DataTypes\UnitPhantasmCostMaster.cs" />
