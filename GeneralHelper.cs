@@ -92,7 +92,7 @@ namespace LostWordDataDecrypter
         {
             byte[] output_buff = MasterMsgPack.Decrypt(src);
             byte[] newbuff = new byte[output_buff.Length + 1];
-            newbuff[0] = (byte)(0x91);  // there is a list wrapper
+            newbuff[0] = (byte)(0x91);  // unpack needs a list wrapper
             for (int i = 0; i < output_buff.Length; i++)
             {
                 newbuff[i + 1] = output_buff[i];
