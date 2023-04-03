@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using static LostWordDataDecrypter.Program;
 
-namespace LostWordDataDecrypter.DataTypes
+namespace LostWordDataDecrypter.DataTypes.DataTypes_ver2
 {
     [Serializable]
     public abstract class MasterRecord<TKey>

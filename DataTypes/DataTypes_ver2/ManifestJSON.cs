@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace LostWordDataDecrypter.DataTypes
+namespace LostWordDataDecrypter.DataTypes.DataTypes_ver2
 {
     public class ManifestJSON
     {

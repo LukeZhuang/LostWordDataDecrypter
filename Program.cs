@@ -1,4 +1,4 @@
-﻿using LostWordDataDecrypter.DataTypes;
+﻿using LostWordDataDecrypter.DataTypes.DataTypes_ver2;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -145,7 +145,7 @@ namespace LostWordDataDecrypter
                     Console.Write("Deserializing " + tableName + ": " + fileName.Substring(0, 10) + " ... ");
                     byte[] src = GeneralHelper.FileToBytes(Path.Combine(dir, fileName));
 
-                    Type TableType = Type.GetType("LostWordDataDecrypter.DataTypes." + tableName);
+                    Type TableType = Type.GetType("LostWordDataDecrypter.DataTypes.DataTypes_ver2." + tableName);
                     if (TableType != null)
                     {
                         var unpackMethod = typeof(MasterMsgPack).GetMethod("Unpack").MakeGenericMethod(TableType);
@@ -159,8 +159,7 @@ namespace LostWordDataDecrypter
                             Console.WriteLine("successful");
                             succDataTypeCount++;
                         }
-                        //catch (Exception e)
-                        catch (NotImplementedException e)
+                        catch (Exception e)
                         {
                             GeneralHelper.CreateFileForAnonymousType(src, outputFileName);
                             Console.WriteLine("type implemented but deserializing failed. Creating anonymous type");

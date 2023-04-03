@@ -3,13 +3,9 @@ using MsgPack.Serialization;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using static LostWordDataDecrypter.Program;
 
 namespace LostWordDataDecrypter
 {
@@ -95,15 +91,12 @@ namespace LostWordDataDecrypter
         public static T Unpack<T>(byte[] src)
         {
             byte[] output_buff = MasterMsgPack.Decrypt(src);
-            byte[] newbuff = output_buff;
-            
-            newbuff = new byte[output_buff.Length + 1];
-            newbuff[0] = (byte)(0x91);  // there is a list wrapper if version < 3.0.0
+            byte[] newbuff = new byte[output_buff.Length + 1];
+            newbuff[0] = (byte)(0x91);  // there is a list wrapper
             for (int i = 0; i < output_buff.Length; i++)
             {
                 newbuff[i + 1] = output_buff[i];
             }
-            
             return m_context.GetSerializer<T>().UnpackSingleObject(newbuff);
         }
 

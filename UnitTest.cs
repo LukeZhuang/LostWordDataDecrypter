@@ -1,4 +1,4 @@
-﻿using LostWordDataDecrypter.DataTypes;
+﻿using LostWordDataDecrypter.DataTypes.DataTypes_ver2;
 using MsgPack.Serialization;
 using System;
 using System.Collections.Generic;

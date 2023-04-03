@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LostWordDataDecrypter.DataTypes
+namespace LostWordDataDecrypter.DataTypes.DataTypes_ver2
 {
     [Serializable]
     public class UnitRecord : MasterRecord<int>
