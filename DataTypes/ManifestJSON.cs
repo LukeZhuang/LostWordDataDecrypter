@@ -13,6 +13,7 @@ namespace LostWordDataDecrypter.DataTypes
         public List<AssestInfo> AssetInfos;
         public List<ResourceInfo> ResourceInfos;
         public List<Unit> Units;
+        public List<Picture> Pictures;
     }
 
     public class ResourceInfo
@@ -27,14 +28,19 @@ namespace LostWordDataDecrypter.DataTypes
         public int Id;
     }
 
+    public class Picture
+    {
+
+    }
+
     public class AssestInfo
     {
         public int key;
         public int type;
-        public string Name;
+        public string Name { get; set; }
         public string Hash;
-        public int crc;
-        public int size;
+        public long crc;
+        public long size;
         public List<string> AssetPaths;
         public List<string> DownloadBundles;
 
