@@ -1,4 +1,4 @@
-﻿using LostWordDataDecrypter.DataTypes.DataTypes_ver2;
+﻿using LostWordDataDecrypter.DataTypes;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -26,10 +26,18 @@ namespace LostWordDataDecrypter
             {
                 Console.WriteLine("Processing: " + dir);
 
+                string apkVersionName = new DirectoryInfo(dir).Name;
+                if (   !Regex.IsMatch(apkVersionName, @".*_ver[0-9]$")
+                    || Type.GetType("LostWordDataDecrypter.DataTypes.DataTypes_ver" + apkVersionName[apkVersionName.Length - 1] + ".FakeMasterTable") == null)
+                {
+                    Console.WriteLine("Stop processing because lack of version info.");
+                    continue;
+                }
+                int version = (apkVersionName[apkVersionName.Length - 1] - '0');
+                Console.WriteLine("Found data version: " + version);
 
                 /* Step 0: Creating output dir if exists
                  */
-                string apkVersionName = new DirectoryInfo(dir).Name;
                 string outputDir = Path.Combine(ROOT_DIR, Path.Combine(OUTPUT_DIR, apkVersionName));
                 bool outputDirExists = Directory.Exists(outputDir);
                 if (!outputDirExists)
@@ -145,7 +153,7 @@ namespace LostWordDataDecrypter
                     Console.Write("Deserializing " + tableName + ": " + fileName.Substring(0, 10) + " ... ");
                     byte[] src = GeneralHelper.FileToBytes(Path.Combine(dir, fileName));
 
-                    Type TableType = Type.GetType("LostWordDataDecrypter.DataTypes.DataTypes_ver2." + tableName);
+                    Type TableType = Type.GetType("LostWordDataDecrypter.DataTypes.DataTypes_ver" + version + "." + tableName);
                     if (TableType != null)
                     {
                         var unpackMethod = typeof(MasterMsgPack).GetMethod("Unpack").MakeGenericMethod(TableType);
@@ -155,7 +163,7 @@ namespace LostWordDataDecrypter
                             // UnitTable st = MasterMsgPack.Unpack<UnitTable>(src);
                             // st.to_csv(Path.Combine(ROOT_DIR, Path.Combine(OUTPUT_DIR, table_name + ".csv")));
                             var st = unpackMethod.Invoke(null, new Object[] { src });
-                            TableType.GetMethod("to_csv").Invoke(st, new Object[] { outputFileName });
+                            TableType.GetMethod("ToCSV").Invoke(st, new Object[] { outputFileName });
                             Console.WriteLine("successful");
                             succDataTypeCount++;
                         }
@@ -174,7 +182,7 @@ namespace LostWordDataDecrypter
                     }
                 }
                 Console.WriteLine("Finished deserializing, successful rate: {0}/{1}/{2}", succDataTypeCount, deserializeFailedDataTypeCount, unImplementedDataTypeCount);
-                Console.WriteLine();
+                Console.WriteLine("\n\n");
             }
 
             Console.WriteLine("\npress any key to exit the process...");

@@ -79,7 +79,8 @@
     <Compile Include="DataTypes\DataTypes_ver2\BulletExtraEffectMaster.cs" />
     <Compile Include="DataTypes\DataTypes_ver2\BulletMaster.cs" />
     <Compile Include="DataTypes\DataTypes_ver2\CharacteristicMaster.cs" />
-    <Compile Include="DataTypes\DataTypes_ver2\ManifestJSON.cs" />
+    <Compile Include="DataTypes\DataTypes_ver3\MasterTable.cs" />
+    <Compile Include="DataTypes\ManifestJSON.cs" />
     <Compile Include="DataTypes\DataTypes_ver2\MasterTable.cs" />
     <Compile Include="DataTypes\DataTypes_ver2\PersonRelationMaster.cs" />
     <Compile Include="DataTypes\DataTypes_ver2\PictureMaster.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="DataTypes\DataTypes_ver2\UnitMaster.cs" />
     <Compile Include="DataTypes\DataTypes_ver2\UnitPhantasmCostMaster.cs" />
     <Compile Include="DataTypes\DataTypes_ver2\UnitRaceMaster.cs" />
+    <Compile Include="DataTypes\DataTypes_ver3\PictureMaster.cs" />
     <Compile Include="GeneralHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
