@@ -44,7 +44,7 @@ for (idx, line) in enumerate(f):
 	lines.append(l)
 	master_gp = re.findall("class ([a-zA-Z]+)Master", l)
 	table_gp = re.findall("class ([a-zA-Z]+)Table : MasterTable", l)
-	record_gp = re.findall("class ([a-zA-Z]+)Record : MasterRecord", l)
+	record_gp = re.findall("class ([a-zA-Z]+)Record : [a-zA-Z]+Record", l)
 	if len(master_gp) > 0:
 		master_line_num[master_gp[0]] = idx
 	if len(table_gp) > 0:
