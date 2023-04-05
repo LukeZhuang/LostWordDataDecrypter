@@ -6,28 +6,23 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitRareAwakenGrowthRecord : MasterRecord<int> // TypeDefIndex: 1651
+    public class UnitRareAwakenGrowthRecord : MasterRecord<int> // TypeDefIndex: 7044
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int rare; // 0x14
-        [MessagePackMember(2)]
-        public int consume_piece; // 0x18
-        [MessagePackMember(3)]
-        public int spellcard_level; // 0x1C
-        [MessagePackMember(4)]
-        public float growth_rate; // 0x20
+        public int id; // 0x8
+        public int rare; // 0xC
+        public int consume_piece; // 0x10
+        public int spellcard_level; // 0x14
+        public float growth_rate; // 0x18
     }
 
     [Serializable]
-    public class UnitRareAwakenGrowthTable : MasterTable<int, UnitRareAwakenGrowthRecord> // TypeDefIndex: 1650
+    public class UnitRareAwakenGrowthTable : MasterTable<int, UnitRareAwakenGrowthRecord> // TypeDefIndex: 7042
     {
         // Fields
     }
 
-    public class UnitRareAwakenGrowthMaster // TypeDefIndex: 1648
+    public class UnitRareAwakenGrowthMaster // TypeDefIndex: 7041
     {
         // Fields
     }

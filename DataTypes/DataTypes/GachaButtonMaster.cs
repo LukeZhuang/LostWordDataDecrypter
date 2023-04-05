@@ -6,40 +6,29 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class GachaButtonRecord : MasterRecord<int> // TypeDefIndex: 1384
+    public class GachaButtonRecord : MasterRecord<int> // TypeDefIndex: 6801
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int consume_type1; // 0x14
-        [MessagePackMember(2)]
-        public int consume_id1; // 0x18
-        [MessagePackMember(3)]
-        public int consume_value1; // 0x1C
-        [MessagePackMember(4)]
-        public int consume_type2; // 0x20
-        [MessagePackMember(5)]
-        public int consume_id2; // 0x24
-        [MessagePackMember(6)]
-        public int consume_value2; // 0x28
-        [MessagePackMember(7)]
-        public int drop_count; // 0x2C
-        [MessagePackMember(8)]
-        public int stock; // 0x30
-        [MessagePackMember(9)]
-        public int bonus_group_no; // 0x34
-        [MessagePackMember(10)]
-        public int decide_num; // 0x38
+        public int id; // 0x8
+        public int consume_type1; // 0xC
+        public int consume_id1; // 0x10
+        public int consume_value1; // 0x14
+        public int consume_type2; // 0x18
+        public int consume_id2; // 0x1C
+        public int consume_value2; // 0x20
+        public int drop_count; // 0x24
+        public int stock; // 0x28
+        public int bonus_group_no; // 0x2C
+        public int decide_num; // 0x30
     }
 
     [Serializable]
-    public class GachaButtonTable : MasterTable<int, GachaButtonRecord> // TypeDefIndex: 1383
+    public class GachaButtonTable : MasterTable<int, GachaButtonRecord> // TypeDefIndex: 6800
     {
         // Fields
     }
 
-    public class GachaButtonMaster // TypeDefIndex: 1382
+    public class GachaButtonMaster // TypeDefIndex: 6799
     {
         // Fields
     }

@@ -6,56 +6,37 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PictureBookRecord : MasterRecord<int> // TypeDefIndex: 3866
+    public class PictureBookRecord : MasterRecord<int> // TypeDefIndex: 8906
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int picture_id; // 0x14
-        [MessagePackMember(2)]
-        public int unit1_id; // 0x18
-        [MessagePackMember(3)]
-        public string unit1_image; // 0x20
-        [MessagePackMember(4)]
-        public int unit2_id; // 0x28
-        [MessagePackMember(5)]
-        public string unit2_image; // 0x30
-        [MessagePackMember(6)]
-        public int unit3_id; // 0x38
-        [MessagePackMember(7)]
-        public string unit3_image; // 0x40
-        [MessagePackMember(8)]
-        public int unit4_id; // 0x48
-        [MessagePackMember(9)]
-        public string unit4_image; // 0x50
-        [MessagePackMember(10)]
-        public int unit5_id; // 0x58
-        [MessagePackMember(11)]
-        public string unit5_image; // 0x60
-        [MessagePackMember(12)]
-        public int unit6_id; // 0x68
-        [MessagePackMember(13)]
-        public string unit6_image; // 0x70
-        [MessagePackMember(14)]
-        public int unit7_id; // 0x78
-        [MessagePackMember(15)]
-        public string unit7_image; // 0x80
-        [MessagePackMember(16)]
-        public int unit8_id; // 0x88
-        [MessagePackMember(17)]
-        public string unit8_image; // 0x90
-        [MessagePackMember(18)]
-        public int priority; // 0x98
+        public int id; // 0x8
+        public int picture_id; // 0xC
+        public int unit1_id; // 0x10
+        public string unit1_image; // 0x14
+        public int unit2_id; // 0x18
+        public string unit2_image; // 0x1C
+        public int unit3_id; // 0x20
+        public string unit3_image; // 0x24
+        public int unit4_id; // 0x28
+        public string unit4_image; // 0x2C
+        public int unit5_id; // 0x30
+        public string unit5_image; // 0x34
+        public int unit6_id; // 0x38
+        public string unit6_image; // 0x3C
+        public int unit7_id; // 0x40
+        public string unit7_image; // 0x44
+        public int unit8_id; // 0x48
+        public string unit8_image; // 0x4C
+        public int priority; // 0x50
     }
 
     [Serializable]
-    public class PictureBookTable : MasterTable<int, PictureBookRecord> // TypeDefIndex: 3865
+    public class PictureBookTable : MasterTable<int, PictureBookRecord> // TypeDefIndex: 8905
     {
         // Fields
     }
 
-    public class PictureBookMaster // TypeDefIndex: 3864
+    public class PictureBookMaster // TypeDefIndex: 8904
     {
         // Fields
     }

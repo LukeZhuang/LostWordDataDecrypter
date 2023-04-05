@@ -6,28 +6,23 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class LoginbonusRecord : MasterRecord<long> // TypeDefIndex: 1427
+    public class LoginbonusRecord : MasterRecord<long> // TypeDefIndex: 6844
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int year; // 0x14
-        [MessagePackMember(2)]
-        public int month; // 0x18
-        [MessagePackMember(3)]
-        public int day_count; // 0x1C
-        [MessagePackMember(4)]
-        public int reward_group_id; // 0x20
+        public int id; // 0x8
+        public int year; // 0xC
+        public int month; // 0x10
+        public int day_count; // 0x14
+        public int reward_group_id; // 0x18
     }
 
     [Serializable]
-    public class LoginbonusTable : MasterTable<long, LoginbonusRecord> // TypeDefIndex: 1426
+    public class LoginbonusTable : MasterTable<long, LoginbonusRecord> // TypeDefIndex: 6843
     {
         // Fields
     }
 
-    public class LoginbonusMaster // TypeDefIndex: 1425
+    public class LoginbonusMaster // TypeDefIndex: 6842
     {
         // Fields
     }

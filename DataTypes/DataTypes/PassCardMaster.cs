@@ -6,28 +6,24 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PassCardRecord : MasterRecord<int> // TypeDefIndex: 3851
+    public class PassCardRecord : MasterRecord<int> // TypeDefIndex: 8891
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int level; // 0x14
-        [MessagePackMember(2)]
-        public string free_reward_goods; // 0x18
-        [MessagePackMember(3)]
-        public string vip_reward_goods; // 0x20
-        //private PassCardFreeList m_free; // 0x28
-        //private PassCardVipList m_vip; // 0x30
+        public int id; // 0x8
+        public int level; // 0xC
+        public string free_reward_goods; // 0x10
+        public string vip_reward_goods; // 0x14
+        //private PassCardFreeList m_free; // 0x18
+        //private PassCardVipList m_vip; // 0x1C
     }
 
     [Serializable]
-    public class PassCardTable : MasterTable<int, PassCardRecord> // TypeDefIndex: 3846
+    public class PassCardTable : MasterTable<int, PassCardRecord> // TypeDefIndex: 8886
     {
         // Fields
     }
 
-    public class PassCardMaster // TypeDefIndex: 3845
+    public class PassCardMaster // TypeDefIndex: 8885
     {
         // Fields
     }

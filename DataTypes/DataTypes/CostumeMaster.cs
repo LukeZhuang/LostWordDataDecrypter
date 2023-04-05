@@ -6,36 +6,27 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class CostumeRecord : MasterRecord<int> // TypeDefIndex: 1269
+    public class CostumeRecord : MasterRecord<int> // TypeDefIndex: 6686
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int unit_id; // 0x14
-        [MessagePackMember(2)]
-        public int stage; // 0x18
-        [MessagePackMember(3)]
-        public int file_id; // 0x1C
-        [MessagePackMember(4)]
-        public string name; // 0x20
-        [MessagePackMember(5)]
-        public string description; // 0x28
-        [MessagePackMember(6)]
-        public int album_visible; // 0x30
-        [MessagePackMember(7)]
-        public string start_at; // 0x38
-        [MessagePackMember(8)]
-        public string end_at; // 0x40
+        public int id; // 0x8
+        public int unit_id; // 0xC
+        public int stage; // 0x10
+        public int file_id; // 0x14
+        public string name; // 0x18
+        public string description; // 0x1C
+        public int album_visible; // 0x20
+        public string start_at; // 0x24
+        public string end_at; // 0x28
     }
 
     [Serializable]
-    public class CostumeTable : MasterTable<int, CostumeRecord> // TypeDefIndex: 1268
+    public class CostumeTable : MasterTable<int, CostumeRecord> // TypeDefIndex: 6683
     {
         // Fields
     }
 
-    public class CostumeMaster // TypeDefIndex: 1265
+    public class CostumeMaster // TypeDefIndex: 6682
     {
         // Fields
     }

@@ -6,98 +6,58 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PictureRecord : MasterRecord<int> // TypeDefIndex: 1497
+    public class PictureRecord : MasterRecord<int> // TypeDefIndex: 6900
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public string name; // 0x18
-        [MessagePackMember(2)]
-        public int album_id; // 0x20
-        [MessagePackMember(3)]
-        public int type; // 0x24
-        [MessagePackMember(4)]
-        public int rare; // 0x28
-        [MessagePackMember(5)]
-        public string illustrator_name; // 0x30
-        [MessagePackMember(6)]
-        public string circle_name; // 0x38
-        [MessagePackMember(7)]
-        public string flavor_text1; // 0x40
-        [MessagePackMember(8)]
-        public string flavor_text2; // 0x48
-        [MessagePackMember(9)]
-        public string flavor_text3; // 0x50
-        [MessagePackMember(10)]
-        public string flavor_text4; // 0x58
-        [MessagePackMember(11)]
-        public string flavor_text5; // 0x60
-        [MessagePackMember(12)]
-        public int correction1_type; // 0x68
-        [MessagePackMember(13)]
-        public int correction1_value; // 0x6C
-        [MessagePackMember(14)]
-        public int correction1_diff; // 0x70
-        [MessagePackMember(15)]
-        public int correction2_type; // 0x74
-        [MessagePackMember(16)]
-        public int correction2_value; // 0x78
-        [MessagePackMember(17)]
-        public int correction2_diff; // 0x7C
-        [MessagePackMember(18)]
-        public int picture_characteristic1_effect_type; // 0x80
-        [MessagePackMember(19)]
-        public int picture_characteristic1_effect_subtype; // 0x84
-        [MessagePackMember(20)]
-        public int picture_characteristic1_effect_value; // 0x88
-        [MessagePackMember(21)]
-        public int picture_characteristic1_effect_value_max; // 0x8C
-        [MessagePackMember(22)]
-        public int picture_characteristic1_effect_turn; // 0x90
-        [MessagePackMember(23)]
-        public int picture_characteristic1_effect_range; // 0x94
-        [MessagePackMember(24)]
-        public int picture_characteristic2_effect_type; // 0x98
-        [MessagePackMember(25)]
-        public int picture_characteristic2_effect_subtype; // 0x9C
-        [MessagePackMember(26)]
-        public int picture_characteristic2_effect_value; // 0xA0
-        [MessagePackMember(27)]
-        public int picture_characteristic2_effect_value_max; // 0xA4
-        [MessagePackMember(28)]
-        public int picture_characteristic2_effect_turn; // 0xA8
-        [MessagePackMember(29)]
-        public int picture_characteristic2_effect_range; // 0xAC
-        [MessagePackMember(30)]
-        public int picture_characteristic3_effect_type; // 0xB0
-        [MessagePackMember(31)]
-        public int picture_characteristic3_effect_subtype; // 0xB4
-        [MessagePackMember(32)]
-        public int picture_characteristic3_effect_value; // 0xB8
-        [MessagePackMember(33)]
-        public int picture_characteristic3_effect_value_max; // 0xBC
-        [MessagePackMember(34)]
-        public int picture_characteristic3_effect_turn; // 0xC0
-        [MessagePackMember(35)]
-        public int picture_characteristic3_effect_range; // 0xC4
-        [MessagePackMember(36)]
-        public string picture_characteristic_text; // 0xC8
-        [MessagePackMember(37)]
-        public string picture_characteristic_text_max; // 0xD0
-        [MessagePackMember(38)]
-        public int recycle_id; // 0xD8
-        [MessagePackMember(39)]
-        public int is_show; // 0xDC
+        public int id; // 0x8
+        public string name; // 0xC
+        public int album_id; // 0x10
+        public int type; // 0x14
+        public int rare; // 0x18
+        public string illustrator_name; // 0x1C
+        public string circle_name; // 0x20
+        public string flavor_text1; // 0x24
+        public string flavor_text2; // 0x28
+        public string flavor_text3; // 0x2C
+        public string flavor_text4; // 0x30
+        public string flavor_text5; // 0x34
+        public int correction1_type; // 0x38
+        public int correction1_value; // 0x3C
+        public int correction1_diff; // 0x40
+        public int correction2_type; // 0x44
+        public int correction2_value; // 0x48
+        public int correction2_diff; // 0x4C
+        public int picture_characteristic1_effect_type; // 0x50
+        public int picture_characteristic1_effect_subtype; // 0x54
+        public int picture_characteristic1_effect_value; // 0x58
+        public int picture_characteristic1_effect_value_max; // 0x5C
+        public int picture_characteristic1_effect_turn; // 0x60
+        public int picture_characteristic1_effect_range; // 0x64
+        public int picture_characteristic2_effect_type; // 0x68
+        public int picture_characteristic2_effect_subtype; // 0x6C
+        public int picture_characteristic2_effect_value; // 0x70
+        public int picture_characteristic2_effect_value_max; // 0x74
+        public int picture_characteristic2_effect_turn; // 0x78
+        public int picture_characteristic2_effect_range; // 0x7C
+        public int picture_characteristic3_effect_type; // 0x80
+        public int picture_characteristic3_effect_subtype; // 0x84
+        public int picture_characteristic3_effect_value; // 0x88
+        public int picture_characteristic3_effect_value_max; // 0x8C
+        public int picture_characteristic3_effect_turn; // 0x90
+        public int picture_characteristic3_effect_range; // 0x94
+        public string picture_characteristic_text; // 0x98
+        public string picture_characteristic_text_max; // 0x9C
+        public int recycle_id; // 0xA0
+        public int is_show; // 0xA4
     }
 
     [Serializable]
-    public class PictureTable : MasterTable<int, PictureRecord> // TypeDefIndex: 1496
+    public class PictureTable : MasterTable<int, PictureRecord> // TypeDefIndex: 6899
     {
         // Fields
     }
 
-    public class PictureMaster // TypeDefIndex: 1495
+    public class PictureMaster // TypeDefIndex: 6898
     {
         // Fields
         public const int CORRECTION_TYPE_LIFE_POINT = 1;

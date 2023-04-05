@@ -6,56 +6,37 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class TowerRecord : MasterRecord<int> // TypeDefIndex: 1605
+    public class TowerRecord : MasterRecord<int> // TypeDefIndex: 6998
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int floor; // 0x14
-        [MessagePackMember(2)]
-        public string title; // 0x18
-        [MessagePackMember(3)]
-        public string comic_title; // 0x20
-        [MessagePackMember(4)]
-        public int battle_id; // 0x28
-        [MessagePackMember(5)]
-        public string comic_filepath; // 0x30
-        [MessagePackMember(6)]
-        public int preview_type; // 0x38
-        [MessagePackMember(7)]
-        public int clear_type; // 0x3C
-        [MessagePackMember(8)]
-        public int boss_flg; // 0x40
-        [MessagePackMember(9)]
-        public string floor_select_banner; // 0x48
-        [MessagePackMember(10)]
-        public string floor_background; // 0x50
-        [MessagePackMember(11)]
-        public int drop_group1_id_for_first; // 0x58
-        [MessagePackMember(12)]
-        public int drop_group2_id_for_first; // 0x5C
-        [MessagePackMember(13)]
-        public int drop_group3_id_for_first; // 0x60
-        [MessagePackMember(14)]
-        public int drop_group4_id_for_first; // 0x64
-        [MessagePackMember(15)]
-        public int drop_group1_id_for_repetition; // 0x68
-        [MessagePackMember(16)]
-        public int drop_group2_id_for_repetition; // 0x6C
-        [MessagePackMember(17)]
-        public int drop_group3_id_for_repetition; // 0x70
-        [MessagePackMember(18)]
-        public int drop_group4_id_for_repetition; // 0x74
+        public int id; // 0x8
+        public int floor; // 0xC
+        public string title; // 0x10
+        public string comic_title; // 0x14
+        public int battle_id; // 0x18
+        public string comic_filepath; // 0x1C
+        public int preview_type; // 0x20
+        public int clear_type; // 0x24
+        public int boss_flg; // 0x28
+        public string floor_select_banner; // 0x2C
+        public string floor_background; // 0x30
+        public int drop_group1_id_for_first; // 0x34
+        public int drop_group2_id_for_first; // 0x38
+        public int drop_group3_id_for_first; // 0x3C
+        public int drop_group4_id_for_first; // 0x40
+        public int drop_group1_id_for_repetition; // 0x44
+        public int drop_group2_id_for_repetition; // 0x48
+        public int drop_group3_id_for_repetition; // 0x4C
+        public int drop_group4_id_for_repetition; // 0x50
     }
 
     [Serializable]
-    public class TowerTable : MasterTable<int, TowerRecord> // TypeDefIndex: 1604
+    public class TowerTable : MasterTable<int, TowerRecord> // TypeDefIndex: 6997
     {
         // Fields
     }
 
-    public class TowerMaster // TypeDefIndex: 1603
+    public class TowerMaster // TypeDefIndex: 6996
     {
         // Fields
     }

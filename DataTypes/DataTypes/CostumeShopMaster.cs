@@ -6,29 +6,19 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class CostumeShopRecord : MasterRecord<int> // TypeDefIndex: 1272
+    public class CostumeShopRecord : MasterRecord<int> // TypeDefIndex: 6689
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int pop_type; // 0x14
-        [MessagePackMember(2)]
-        public int main_category_type; // 0x18
-        [MessagePackMember(3)]
-        public int sub_category_master_id; // 0x1C
-        [MessagePackMember(4)]
-        public int consume_orb; // 0x20
-        [MessagePackMember(5)]
-        public int costume_id; // 0x24
-        [MessagePackMember(6)]
-        public string banner_image; // 0x28
-        [MessagePackMember(7)]
-        public int display_order; // 0x30
-        [MessagePackMember(8)]
-        public string start_at; // 0x38
-        [MessagePackMember(9)]
-        public string end_at; // 0x40
+        public int id; // 0x8
+        public int pop_type; // 0xC
+        public int main_category_type; // 0x10
+        public int sub_category_master_id; // 0x14
+        public int consume_orb; // 0x18
+        public int costume_id; // 0x1C
+        public string banner_image; // 0x20
+        public int display_order; // 0x24
+        public string start_at; // 0x28
+        public string end_at; // 0x2C
         public const int POP_TYPE_HIDDEN = 0;
         public const int POP_TYPE_NEW = 1;
         public const int POP_TYPE_FIRST_BUY = 2;
@@ -37,12 +27,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class CostumeShopTable : MasterTable<int, CostumeShopRecord> // TypeDefIndex: 1271
+    public class CostumeShopTable : MasterTable<int, CostumeShopRecord> // TypeDefIndex: 6688
     {
         // Fields
     }
 
-    public class CostumeShopMaster // TypeDefIndex: 1270
+    public class CostumeShopMaster // TypeDefIndex: 6687
     {
         // Fields
     }

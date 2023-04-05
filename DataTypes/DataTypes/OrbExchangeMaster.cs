@@ -6,38 +6,28 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class OrbExchangeRecord : MasterRecord<int> // TypeDefIndex: 1462
+    public class OrbExchangeRecord : MasterRecord<int> // TypeDefIndex: 6865
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int main_category_type; // 0x14
-        [MessagePackMember(2)]
-        public int sub_category_master_id; // 0x18
-        [MessagePackMember(3)]
-        public int consume_orb; // 0x1C
-        [MessagePackMember(4)]
-        public int object_type; // 0x20
-        [MessagePackMember(5)]
-        public int object_id; // 0x24
-        [MessagePackMember(6)]
-        public int object_value; // 0x28
-        [MessagePackMember(7)]
-        public int display_order; // 0x2C
-        [MessagePackMember(8)]
-        public string start_at; // 0x30
-        [MessagePackMember(9)]
-        public string end_at; // 0x38
+        public int id; // 0x8
+        public int main_category_type; // 0xC
+        public int sub_category_master_id; // 0x10
+        public int consume_orb; // 0x14
+        public int object_type; // 0x18
+        public int object_id; // 0x1C
+        public int object_value; // 0x20
+        public int display_order; // 0x24
+        public string start_at; // 0x28
+        public string end_at; // 0x2C
     }
 
     [Serializable]
-    public class OrbExchangeTable : MasterTable<int, OrbExchangeRecord> // TypeDefIndex: 1461
+    public class OrbExchangeTable : MasterTable<int, OrbExchangeRecord> // TypeDefIndex: 6864
     {
         // Fields
     }
 
-    public class OrbExchangeMaster // TypeDefIndex: 1460
+    public class OrbExchangeMaster // TypeDefIndex: 6863
     {
         // Fields
     }

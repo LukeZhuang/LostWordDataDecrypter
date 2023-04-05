@@ -6,50 +6,34 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PictureRecycleRecord : MasterRecord<long> // TypeDefIndex: 1505
+    public class PictureRecycleRecord : MasterRecord<long> // TypeDefIndex: 6908
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int recycle_id; // 0x14
-        [MessagePackMember(2)]
-        public int spec_actualize; // 0x18
-        [MessagePackMember(3)]
-        public int potential_limitbreak; // 0x1C
-        [MessagePackMember(4)]
-        public int gold; // 0x20
-        [MessagePackMember(5)]
-        public int phantasm_point; // 0x24
-        [MessagePackMember(6)]
-        public int piece; // 0x28
-        [MessagePackMember(7)]
-        public int object1_type; // 0x2C
-        [MessagePackMember(8)]
-        public int object1_id; // 0x30
-        [MessagePackMember(9)]
-        public int object1_value; // 0x34
-        [MessagePackMember(10)]
-        public int object2_type; // 0x38
-        [MessagePackMember(11)]
-        public int object2_id; // 0x3C
-        [MessagePackMember(12)]
-        public int object2_value; // 0x40
-        [MessagePackMember(13)]
-        public int object3_type; // 0x44
-        [MessagePackMember(14)]
-        public int object3_id; // 0x48
-        [MessagePackMember(15)]
-        public int object3_value; // 0x4C
+        public int id; // 0x8
+        public int recycle_id; // 0xC
+        public int spec_actualize; // 0x10
+        public int potential_limitbreak; // 0x14
+        public int gold; // 0x18
+        public int phantasm_point; // 0x1C
+        public int piece; // 0x20
+        public int object1_type; // 0x24
+        public int object1_id; // 0x28
+        public int object1_value; // 0x2C
+        public int object2_type; // 0x30
+        public int object2_id; // 0x34
+        public int object2_value; // 0x38
+        public int object3_type; // 0x3C
+        public int object3_id; // 0x40
+        public int object3_value; // 0x44
     }
 
     [Serializable]
-    public class PictureRecycleTable : MasterTable<long, PictureRecycleRecord> // TypeDefIndex: 1504
+    public class PictureRecycleTable : MasterTable<long, PictureRecycleRecord> // TypeDefIndex: 6907
     {
         // Fields
     }
 
-    public class PictureRecycleMaster // TypeDefIndex: 1503
+    public class PictureRecycleMaster // TypeDefIndex: 6906
     {
         // Fields
     }

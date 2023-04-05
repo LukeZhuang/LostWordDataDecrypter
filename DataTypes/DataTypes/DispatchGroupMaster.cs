@@ -6,38 +6,28 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class DispatchGroupRecord : MasterRecord<int> // TypeDefIndex: 1296
+    public class DispatchGroupRecord : MasterRecord<int> // TypeDefIndex: 6713
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int type; // 0x14
-        [MessagePackMember(2)]
-        public int appear_limit; // 0x18
-        [MessagePackMember(3)]
-        public int open_dispatch_group_id; // 0x1C
-        [MessagePackMember(4)]
-        public int open_complete_count; // 0x20
-        [MessagePackMember(5)]
-        public int open_start_hour; // 0x24
-        [MessagePackMember(6)]
-        public int open_end_hour; // 0x28
-        [MessagePackMember(7)]
-        public int close_complete_count; // 0x2C
-        [MessagePackMember(8)]
-        public int display_order; // 0x30
-        [MessagePackMember(9)]
-        public string description; // 0x38
+        public int id; // 0x8
+        public int type; // 0xC
+        public int appear_limit; // 0x10
+        public int open_dispatch_group_id; // 0x14
+        public int open_complete_count; // 0x18
+        public int open_start_hour; // 0x1C
+        public int open_end_hour; // 0x20
+        public int close_complete_count; // 0x24
+        public int display_order; // 0x28
+        public string description; // 0x2C
     }
 
     [Serializable]
-    public class DispatchGroupTable : MasterTable<int, DispatchGroupRecord> // TypeDefIndex: 1295
+    public class DispatchGroupTable : MasterTable<int, DispatchGroupRecord> // TypeDefIndex: 6712
     {
         // Fields
     }
 
-    public class DispatchGroupMaster // TypeDefIndex: 1294
+    public class DispatchGroupMaster // TypeDefIndex: 6711
     {
         // Fields
         public const int TYPE_DAILY = 0;

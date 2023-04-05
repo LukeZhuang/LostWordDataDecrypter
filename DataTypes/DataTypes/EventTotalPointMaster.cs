@@ -6,30 +6,24 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class EventTotalPointRecord : MasterRecord<int> // TypeDefIndex: 1360
+    public class EventTotalPointRecord : MasterRecord<int> // TypeDefIndex: 6777
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int total_point_group_id; // 0x14
-        [MessagePackMember(2)]
-        public int object_type; // 0x18
-        [MessagePackMember(3)]
-        public int object_id; // 0x1C
-        [MessagePackMember(4)]
-        public int object_value; // 0x20
-        [MessagePackMember(5)]
-        public int display_order; // 0x24
+        public int id; // 0x8
+        public int total_point_group_id; // 0xC
+        public int object_type; // 0x10
+        public int object_id; // 0x14
+        public int object_value; // 0x18
+        public int display_order; // 0x1C
     }
 
     [Serializable]
-    public class EventTotalPointTable : MasterTable<int, EventTotalPointRecord> // TypeDefIndex: 1359
+    public class EventTotalPointTable : MasterTable<int, EventTotalPointRecord> // TypeDefIndex: 6776
     {
         // Fields
     }
 
-    public class EventTotalPointMaster // TypeDefIndex: 1358
+    public class EventTotalPointMaster // TypeDefIndex: 6775
     {
         // Fields
     }

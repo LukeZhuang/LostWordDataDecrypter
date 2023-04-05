@@ -6,54 +6,36 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PayShopRecord : MasterRecord<int> // TypeDefIndex: 1468
+    public class PayShopRecord : MasterRecord<int> // TypeDefIndex: 6871
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int pop_type; // 0x14
-        [MessagePackMember(2)]
-        public int main_category_type; // 0x18
-        [MessagePackMember(3)]
-        public int sub_category_master_id; // 0x1C
-        [MessagePackMember(4)]
-        public int type; // 0x20
-        [MessagePackMember(5)]
-        public string name; // 0x28
-        [MessagePackMember(6)]
-        public string description; // 0x30
-        [MessagePackMember(7)]
-        public int purchase_orb_value; // 0x38
-        [MessagePackMember(8)]
-        public int free_orb_value; // 0x3C
-        [MessagePackMember(9)]
-        public int available_count; // 0x40
-        [MessagePackMember(10)]
-        public int monthly_available_count; // 0x44
-        [MessagePackMember(11)]
-        public int daily_available_count; // 0x48
-        [MessagePackMember(12)]
-        public int price_id; // 0x4C
-        [MessagePackMember(13)]
-        public int open_shop_id; // 0x50
-        [MessagePackMember(14)]
-        public string banner_image; // 0x58
-        [MessagePackMember(15)]
-        public int display_order; // 0x60
-        [MessagePackMember(16)]
-        public string start_at; // 0x68
-        [MessagePackMember(17)]
-        public string end_at; // 0x70
+        public int id; // 0x8
+        public int pop_type; // 0xC
+        public int main_category_type; // 0x10
+        public int sub_category_master_id; // 0x14
+        public int type; // 0x18
+        public string name; // 0x1C
+        public string description; // 0x20
+        public int purchase_orb_value; // 0x24
+        public int free_orb_value; // 0x28
+        public int available_count; // 0x2C
+        public int monthly_available_count; // 0x30
+        public int daily_available_count; // 0x34
+        public int price_id; // 0x38
+        public int open_shop_id; // 0x3C
+        public string banner_image; // 0x40
+        public int display_order; // 0x44
+        public string start_at; // 0x48
+        public string end_at; // 0x4C
     }
 
     [Serializable]
-    public class PayShopTable : MasterTable<int, PayShopRecord> // TypeDefIndex: 1467
+    public class PayShopTable : MasterTable<int, PayShopRecord> // TypeDefIndex: 6870
     {
         // Fields
     }
 
-    public class PayShopMaster // TypeDefIndex: 1466
+    public class PayShopMaster // TypeDefIndex: 6869
     {
         // Fields
     }

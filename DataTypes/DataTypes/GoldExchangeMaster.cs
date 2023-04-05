@@ -6,38 +6,28 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class GoldExchangeRecord : MasterRecord<int> // TypeDefIndex: 1398
+    public class GoldExchangeRecord : MasterRecord<int> // TypeDefIndex: 6815
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int gold_exchange_group_id; // 0x14
-        [MessagePackMember(2)]
-        public int discount_rate; // 0x18
-        [MessagePackMember(3)]
-        public int consume_gold; // 0x1C
-        [MessagePackMember(4)]
-        public int object_type; // 0x20
-        [MessagePackMember(5)]
-        public int object_id; // 0x24
-        [MessagePackMember(6)]
-        public int object_value; // 0x28
-        [MessagePackMember(7)]
-        public int display_order; // 0x2C
-        [MessagePackMember(8)]
-        public string start_at; // 0x30
-        [MessagePackMember(9)]
-        public string end_at; // 0x38
+        public int id; // 0x8
+        public int gold_exchange_group_id; // 0xC
+        public int discount_rate; // 0x10
+        public int consume_gold; // 0x14
+        public int object_type; // 0x18
+        public int object_id; // 0x1C
+        public int object_value; // 0x20
+        public int display_order; // 0x24
+        public string start_at; // 0x28
+        public string end_at; // 0x2C
     }
 
     [Serializable]
-    public class GoldExchangeTable : MasterTable<int, GoldExchangeRecord> // TypeDefIndex: 1397
+    public class GoldExchangeTable : MasterTable<int, GoldExchangeRecord> // TypeDefIndex: 6814
     {
         // Fields
     }
 
-    public class GoldExchangeMaster // TypeDefIndex: 1396
+    public class GoldExchangeMaster // TypeDefIndex: 6813
     {
         // Fields
     }

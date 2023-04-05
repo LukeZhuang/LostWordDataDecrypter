@@ -6,26 +6,22 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitSFWLimitbreakRecord : MasterRecord<long> // TypeDefIndex: 1677
+    public class UnitSFWLimitbreakRecord : MasterRecord<long> // TypeDefIndex: 7070
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int level_limitbreak; // 0x14
-        [MessagePackMember(2)]
-        public int consume_strong_censer; // 0x18
-        [MessagePackMember(3)]
-        public int max_value; // 0x1C
+        public int id; // 0x8
+        public int level_limitbreak; // 0xC
+        public int consume_strong_censer; // 0x10
+        public int max_value; // 0x14
     }
 
     [Serializable]
-    public class UnitSFWLimitbreakTable : MasterTable<long, UnitSFWLimitbreakRecord> // TypeDefIndex: 1676
+    public class UnitSFWLimitbreakTable : MasterTable<long, UnitSFWLimitbreakRecord> // TypeDefIndex: 7069
     {
         // Fields
     }
 
-    public class UnitSFWLimitbreakMaster // TypeDefIndex: 1675
+    public class UnitSFWLimitbreakMaster // TypeDefIndex: 7068
     {
         // Fields
     }

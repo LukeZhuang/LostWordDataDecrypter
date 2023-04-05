@@ -6,60 +6,39 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitRankPromoteRecord : MasterRecord<long> // TypeDefIndex: 1647
+    public class UnitRankPromoteRecord : MasterRecord<long> // TypeDefIndex: 7040
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int unit_id; // 0x14
-        [MessagePackMember(2)]
-        public int rank; // 0x18
-        [MessagePackMember(3)]
-        public int slot1_object_type; // 0x1C
-        [MessagePackMember(4)]
-        public int slot1_object_id; // 0x20
-        [MessagePackMember(5)]
-        public int slot1_object_value; // 0x24
-        [MessagePackMember(6)]
-        public int slot2_object_type; // 0x28
-        [MessagePackMember(7)]
-        public int slot2_object_id; // 0x2C
-        [MessagePackMember(8)]
-        public int slot2_object_value; // 0x30
-        [MessagePackMember(9)]
-        public int slot3_object_type; // 0x34
-        [MessagePackMember(10)]
-        public int slot3_object_id; // 0x38
-        [MessagePackMember(11)]
-        public int slot3_object_value; // 0x3C
-        [MessagePackMember(12)]
-        public int slot4_object_type; // 0x40
-        [MessagePackMember(13)]
-        public int slot4_object_id; // 0x44
-        [MessagePackMember(14)]
-        public int slot4_object_value; // 0x48
-        [MessagePackMember(15)]
-        public int slot5_object_type; // 0x4C
-        [MessagePackMember(16)]
-        public int slot5_object_id; // 0x50
-        [MessagePackMember(17)]
-        public int slot5_object_value; // 0x54
-        [MessagePackMember(18)]
-        public int slot6_object_type; // 0x58
-        [MessagePackMember(19)]
-        public int slot6_object_id; // 0x5C
-        [MessagePackMember(20)]
-        public int slot6_object_value; // 0x60
+        public int id; // 0x8
+        public int unit_id; // 0xC
+        public int rank; // 0x10
+        public int slot1_object_type; // 0x14
+        public int slot1_object_id; // 0x18
+        public int slot1_object_value; // 0x1C
+        public int slot2_object_type; // 0x20
+        public int slot2_object_id; // 0x24
+        public int slot2_object_value; // 0x28
+        public int slot3_object_type; // 0x2C
+        public int slot3_object_id; // 0x30
+        public int slot3_object_value; // 0x34
+        public int slot4_object_type; // 0x38
+        public int slot4_object_id; // 0x3C
+        public int slot4_object_value; // 0x40
+        public int slot5_object_type; // 0x44
+        public int slot5_object_id; // 0x48
+        public int slot5_object_value; // 0x4C
+        public int slot6_object_type; // 0x50
+        public int slot6_object_id; // 0x54
+        public int slot6_object_value; // 0x58
     }
 
     [Serializable]
-    public class UnitRankPromoteTable : MasterTable<long, UnitRankPromoteRecord> // TypeDefIndex: 1646
+    public class UnitRankPromoteTable : MasterTable<long, UnitRankPromoteRecord> // TypeDefIndex: 7039
     {
         // Fields
     }
 
-    public class UnitRankPromoteMaster // TypeDefIndex: 1645
+    public class UnitRankPromoteMaster // TypeDefIndex: 7038
     {
         // Fields
     }

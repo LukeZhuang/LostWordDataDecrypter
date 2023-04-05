@@ -6,34 +6,25 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class GachaPointExchangeRecord : MasterRecord<int> // TypeDefIndex: 1391
+    public class GachaPointExchangeRecord : MasterRecord<int> // TypeDefIndex: 6808
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int gacha_point_id; // 0x14
-        [MessagePackMember(2)]
-        public int need_point; // 0x18
-        [MessagePackMember(3)]
-        public int object_type; // 0x1C
-        [MessagePackMember(4)]
-        public int object_id; // 0x20
-        [MessagePackMember(5)]
-        public int object_value; // 0x24
-        [MessagePackMember(6)]
-        public int is_pickup_only; // 0x28
-        [MessagePackMember(7)]
-        public int exchange_limit_count; // 0x2C
+        public int id; // 0x8
+        public int gacha_point_id; // 0xC
+        public int need_point; // 0x10
+        public int object_type; // 0x14
+        public int object_id; // 0x18
+        public int object_value; // 0x1C
+        public int is_pickup_only; // 0x20
     }
 
     [Serializable]
-    public class GachaPointExchangeTable : MasterTable<int, GachaPointExchangeRecord> // TypeDefIndex: 1390
+    public class GachaPointExchangeTable : MasterTable<int, GachaPointExchangeRecord> // TypeDefIndex: 6807
     {
         // Fields
     }
 
-    public class GachaPointExchangeMaster // TypeDefIndex: 1389
+    public class GachaPointExchangeMaster // TypeDefIndex: 6806
     {
         // Fields
     }

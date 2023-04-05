@@ -6,24 +6,21 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PayShopSubCategoryRecord : MasterRecord<int> // TypeDefIndex: 1471
+    public class PayShopSubCategoryRecord : MasterRecord<int> // TypeDefIndex: 6874
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public string display_name; // 0x18
-        [MessagePackMember(2)]
-        public int display_order; // 0x20
+        public int id; // 0x8
+        public string display_name; // 0xC
+        public int display_order; // 0x10
     }
 
     [Serializable]
-    public class PayShopSubCategoryTable : MasterTable<int, PayShopSubCategoryRecord> // TypeDefIndex: 1470
+    public class PayShopSubCategoryTable : MasterTable<int, PayShopSubCategoryRecord> // TypeDefIndex: 6873
     {
         // Fields
     }
 
-    public class PayShopSubCategoryMaster // TypeDefIndex: 1469
+    public class PayShopSubCategoryMaster // TypeDefIndex: 6872
     {
         // Fields
     }

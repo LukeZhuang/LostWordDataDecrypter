@@ -6,28 +6,28 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PriceRecord : MasterRecord<int> // TypeDefIndex: 1522
+    public class PriceRecord : MasterRecord<int> // TypeDefIndex: 6925
     {
         // Fields
-        public int id; // 0x10
-        public string name; // 0x18
-        public int shop_type; // 0x20
-        public float price; // 0x24
-        public string ios_product_id; // 0x28
-        public string android_product_id; // 0x30
-        public float price_hkd; // 0x38
-        public float price_ntd; // 0x3C
-        public string product_id_usd; // 0x40
-        public string special_product_id; // 0x48
+        public int id; // 0x8
+        public string name; // 0xC
+        public int shop_type; // 0x10
+        public float price; // 0x14
+        public string ios_product_id; // 0x18
+        public string android_product_id; // 0x1C
+        public float price_hkd; // 0x20
+        public float price_ntd; // 0x24
+        public string product_id_usd; // 0x28
+        public string special_product_id; // 0x2C
     }
 
     [Serializable]
-    public class PriceTable : MasterTable<int, PriceRecord> // TypeDefIndex: 1521
+    public class PriceTable : MasterTable<int, PriceRecord> // TypeDefIndex: 6924
     {
         // Fields
     }
 
-    public class PriceMaster // TypeDefIndex: 1520
+    public class PriceMaster // TypeDefIndex: 6923
     {
         // Fields
         public const string CURRENCY_CODE = "RMB";

@@ -6,37 +6,28 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class HomeBannerRecord : MasterRecord<int> // TypeDefIndex: 1407
+    public class HomeBannerRecord : MasterRecord<int> // TypeDefIndex: 6824
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public string banner_image; // 0x18
-        [MessagePackMember(2)]
-        public int jump_type; // 0x20
-        [MessagePackMember(3)]
-        public int jump_id; // 0x24
-        [MessagePackMember(4)]
-        public string url; // 0x28
-        [MessagePackMember(5)]
-        public int display_order; // 0x30
-        [MessagePackMember(6)]
-        public string start_at; // 0x38
-        [MessagePackMember(7)]
-        public string end_at; // 0x40
-        [MessagePackMember(8)]
-        public int time_display_flg; // 0x48
-        private List<int> m_urlIntValues; // 0x50
+        public int id; // 0x8
+        public string banner_image; // 0xC
+        public int jump_type; // 0x10
+        public int jump_id; // 0x14
+        public string url; // 0x18
+        public int display_order; // 0x1C
+        public string start_at; // 0x20
+        public string end_at; // 0x24
+        public int time_display_flg; // 0x28
+        private List<int> m_urlIntValues; // 0x2C
     }
 
     [Serializable]
-    public class HomeBannerTable : MasterTable<int, HomeBannerRecord> // TypeDefIndex: 1406
+    public class HomeBannerTable : MasterTable<int, HomeBannerRecord> // TypeDefIndex: 6823
     {
         // Fields
     }
 
-    public class HomeBannerMaster // TypeDefIndex: 1405
+    public class HomeBannerMaster // TypeDefIndex: 6822
     {
         // Fields
     }

@@ -6,69 +6,52 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class EventRecord : MasterRecord<int> // TypeDefIndex: 1338
+    public class EventRecord : MasterRecord<int> // TypeDefIndex: 6755
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public string summary; // 0x18
-        [MessagePackMember(2)]
-        public int event_type; // 0x20
-        [MessagePackMember(3)]
-        public string param; // 0x28
-        [MessagePackMember(4)]
-        public string start_at; // 0x30
-        [MessagePackMember(5)]
-        public string end_at; // 0x38
-        [MessagePackMember(6)]
-        public string point_exchange_end_at; // 0x40
-        [MessagePackMember(7)]
-        public int event_effect_group; // 0x48
-        [MessagePackMember(8)]
-        public string event_button_image; // 0x50
-        [MessagePackMember(9)]
-        public string exchange_button_image; // 0x58
-        [MessagePackMember(10)]
-        public string exchange_name; // 0x60
-        [MessagePackMember(11)]
-        public int point_image_id; // 0x68
-        [MessagePackMember(12)]
-        public string point_description; // 0x70
-        [MessagePackMember(13)]
-        public int priority; // 0x78
-        [MessagePackMember(14)]
-        public string costume_effect_list; // 0x80
-        [MessagePackMember(15)]
-        public int exchange_tab_priority; // 0x88
-        private Dictionary<string, object> m_param; // 0x90
-        private int m_exp_rate; // 0x98
-        private int m_drop_count_rate; // 0x9C
-        private Dictionary<string, object> m_chapter_list; // 0xA0
-        private Dictionary<string, object> m_section_list; // 0xA8
-        private Dictionary<string, object> m_battle_list; // 0xB0
-        private int m_all_daily_quest; // 0xB8
-        private int m_event_extra_count; // 0xBC
-        private DateTime m_event_extra_start_at; // 0xC0
-        private DateTime m_event_extra_end_at; // 0xC8
-        private int m_daily_quest_add_count; // 0xD0
-        private int m_character_quest_add_count; // 0xD4
-        private string m_point_name; // 0xD8
-        private string m_manga_name; // 0xE0
-        private int m_login_count; // 0xE8
-        private string m_bg_image; // 0xF0
-        private string m_title_image; // 0xF8
-        private string m_url; // 0x100
-        private int m_is_auto; // 0x108
+        public int id; // 0x8
+        public string summary; // 0xC
+        public int event_type; // 0x10
+        public string param; // 0x14
+        public string start_at; // 0x18
+        public string end_at; // 0x1C
+        public string point_exchange_end_at; // 0x20
+        public int event_effect_group; // 0x24
+        public string event_button_image; // 0x28
+        public string exchange_button_image; // 0x2C
+        public string exchange_name; // 0x30
+        public int point_image_id; // 0x34
+        public string point_description; // 0x38
+        public int priority; // 0x3C
+        public string costume_effect_list; // 0x40
+        public int exchange_tab_priority; // 0x44
+        private Dictionary<string, object> m_param; // 0x48
+        private int m_exp_rate; // 0x4C
+        private int m_drop_count_rate; // 0x50
+        private Dictionary<string, object> m_chapter_list; // 0x54
+        private Dictionary<string, object> m_section_list; // 0x58
+        private Dictionary<string, object> m_battle_list; // 0x5C
+        private int m_all_daily_quest; // 0x60
+        private int m_event_extra_count; // 0x64
+        private DateTime m_event_extra_start_at; // 0x68
+        private DateTime m_event_extra_end_at; // 0x70
+        private int m_daily_quest_add_count; // 0x78
+        private int m_character_quest_add_count; // 0x7C
+        private string m_point_name; // 0x80
+        private string m_manga_name; // 0x84
+        private int m_login_count; // 0x88
+        private string m_bg_image; // 0x8C
+        private string m_title_image; // 0x90
+        private string m_url; // 0x94
     }
 
     [Serializable]
-    public class EventTable : MasterTable<int, EventRecord> // TypeDefIndex: 1337
+    public class EventTable : MasterTable<int, EventRecord> // TypeDefIndex: 6749
     {
         // Fields
     }
 
-    public class EventMaster // TypeDefIndex: 1331
+    public class EventMaster // TypeDefIndex: 6748
     {
         // Fields
         public const int EVENT_TYPE_LOTTERY_COUNT = 1;
@@ -106,7 +89,6 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         public const string BG_IMAGE_KEY = "bg_image";
         public const string TITLE_IMAGE_KEY = "title_image";
         public const string URL_KEY = "url";
-        public const string IS_AUTO_KEY = "is_auto";
     }
 
 }

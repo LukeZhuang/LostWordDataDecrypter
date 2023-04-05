@@ -6,28 +6,23 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitTrustGrowthRecord : MasterRecord<int> // TypeDefIndex: 1698
+    public class UnitTrustGrowthRecord : MasterRecord<int> // TypeDefIndex: 7091
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int trust_rank; // 0x14
-        [MessagePackMember(2)]
-        public int trust_upper_limit; // 0x18
-        [MessagePackMember(3)]
-        public float growth_rate; // 0x1C
-        [MessagePackMember(4)]
-        public string description; // 0x20
+        public int id; // 0x8
+        public int trust_rank; // 0xC
+        public int trust_upper_limit; // 0x10
+        public float growth_rate; // 0x14
+        public string description; // 0x18
     }
 
     [Serializable]
-    public class UnitTrustGrowthTable : MasterTable<int, UnitTrustGrowthRecord> // TypeDefIndex: 1697
+    public class UnitTrustGrowthTable : MasterTable<int, UnitTrustGrowthRecord> // TypeDefIndex: 7088
     {
         // Fields
     }
 
-    public class UnitTrustGrowthMaster // TypeDefIndex: 1694
+    public class UnitTrustGrowthMaster // TypeDefIndex: 7087
     {
         // Fields
     }

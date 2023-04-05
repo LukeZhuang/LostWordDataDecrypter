@@ -6,30 +6,24 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class DailyQuestStageRecord : MasterRecord<int> // TypeDefIndex: 1284
+    public class DailyQuestStageRecord : MasterRecord<int> // TypeDefIndex: 6701
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int daily_quest_id; // 0x14
-        [MessagePackMember(2)]
-        public string title; // 0x18
-        [MessagePackMember(3)]
-        public int open_level; // 0x20
-        [MessagePackMember(4)]
-        public int battle_id; // 0x24
-        [MessagePackMember(5)]
-        public int is_mop_up; // 0x28
+        public int id; // 0x8
+        public int daily_quest_id; // 0xC
+        public string title; // 0x10
+        public int open_level; // 0x14
+        public int battle_id; // 0x18
+        public int is_mop_up; // 0x1C
     }
 
     [Serializable]
-    public class DailyQuestStageTable : MasterTable<int, DailyQuestStageRecord> // TypeDefIndex: 1283
+    public class DailyQuestStageTable : MasterTable<int, DailyQuestStageRecord> // TypeDefIndex: 6700
     {
         // Fields
     }
 
-    public class DailyQuestStageMaster // TypeDefIndex: 1282
+    public class DailyQuestStageMaster // TypeDefIndex: 6699
     {
         // Fields
     }

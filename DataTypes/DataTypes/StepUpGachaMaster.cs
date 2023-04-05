@@ -6,26 +6,22 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class StepUpGachaRecord : MasterRecord<int> // TypeDefIndex: 1596
+    public class StepUpGachaRecord : MasterRecord<int> // TypeDefIndex: 6989
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int gacha_id; // 0x14
-        [MessagePackMember(2)]
-        public int gacha_button_id; // 0x18
-        [MessagePackMember(3)]
-        public int step_num; // 0x1C
+        public int id; // 0x8
+        public int gacha_id; // 0xC
+        public int gacha_button_id; // 0x10
+        public int step_num; // 0x14
     }
 
     [Serializable]
-    public class StepUpGachaTable : MasterTable<int, StepUpGachaRecord> // TypeDefIndex: 1595
+    public class StepUpGachaTable : MasterTable<int, StepUpGachaRecord> // TypeDefIndex: 6987
     {
         // Fields
     }
 
-    public class StepUpGachaMaster // TypeDefIndex: 1593
+    public class StepUpGachaMaster // TypeDefIndex: 6986
     {
         // Fields
     }

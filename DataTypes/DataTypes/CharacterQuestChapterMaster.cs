@@ -6,30 +6,24 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class CharacterQuestChapterRecord : MasterRecord<int> // TypeDefIndex: 1255
+    public class CharacterQuestChapterRecord : MasterRecord<int> // TypeDefIndex: 6672
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public string target_name; // 0x18
-        [MessagePackMember(2)]
-        public int target_unit_id; // 0x20
-        [MessagePackMember(3)]
-        public int priority; // 0x24
-        [MessagePackMember(4)]
-        public int costume_id; // 0x28
-        [MessagePackMember(5)]
-        public int unit_speech_group_id; // 0x2C
+        public int id; // 0x8
+        public string target_name; // 0xC
+        public int target_unit_id; // 0x10
+        public int priority; // 0x14
+        public int costume_id; // 0x18
+        public int unit_speech_group_id; // 0x1C
     }
 
     [Serializable]
-    public class CharacterQuestChapterTable : MasterTable<int, CharacterQuestChapterRecord> // TypeDefIndex: 1254
+    public class CharacterQuestChapterTable : MasterTable<int, CharacterQuestChapterRecord> // TypeDefIndex: 6671
     {
         // Fields
     }
 
-    public class CharacterQuestChapterMaster // TypeDefIndex: 1253
+    public class CharacterQuestChapterMaster // TypeDefIndex: 6670
     {
         // Fields
     }

@@ -6,56 +6,37 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitShotReleaseRecord : MasterRecord<int> // TypeDefIndex: 1682
+    public class UnitShotReleaseRecord : MasterRecord<int> // TypeDefIndex: 7075
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int unit_id; // 0x14
-        [MessagePackMember(2)]
-        public int unit_reincarnation_release_master_id; // 0x18
-        [MessagePackMember(3)]
-        public int step_num; // 0x1C
-        [MessagePackMember(4)]
-        public int target_shot; // 0x20
-        [MessagePackMember(5)]
-        public int target_magazine_index; // 0x24
-        [MessagePackMember(6)]
-        public int release_bullet_master_id; // 0x28
-        [MessagePackMember(7)]
-        public int slot1_object_type; // 0x2C
-        [MessagePackMember(8)]
-        public int slot1_object_id; // 0x30
-        [MessagePackMember(9)]
-        public int slot1_object_value; // 0x34
-        [MessagePackMember(10)]
-        public int slot2_object_type; // 0x38
-        [MessagePackMember(11)]
-        public int slot2_object_id; // 0x3C
-        [MessagePackMember(12)]
-        public int slot2_object_value; // 0x40
-        [MessagePackMember(13)]
-        public int slot3_object_type; // 0x44
-        [MessagePackMember(14)]
-        public int slot3_object_id; // 0x48
-        [MessagePackMember(15)]
-        public int slot3_object_value; // 0x4C
-        [MessagePackMember(16)]
-        public int slot4_object_type; // 0x50
-        [MessagePackMember(17)]
-        public int slot4_object_id; // 0x54
-        [MessagePackMember(18)]
-        public int slot4_object_value; // 0x58
+        public int id; // 0x8
+        public int unit_id; // 0xC
+        public int unit_reincarnation_release_master_id; // 0x10
+        public int step_num; // 0x14
+        public int target_shot; // 0x18
+        public int target_magazine_index; // 0x1C
+        public int release_bullet_master_id; // 0x20
+        public int slot1_object_type; // 0x24
+        public int slot1_object_id; // 0x28
+        public int slot1_object_value; // 0x2C
+        public int slot2_object_type; // 0x30
+        public int slot2_object_id; // 0x34
+        public int slot2_object_value; // 0x38
+        public int slot3_object_type; // 0x3C
+        public int slot3_object_id; // 0x40
+        public int slot3_object_value; // 0x44
+        public int slot4_object_type; // 0x48
+        public int slot4_object_id; // 0x4C
+        public int slot4_object_value; // 0x50
     }
 
     [Serializable]
-    public class UnitShotReleaseTable : MasterTable<int, UnitShotReleaseRecord> // TypeDefIndex: 1681
+    public class UnitShotReleaseTable : MasterTable<int, UnitShotReleaseRecord> // TypeDefIndex: 7072
     {
         // Fields
     }
 
-    public class UnitShotReleaseMaster // TypeDefIndex: 1678
+    public class UnitShotReleaseMaster // TypeDefIndex: 7071
     {
         // Fields
     }

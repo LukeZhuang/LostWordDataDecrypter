@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
@@ -18,8 +15,7 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         public Dictionary<TKey, TRec> m_table { get; set; }
 
-        public MasterTable()
-        {
+        public MasterTable() {
             m_table = new Dictionary<TKey, TRec>();
         }
 

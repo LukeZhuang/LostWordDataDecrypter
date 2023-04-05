@@ -6,28 +6,23 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitPhantasmCostRecord : MasterRecord<long> // TypeDefIndex: 1633
+    public class UnitPhantasmCostRecord : MasterRecord<long> // TypeDefIndex: 7026
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int rare; // 0x14
-        [MessagePackMember(2)]
-        public int level_limitbreak; // 0x18
-        [MessagePackMember(3)]
-        public int reincarnation_stage; // 0x1C
-        [MessagePackMember(4)]
-        public int phantasm_cost; // 0x20
+        public int id; // 0x8
+        public int rare; // 0xC
+        public int level_limitbreak; // 0x10
+        public int reincarnation_stage; // 0x14
+        public int phantasm_cost; // 0x18
     }
 
     [Serializable]
-    public class UnitPhantasmCostTable : MasterTable<long, UnitPhantasmCostRecord> // TypeDefIndex: 1632
+    public class UnitPhantasmCostTable : MasterTable<long, UnitPhantasmCostRecord> // TypeDefIndex: 7025
     {
         // Fields
     }
 
-    public class UnitPhantasmCostMaster // TypeDefIndex: 1631
+    public class UnitPhantasmCostMaster // TypeDefIndex: 7024
     {
         // Fields
     }

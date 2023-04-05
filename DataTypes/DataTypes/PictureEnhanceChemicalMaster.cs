@@ -6,30 +6,24 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PictureEnhanceChemicalRecord : MasterRecord<long> // TypeDefIndex: 1490
+    public class PictureEnhanceChemicalRecord : MasterRecord<long> // TypeDefIndex: 6893
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int picture_type; // 0x14
-        [MessagePackMember(2)]
-        public int rare; // 0x18
-        [MessagePackMember(3)]
-        public int spec_actualize; // 0x1C
-        [MessagePackMember(4)]
-        public int item_id; // 0x20
-        [MessagePackMember(5)]
-        public int item_value; // 0x24
+        public int id; // 0x8
+        public int picture_type; // 0xC
+        public int rare; // 0x10
+        public int spec_actualize; // 0x14
+        public int item_id; // 0x18
+        public int item_value; // 0x1C
     }
 
     [Serializable]
-    public class PictureEnhanceChemicalTable : MasterTable<long, PictureEnhanceChemicalRecord> // TypeDefIndex: 1489
+    public class PictureEnhanceChemicalTable : MasterTable<long, PictureEnhanceChemicalRecord> // TypeDefIndex: 6890
     {
         // Fields
     }
 
-    public class PictureEnhanceChemicalMaster // TypeDefIndex: 1486
+    public class PictureEnhanceChemicalMaster // TypeDefIndex: 6889
     {
         // Fields
     }

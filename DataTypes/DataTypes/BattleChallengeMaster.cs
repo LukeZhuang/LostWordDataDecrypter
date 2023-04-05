@@ -6,34 +6,27 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class BattleChallengeRecord : MasterRecord<int> // TypeDefIndex: 1211
+    public class BattleChallengeRecord : MasterRecord<int> // TypeDefIndex: 6628
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int challenge1_condition_type; // 0x14
-        [MessagePackMember(2)]
-        public int challenge1_value; // 0x18
-        [MessagePackMember(3)]
-        public int challenge2_condition_type; // 0x1C
-        [MessagePackMember(4)]
-        public int challenge2_value; // 0x20
-        [MessagePackMember(5)]
-        public int challenge3_condition_type; // 0x24
-        [MessagePackMember(6)]
-        public int challenge3_value; // 0x28
+        public int id; // 0x8
+        public int challenge1_condition_type; // 0xC
+        public int challenge1_value; // 0x10
+        public int challenge2_condition_type; // 0x14
+        public int challenge2_value; // 0x18
+        public int challenge3_condition_type; // 0x1C
+        public int challenge3_value; // 0x20
         private const string KEY_TYPE_FORMAT = "BATTLE_CHALLENGE_TEXT_{0}";
         private const string KEY_TYPE_VALUE_FORMAT = "BATTLE_CHALLENGE_TEXT_{0}_{1}";
     }
 
     [Serializable]
-    public class BattleChallengeTable : MasterTable<int, BattleChallengeRecord> // TypeDefIndex: 1210
+    public class BattleChallengeTable : MasterTable<int, BattleChallengeRecord> // TypeDefIndex: 6627
     {
         // Fields
     }
 
-    public class BattleChallengeMaster // TypeDefIndex: 1209
+    public class BattleChallengeMaster // TypeDefIndex: 6626
     {
         // Fields
         public const int CONDITION_TYPE_NONE = 0;

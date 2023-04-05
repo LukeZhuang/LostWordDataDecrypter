@@ -6,28 +6,23 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class ArenaDifficultCoefRecord : MasterRecord<int> // TypeDefIndex: 1182
+    public class ArenaDifficultCoefRecord : MasterRecord<int> // TypeDefIndex: 6599
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int arena_category; // 0x14
-        [MessagePackMember(2)]
-        public int type; // 0x18
-        [MessagePackMember(3)]
-        public int difficulty; // 0x1C
-        [MessagePackMember(4)]
-        public float coefficient; // 0x20
+        public int id; // 0x8
+        public int arena_category; // 0xC
+        public int type; // 0x10
+        public int difficulty; // 0x14
+        public float coefficient; // 0x18
     }
 
     [Serializable]
-    public class ArenaDifficultCoefTable : MasterTable<int, ArenaDifficultCoefRecord> // TypeDefIndex: 1181
+    public class ArenaDifficultCoefTable : MasterTable<int, ArenaDifficultCoefRecord> // TypeDefIndex: 6597
     {
         // Fields
     }
 
-    public class ArenaDifficultCoefMaster // TypeDefIndex: 1179
+    public class ArenaDifficultCoefMaster // TypeDefIndex: 6596
     {
         // Fields
         public static int TYPE_LIFE_POINT; // 0x0

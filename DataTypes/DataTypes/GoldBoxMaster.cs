@@ -6,34 +6,26 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class GoldBoxRecord : MasterRecord<int> // TypeDefIndex: 1395
+    public class GoldBoxRecord : MasterRecord<int> // TypeDefIndex: 6812
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int level; // 0x14
-        [MessagePackMember(2)]
-        public int need_player_level; // 0x18
-        [MessagePackMember(3)]
-        public int consume_gold; // 0x1C
-        [MessagePackMember(4)]
-        public int need_time; // 0x20
-        [MessagePackMember(5)]
-        public int gathering_time; // 0x24
-        [MessagePackMember(6)]
-        public int gathering_gold; // 0x28
-        [MessagePackMember(7)]
-        public int gold_limit_stock; // 0x2C
+        public int id; // 0x8
+        public int level; // 0xC
+        public int need_player_level; // 0x10
+        public int consume_gold; // 0x14
+        public int need_time; // 0x18
+        public int gathering_time; // 0x1C
+        public int gathering_gold; // 0x20
+        public int gold_limit_stock; // 0x24
     }
 
     [Serializable]
-    public class GoldBoxTable : MasterTable<int, GoldBoxRecord> // TypeDefIndex: 1394
+    public class GoldBoxTable : MasterTable<int, GoldBoxRecord> // TypeDefIndex: 6810
     {
         // Fields
     }
 
-    public class GoldBoxMaster // TypeDefIndex: 1392
+    public class GoldBoxMaster // TypeDefIndex: 6809
     {
         // Fields
     }

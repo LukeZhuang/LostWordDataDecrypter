@@ -6,34 +6,26 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitPositionRecord : MasterRecord<int> // TypeDefIndex: 1637
+    public class UnitPositionRecord : MasterRecord<int> // TypeDefIndex: 7030
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int costume_id; // 0x14
-        [MessagePackMember(2)]
-        public int place; // 0x18
-        [MessagePackMember(3)]
-        public float x; // 0x1C
-        [MessagePackMember(4)]
-        public float y; // 0x20
-        [MessagePackMember(5)]
-        public float center_x; // 0x24
-        [MessagePackMember(6)]
-        public float center_y; // 0x28
-        [MessagePackMember(7)]
-        public float scale; // 0x2C
+        public int id; // 0x8
+        public int costume_id; // 0xC
+        public int place; // 0x10
+        public float x; // 0x14
+        public float y; // 0x18
+        public float center_x; // 0x1C
+        public float center_y; // 0x20
+        public float scale; // 0x24
     }
 
     [Serializable]
-    public class UnitPositionTable : MasterTable<int, UnitPositionRecord> // TypeDefIndex: 1636
+    public class UnitPositionTable : MasterTable<int, UnitPositionRecord> // TypeDefIndex: 7028
     {
         // Fields
     }
 
-    public class UnitPositionMaster // TypeDefIndex: 1634
+    public class UnitPositionMaster // TypeDefIndex: 7027
     {
         // Fields
         public static int PLACE_HOME; // 0x0

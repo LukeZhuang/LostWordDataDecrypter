@@ -6,45 +6,32 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class MissionRecord : MasterRecord<int> // TypeDefIndex: 1436
+    public class MissionRecord : MasterRecord<int> // TypeDefIndex: 6850
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int type; // 0x14
-        [MessagePackMember(2)]
-        public string name; // 0x18
-        [MessagePackMember(3)]
-        public int event_id; // 0x20
-        [MessagePackMember(4)]
-        public int complete_type; // 0x24
-        [MessagePackMember(5)]
-        public int complete_id; // 0x28
-        [MessagePackMember(6)]
-        public int complete_value; // 0x2C
-        [MessagePackMember(7)]
-        public int reward_group1_id; // 0x30
-        [MessagePackMember(8)]
-        public int reward_group2_id; // 0x34
-        [MessagePackMember(9)]
-        public int reward_group3_id; // 0x38
-        [MessagePackMember(10)]
-        public int reward_group4_id; // 0x3C
-        [MessagePackMember(11)]
-        public int display_order; // 0x40
-        [MessagePackMember(12)]
-        public string param; // 0x48
-        private Dictionary<string, object> m_param; // 0x50
+        public int id; // 0x8
+        public int type; // 0xC
+        public string name; // 0x10
+        public int event_id; // 0x14
+        public int complete_type; // 0x18
+        public int complete_id; // 0x1C
+        public int complete_value; // 0x20
+        public int reward_group1_id; // 0x24
+        public int reward_group2_id; // 0x28
+        public int reward_group3_id; // 0x2C
+        public int reward_group4_id; // 0x30
+        public int display_order; // 0x34
+        public string param; // 0x38
+        private Dictionary<string, object> m_param; // 0x3C
     }
 
     [Serializable]
-    public class MissionTable : MasterTable<int, MissionRecord> // TypeDefIndex: 1435
+    public class MissionTable : MasterTable<int, MissionRecord> // TypeDefIndex: 6849
     {
         // Fields
     }
 
-    public class MissionMaster // TypeDefIndex: 1434
+    public class MissionMaster // TypeDefIndex: 6848
     {
         // Fields
         public const int TYPE_MAIN = 1;

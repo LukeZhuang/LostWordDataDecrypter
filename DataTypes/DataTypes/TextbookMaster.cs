@@ -6,34 +6,26 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class TextbookRecord : MasterRecord<int> // TypeDefIndex: 1599
+    public class TextbookRecord : MasterRecord<int> // TypeDefIndex: 6992
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int item_id; // 0x14
-        [MessagePackMember(2)]
-        public int skill_type; // 0x18
-        [MessagePackMember(3)]
-        public int exp; // 0x1C
-        [MessagePackMember(4)]
-        public int same_type_exp_rate; // 0x20
-        [MessagePackMember(5)]
-        public int need_time; // 0x24
-        [MessagePackMember(6)]
-        public int shorten_time; // 0x28
-        [MessagePackMember(7)]
-        public int auto_select_priority; // 0x2C
+        public int id; // 0x8
+        public int item_id; // 0xC
+        public int skill_type; // 0x10
+        public int exp; // 0x14
+        public int same_type_exp_rate; // 0x18
+        public int need_time; // 0x1C
+        public int shorten_time; // 0x20
+        public int auto_select_priority; // 0x24
     }
 
     [Serializable]
-    public class TextbookTable : MasterTable<int, TextbookRecord> // TypeDefIndex: 1598
+    public class TextbookTable : MasterTable<int, TextbookRecord> // TypeDefIndex: 6991
     {
         // Fields
     }
 
-    public class TextbookMaster // TypeDefIndex: 1597
+    public class TextbookMaster // TypeDefIndex: 6990
     {
         // Fields
     }

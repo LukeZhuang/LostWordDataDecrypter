@@ -6,21 +6,21 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class RandomNameRecord : MasterRecord<int> // TypeDefIndex: 3872
+    public class RandomNameRecord : MasterRecord<int> // TypeDefIndex: 8912
     {
         // Fields
-        public int id; // 0x10
-        public string adj_name; // 0x18
-        public string n_name; // 0x20
+        public int id; // 0x8
+        public string adj_name; // 0xC
+        public string n_name; // 0x10
     }
 
     [Serializable]
-    public class RandomNameTable : MasterTable<int, RandomNameRecord> // TypeDefIndex: 3871
+    public class RandomNameTable : MasterTable<int, RandomNameRecord> // TypeDefIndex: 8911
     {
         // Fields
     }
 
-    public class RandomNameMaster // TypeDefIndex: 3870
+    public class RandomNameMaster // TypeDefIndex: 8910
     {
         // Fields
     }

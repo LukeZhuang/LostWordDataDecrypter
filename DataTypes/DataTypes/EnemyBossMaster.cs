@@ -6,40 +6,27 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class EnemyBossRecord : MasterRecord<int> // TypeDefIndex: 1314
+    public class EnemyBossRecord : MasterRecord<int> // TypeDefIndex: 6731
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int interrupt_skill_id; // 0x14
-        [MessagePackMember(2)]
-        public int interrupt_skill_level; // 0x18
-        [MessagePackMember(3)]
-        public int gauge2_enemy_id; // 0x1C
-        [MessagePackMember(4)]
-        public int gauge2_multiple_spirits_weekly_enemy_id; // 0x20
-        [MessagePackMember(5)]
-        public int gauge2_skill_id; // 0x24
-        [MessagePackMember(6)]
-        public int gauge2_skill_level; // 0x28
-        [MessagePackMember(7)]
-        public int gauge3_enemy_id; // 0x2C
-        [MessagePackMember(8)]
-        public int gauge3_multiple_spirits_weekly_enemy_id; // 0x30
-        [MessagePackMember(9)]
-        public int gauge3_skill_id; // 0x34
-        [MessagePackMember(10)]
-        public int gauge3_skill_level; // 0x38
+        public int id; // 0x8
+        public int interrupt_skill_id; // 0xC
+        public int interrupt_skill_level; // 0x10
+        public int gauge2_enemy_id; // 0x14
+        public int gauge2_skill_id; // 0x18
+        public int gauge2_skill_level; // 0x1C
+        public int gauge3_enemy_id; // 0x20
+        public int gauge3_skill_id; // 0x24
+        public int gauge3_skill_level; // 0x28
     }
 
     [Serializable]
-    public class EnemyBossTable : MasterTable<int, EnemyBossRecord> // TypeDefIndex: 1313
+    public class EnemyBossTable : MasterTable<int, EnemyBossRecord> // TypeDefIndex: 6729
     {
         // Fields
     }
 
-    public class EnemyBossMaster // TypeDefIndex: 1311
+    public class EnemyBossMaster // TypeDefIndex: 6728
     {
         // Fields
     }

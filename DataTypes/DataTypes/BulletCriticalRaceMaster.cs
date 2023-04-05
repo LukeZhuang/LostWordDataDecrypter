@@ -6,24 +6,21 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class BulletCriticalRaceRecord : MasterRecord<long> // TypeDefIndex: 1233
+    public class BulletCriticalRaceRecord : MasterRecord<long> // TypeDefIndex: 6650
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int bullet_id; // 0x14
-        [MessagePackMember(2)]
-        public int race_id; // 0x18
+        public int id; // 0x8
+        public int bullet_id; // 0xC
+        public int race_id; // 0x10
     }
 
     [Serializable]
-    public class BulletCriticalRaceTable : MasterTable<long, BulletCriticalRaceRecord> // TypeDefIndex: 1232
+    public class BulletCriticalRaceTable : MasterTable<long, BulletCriticalRaceRecord> // TypeDefIndex: 6649
     {
         // Fields
     }
 
-    public class BulletCriticalRaceMaster // TypeDefIndex: 1231
+    public class BulletCriticalRaceMaster // TypeDefIndex: 6648
     {
         // Fields
     }

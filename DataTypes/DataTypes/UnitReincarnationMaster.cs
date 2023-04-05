@@ -6,38 +6,28 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitReincarnationRecord : MasterRecord<long> // TypeDefIndex: 1660
+    public class UnitReincarnationRecord : MasterRecord<long> // TypeDefIndex: 7053
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int unit_id; // 0x14
-        [MessagePackMember(2)]
-        public int stage; // 0x18
-        [MessagePackMember(3)]
-        public int life_point; // 0x1C
-        [MessagePackMember(4)]
-        public int yang_attack; // 0x20
-        [MessagePackMember(5)]
-        public int yang_defense; // 0x24
-        [MessagePackMember(6)]
-        public int yin_attack; // 0x28
-        [MessagePackMember(7)]
-        public int yin_defense; // 0x2C
-        [MessagePackMember(8)]
-        public int speed; // 0x30
-        [MessagePackMember(9)]
-        public int performance_type; // 0x34
+        public int id; // 0x8
+        public int unit_id; // 0xC
+        public int stage; // 0x10
+        public int life_point; // 0x14
+        public int yang_attack; // 0x18
+        public int yang_defense; // 0x1C
+        public int yin_attack; // 0x20
+        public int yin_defense; // 0x24
+        public int speed; // 0x28
+        public int performance_type; // 0x2C
     }
 
     [Serializable]
-    public class UnitReincarnationTable : MasterTable<long, UnitReincarnationRecord> // TypeDefIndex: 1659
+    public class UnitReincarnationTable : MasterTable<long, UnitReincarnationRecord> // TypeDefIndex: 7052
     {
         // Fields
     }
 
-    public class UnitReincarnationMaster // TypeDefIndex: 1658
+    public class UnitReincarnationMaster // TypeDefIndex: 7051
     {
         // Fields
     }

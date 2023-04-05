@@ -6,38 +6,28 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class RoleCombinationRecord : MasterRecord<int> // TypeDefIndex: 1546
+    public class RoleCombinationRecord : MasterRecord<int> // TypeDefIndex: 6946
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public string name; // 0x18
-        [MessagePackMember(2)]
-        public int role1; // 0x20
-        [MessagePackMember(3)]
-        public int role2; // 0x24
-        [MessagePackMember(4)]
-        public int role3; // 0x28
-        [MessagePackMember(5)]
-        public int role4; // 0x2C
-        [MessagePackMember(6)]
-        public int role5; // 0x30
-        [MessagePackMember(7)]
-        public int role6; // 0x34
-        [MessagePackMember(8)]
-        public int role7; // 0x38
-        [MessagePackMember(9)]
-        public int role8; // 0x3C
+        public int id; // 0x8
+        public string name; // 0xC
+        public int role1; // 0x10
+        public int role2; // 0x14
+        public int role3; // 0x18
+        public int role4; // 0x1C
+        public int role5; // 0x20
+        public int role6; // 0x24
+        public int role7; // 0x28
+        public int role8; // 0x2C
     }
 
     [Serializable]
-    public class RoleCombinationTable : MasterTable<int, RoleCombinationRecord> // TypeDefIndex: 1545
+    public class RoleCombinationTable : MasterTable<int, RoleCombinationRecord> // TypeDefIndex: 6945
     {
         // Fields
     }
 
-    public class RoleCombinationMaster // TypeDefIndex: 1544
+    public class RoleCombinationMaster // TypeDefIndex: 6944
     {
         // Fields
     }

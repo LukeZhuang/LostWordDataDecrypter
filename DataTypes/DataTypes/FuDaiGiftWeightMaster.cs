@@ -6,24 +6,21 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class FuDaiGiftWeightRecord : MasterRecord<int> // TypeDefIndex: 3841
+    public class FuDaiGiftWeightRecord : MasterRecord<int> // TypeDefIndex: 8881
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public string gift_name; // 0x18
-        [MessagePackMember(2)]
-        public int level; // 0x20
+        public int id; // 0x8
+        public string gift_name; // 0xC
+        public int level; // 0x10
     }
 
     [Serializable]
-    public class FuDaiGiftWeightTable : MasterTable<int, FuDaiGiftWeightRecord> // TypeDefIndex: 3840
+    public class FuDaiGiftWeightTable : MasterTable<int, FuDaiGiftWeightRecord> // TypeDefIndex: 8880
     {
         // Fields
     }
 
-    public class FuDaiGiftWeightMaster // TypeDefIndex: 3839
+    public class FuDaiGiftWeightMaster // TypeDefIndex: 8879
     {
         // Fields
     }

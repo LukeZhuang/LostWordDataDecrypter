@@ -6,34 +6,26 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitLevelLimitbreakGrowthRecord : MasterRecord<int> // TypeDefIndex: 1622
+    public class UnitLevelLimitbreakGrowthRecord : MasterRecord<int> // TypeDefIndex: 7015
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int level_limitbreak; // 0x14
-        [MessagePackMember(2)]
-        public int level_lower_limit; // 0x18
-        [MessagePackMember(3)]
-        public int consume_same_unit_count; // 0x1C
-        [MessagePackMember(4)]
-        public int consume_gold; // 0x20
-        [MessagePackMember(5)]
-        public int level_max; // 0x24
-        [MessagePackMember(6)]
-        public int use_spellcard_count_max; // 0x28
-        [MessagePackMember(7)]
-        public float growth_rate; // 0x2C
+        public int id; // 0x8
+        public int level_limitbreak; // 0xC
+        public int level_lower_limit; // 0x10
+        public int consume_same_unit_count; // 0x14
+        public int consume_gold; // 0x18
+        public int level_max; // 0x1C
+        public int use_spellcard_count_max; // 0x20
+        public float growth_rate; // 0x24
     }
 
     [Serializable]
-    public class UnitLevelLimitbreakGrowthTable : MasterTable<int, UnitLevelLimitbreakGrowthRecord> // TypeDefIndex: 1621
+    public class UnitLevelLimitbreakGrowthTable : MasterTable<int, UnitLevelLimitbreakGrowthRecord> // TypeDefIndex: 7013
     {
         // Fields
     }
 
-    public class UnitLevelLimitbreakGrowthMaster // TypeDefIndex: 1619
+    public class UnitLevelLimitbreakGrowthMaster // TypeDefIndex: 7012
     {
         // Fields
     }

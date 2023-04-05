@@ -6,38 +6,28 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class ComicRecord : MasterRecord<int> // TypeDefIndex: 1261
+    public class ComicRecord : MasterRecord<int> // TypeDefIndex: 6678
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public string title; // 0x18
-        [MessagePackMember(2)]
-        public string title_kana; // 0x20
-        [MessagePackMember(3)]
-        public string author_name; // 0x28
-        [MessagePackMember(4)]
-        public string author_name_kana; // 0x30
-        [MessagePackMember(5)]
-        public string summary; // 0x38
-        [MessagePackMember(6)]
-        public string thumbnail_file_path; // 0x40
-        [MessagePackMember(7)]
-        public string comic_file_path; // 0x48
-        [MessagePackMember(8)]
-        public int max_page_num; // 0x50
-        [MessagePackMember(9)]
-        public string release_date; // 0x58
+        public int id; // 0x8
+        public string title; // 0xC
+        public string title_kana; // 0x10
+        public string author_name; // 0x14
+        public string author_name_kana; // 0x18
+        public string summary; // 0x1C
+        public string thumbnail_file_path; // 0x20
+        public string comic_file_path; // 0x24
+        public int max_page_num; // 0x28
+        public string release_date; // 0x2C
     }
 
     [Serializable]
-    public class ComicTable : MasterTable<int, ComicRecord> // TypeDefIndex: 1260
+    public class ComicTable : MasterTable<int, ComicRecord> // TypeDefIndex: 6677
     {
         // Fields
     }
 
-    public class ComicMaster // TypeDefIndex: 1259
+    public class ComicMaster // TypeDefIndex: 6676
     {
         // Fields
     }

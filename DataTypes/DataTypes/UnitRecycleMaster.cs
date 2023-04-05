@@ -6,38 +6,28 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitRecycleRecord : MasterRecord<long> // TypeDefIndex: 1654
+    public class UnitRecycleRecord : MasterRecord<long> // TypeDefIndex: 7047
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int recycle_id; // 0x14
-        [MessagePackMember(2)]
-        public int rare; // 0x18
-        [MessagePackMember(3)]
-        public int level_limitbreak; // 0x1C
-        [MessagePackMember(4)]
-        public int gold; // 0x20
-        [MessagePackMember(5)]
-        public int phantasm_point; // 0x24
-        [MessagePackMember(6)]
-        public int piece; // 0x28
-        [MessagePackMember(7)]
-        public int object_type; // 0x2C
-        [MessagePackMember(8)]
-        public int object_id; // 0x30
-        [MessagePackMember(9)]
-        public int object_value; // 0x34
+        public int id; // 0x8
+        public int recycle_id; // 0xC
+        public int rare; // 0x10
+        public int level_limitbreak; // 0x14
+        public int gold; // 0x18
+        public int phantasm_point; // 0x1C
+        public int piece; // 0x20
+        public int object_type; // 0x24
+        public int object_id; // 0x28
+        public int object_value; // 0x2C
     }
 
     [Serializable]
-    public class UnitRecycleTable : MasterTable<long, UnitRecycleRecord> // TypeDefIndex: 1653
+    public class UnitRecycleTable : MasterTable<long, UnitRecycleRecord> // TypeDefIndex: 7046
     {
         // Fields
     }
 
-    public class UnitRecycleMaster // TypeDefIndex: 1652
+    public class UnitRecycleMaster // TypeDefIndex: 7045
     {
         // Fields
     }

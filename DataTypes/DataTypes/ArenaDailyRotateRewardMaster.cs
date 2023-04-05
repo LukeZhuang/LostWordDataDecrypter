@@ -6,30 +6,24 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class ArenaDailyRotateRewardRecord : MasterRecord<int> // TypeDefIndex: 1178
+    public class ArenaDailyRotateRewardRecord : MasterRecord<int> // TypeDefIndex: 6587
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int day_count; // 0x14
-        [MessagePackMember(2)]
-        public int rotate_no; // 0x18
-        [MessagePackMember(3)]
-        public int object_type; // 0x1C
-        [MessagePackMember(4)]
-        public int object_id; // 0x20
-        [MessagePackMember(5)]
-        public int object_value; // 0x24
+        public int id; // 0x8
+        public int day_count; // 0xC
+        public int rotate_no; // 0x10
+        public int object_type; // 0x14
+        public int object_id; // 0x18
+        public int object_value; // 0x1C
     }
 
     [Serializable]
-    public class ArenaDailyRotateRewardTable : MasterTable<int, ArenaDailyRotateRewardRecord> // TypeDefIndex: 1177
+    public class ArenaDailyRotateRewardTable : MasterTable<int, ArenaDailyRotateRewardRecord> // TypeDefIndex: 6585
     {
         // Fields
     }
 
-    public class ArenaDailyRotateRewardMaster // TypeDefIndex: 1175
+    public class ArenaDailyRotateRewardMaster // TypeDefIndex: 6584
     {
         // Fields
     }

@@ -6,50 +6,36 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class EpisodeRecord : MasterRecord<int> // TypeDefIndex: 1327
+    public class EpisodeRecord : MasterRecord<int> // TypeDefIndex: 6744
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int chapter_id; // 0x14
-        [MessagePackMember(2)]
-        public int section_id; // 0x18
-        [MessagePackMember(3)]
-        public string title; // 0x20
-        [MessagePackMember(4)]
-        public string sub_title; // 0x28
-        [MessagePackMember(5)]
-        public int number; // 0x30
-        [MessagePackMember(6)]
-        public int type; // 0x34
-        [MessagePackMember(7)]
-        public int normal_battle_id; // 0x38
-        [MessagePackMember(8)]
-        public int hard_battle_id; // 0x3C
-        [MessagePackMember(9)]
-        public int lunatic_battle_id; // 0x40
-        [MessagePackMember(10)]
-        public string comic_filepath; // 0x48
-        [MessagePackMember(11)]
-        public int open_type; // 0x50
-        [MessagePackMember(12)]
-        public string open_param; // 0x58
-        [MessagePackMember(13)]
-        public int is_mop_up; // 0x60
-        private DateTime m_startAt; // 0x68
-        private int m_eventPointTotal; // 0x70
-        private int m_openPage; // 0x74
-        private Dictionary<string, object> m_open_param; // 0x78
+        public int id; // 0x8
+        public int chapter_id; // 0xC
+        public int section_id; // 0x10
+        public string title; // 0x14
+        public string sub_title; // 0x18
+        public int number; // 0x1C
+        public int type; // 0x20
+        public int normal_battle_id; // 0x24
+        public int hard_battle_id; // 0x28
+        public int lunatic_battle_id; // 0x2C
+        public string comic_filepath; // 0x30
+        public int open_type; // 0x34
+        public string open_param; // 0x38
+        public int is_mop_up; // 0x3C
+        private DateTime m_startAt; // 0x40
+        private int m_eventPointTotal; // 0x48
+        private Dictionary<string, object> m_open_param; // 0x4C
+        private int m_openPage; // 0x50
     }
 
     [Serializable]
-    public class EpisodeTable : MasterTable<int, EpisodeRecord> // TypeDefIndex: 1326
+    public class EpisodeTable : MasterTable<int, EpisodeRecord> // TypeDefIndex: 6737
     {
         // Fields
     }
 
-    public class EpisodeMaster // TypeDefIndex: 1319
+    public class EpisodeMaster // TypeDefIndex: 6736
     {
         // Fields
         public const int TYPE_BATTLE = 0;

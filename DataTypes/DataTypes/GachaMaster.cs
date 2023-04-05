@@ -6,50 +6,33 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class GachaRecord : MasterRecord<int> // TypeDefIndex: 1388
+    public class GachaRecord : MasterRecord<int> // TypeDefIndex: 6805
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public string name; // 0x18
-        [MessagePackMember(2)]
-        public int type; // 0x20
-        [MessagePackMember(3)]
-        public int gacha_button_id1; // 0x24
-        [MessagePackMember(4)]
-        public int gacha_button_id2; // 0x28
-        [MessagePackMember(5)]
-        public int gacha_button_id3; // 0x2C
-        [MessagePackMember(6)]
-        public int gacha_button_id4; // 0x30
-        [MessagePackMember(7)]
-        public string banner_image; // 0x38
-        [MessagePackMember(8)]
-        public int drop_category_group_id; // 0x40
-        [MessagePackMember(9)]
-        public int display_order; // 0x44
-        [MessagePackMember(10)]
-        public int gacha_point_id; // 0x48
-        [MessagePackMember(11)]
-        public string mail_display_name; // 0x50
-        [MessagePackMember(12)]
-        public int gacha_rate_hidden; // 0x58
-        [MessagePackMember(13)]
-        public int gacha_point_hidden; // 0x5C
-        [MessagePackMember(14)]
-        public string start_at; // 0x60
-        [MessagePackMember(15)]
-        public string end_at; // 0x68
+        public int id; // 0x8
+        public string name; // 0xC
+        public int type; // 0x10
+        public int gacha_button_id1; // 0x14
+        public int gacha_button_id2; // 0x18
+        public int gacha_button_id3; // 0x1C
+        public int gacha_button_id4; // 0x20
+        public string banner_image; // 0x24
+        public int drop_category_group_id; // 0x28
+        public int display_order; // 0x2C
+        public int gacha_point_id; // 0x30
+        public string mail_display_name; // 0x34
+        public int gacha_rate_hidden; // 0x38
+        public string start_at; // 0x3C
+        public string end_at; // 0x40
     }
 
     [Serializable]
-    public class GachaTable : MasterTable<int, GachaRecord> // TypeDefIndex: 1387
+    public class GachaTable : MasterTable<int, GachaRecord> // TypeDefIndex: 6803
     {
         // Fields
     }
 
-    public class GachaMaster // TypeDefIndex: 1385
+    public class GachaMaster // TypeDefIndex: 6802
     {
         // Fields
         public static int TYPE_NORMAL; // 0x0

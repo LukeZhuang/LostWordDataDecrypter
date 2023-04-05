@@ -6,52 +6,35 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class ValuePackShopRecord : MasterRecord<int> // TypeDefIndex: 1704
+    public class ValuePackShopRecord : MasterRecord<int> // TypeDefIndex: 7097
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public int pop_type; // 0x14
-        [MessagePackMember(2)]
-        public int main_category_type; // 0x18
-        [MessagePackMember(3)]
-        public int sub_category_master_id; // 0x1C
-        [MessagePackMember(4)]
-        public int shop_type; // 0x20
-        [MessagePackMember(5)]
-        public string name; // 0x28
-        [MessagePackMember(6)]
-        public string description; // 0x30
-        [MessagePackMember(7)]
-        public int consume_orb; // 0x38
-        [MessagePackMember(8)]
-        public int price_id; // 0x3C
-        [MessagePackMember(9)]
-        public int available_count; // 0x40
-        [MessagePackMember(10)]
-        public int monthly_available_count; // 0x44
-        [MessagePackMember(11)]
-        public int weekly_available_count; // 0x48
-        [MessagePackMember(12)]
-        public int daily_available_count; // 0x4C
-        [MessagePackMember(13)]
-        public string banner_image; // 0x50
-        [MessagePackMember(14)]
-        public int display_order; // 0x58
-        [MessagePackMember(15)]
-        public string start_at; // 0x60
-        [MessagePackMember(16)]
-        public string end_at; // 0x68
+        public int id; // 0x8
+        public int pop_type; // 0xC
+        public int main_category_type; // 0x10
+        public int sub_category_master_id; // 0x14
+        public int shop_type; // 0x18
+        public string name; // 0x1C
+        public string description; // 0x20
+        public int consume_orb; // 0x24
+        public int price_id; // 0x28
+        public int available_count; // 0x2C
+        public int monthly_available_count; // 0x30
+        public int weekly_available_count; // 0x34
+        public int daily_available_count; // 0x38
+        public string banner_image; // 0x3C
+        public int display_order; // 0x40
+        public string start_at; // 0x44
+        public string end_at; // 0x48
     }
 
     [Serializable]
-    public class ValuePackShopTable : MasterTable<int, ValuePackShopRecord> // TypeDefIndex: 1703
+    public class ValuePackShopTable : MasterTable<int, ValuePackShopRecord> // TypeDefIndex: 7096
     {
         // Fields
     }
 
-    public class ValuePackShopMaster // TypeDefIndex: 1702
+    public class ValuePackShopMaster // TypeDefIndex: 7095
     {
         // Fields
         public const int ShopType_StepUp = 4;

@@ -6,40 +6,29 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class DailyQuestRecord : MasterRecord<int> // TypeDefIndex: 1281
+    public class DailyQuestRecord : MasterRecord<int> // TypeDefIndex: 6698
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public string name; // 0x18
-        [MessagePackMember(2)]
-        public int is_open_week0; // 0x20
-        [MessagePackMember(3)]
-        public int is_open_week1; // 0x24
-        [MessagePackMember(4)]
-        public int is_open_week2; // 0x28
-        [MessagePackMember(5)]
-        public int is_open_week3; // 0x2C
-        [MessagePackMember(6)]
-        public int is_open_week4; // 0x30
-        [MessagePackMember(7)]
-        public int is_open_week5; // 0x34
-        [MessagePackMember(8)]
-        public int is_open_week6; // 0x38
-        [MessagePackMember(9)]
-        public int count; // 0x3C
-        [MessagePackMember(10)]
-        public int display_order; // 0x40
+        public int id; // 0x8
+        public string name; // 0xC
+        public int is_open_week0; // 0x10
+        public int is_open_week1; // 0x14
+        public int is_open_week2; // 0x18
+        public int is_open_week3; // 0x1C
+        public int is_open_week4; // 0x20
+        public int is_open_week5; // 0x24
+        public int is_open_week6; // 0x28
+        public int count; // 0x2C
+        public int display_order; // 0x30
     }
 
     [Serializable]
-    public class DailyQuestTable : MasterTable<int, DailyQuestRecord> // TypeDefIndex: 1280
+    public class DailyQuestTable : MasterTable<int, DailyQuestRecord> // TypeDefIndex: 6697
     {
         // Fields
     }
 
-    public class DailyQuestMaster // TypeDefIndex: 1279
+    public class DailyQuestMaster // TypeDefIndex: 6696
     {
         // Fields
     }

@@ -6,36 +6,27 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class ReleaseCharacteristicRecord : MasterRecord<int> // TypeDefIndex: 1531
+    public class ReleaseCharacteristicRecord : MasterRecord<int> // TypeDefIndex: 6934
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public string characteristic_name; // 0x18
-        [MessagePackMember(2)]
-        public string characteristic_description; // 0x20
-        [MessagePackMember(3)]
-        public int characteristic_type; // 0x28
-        [MessagePackMember(4)]
-        public int characteristic_effect_type; // 0x2C
-        [MessagePackMember(5)]
-        public int characteristic_effect_subtype; // 0x30
-        [MessagePackMember(6)]
-        public int characteristic_rate; // 0x34
-        [MessagePackMember(7)]
-        public int characteristic_effect_value; // 0x38
-        [MessagePackMember(8)]
-        public string characteristic_icon_filename; // 0x40
+        public int id; // 0x8
+        public string characteristic_name; // 0xC
+        public string characteristic_description; // 0x10
+        public int characteristic_type; // 0x14
+        public int characteristic_effect_type; // 0x18
+        public int characteristic_effect_subtype; // 0x1C
+        public int characteristic_rate; // 0x20
+        public int characteristic_effect_value; // 0x24
+        public string characteristic_icon_filename; // 0x28
     }
 
     [Serializable]
-    public class ReleaseCharacteristicTable : MasterTable<int, ReleaseCharacteristicRecord> // TypeDefIndex: 1530
+    public class ReleaseCharacteristicTable : MasterTable<int, ReleaseCharacteristicRecord> // TypeDefIndex: 6933
     {
         // Fields
     }
 
-    public class ReleaseCharacteristicMaster // TypeDefIndex: 1529
+    public class ReleaseCharacteristicMaster // TypeDefIndex: 6932
     {
         // Fields
     }

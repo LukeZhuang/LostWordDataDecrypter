@@ -6,80 +6,49 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class CharacteristicRecord : MasterRecord<int> // TypeDefIndex: 1252
+    public class CharacteristicRecord : MasterRecord<int> // TypeDefIndex: 6669
     {
         // Fields
-        [MessagePackMember(0)]
-        public int id; // 0x10
-        [MessagePackMember(1)]
-        public string characteristic1_name; // 0x18
-        [MessagePackMember(2)]
-        public string characteristic1_description; // 0x20
-        [MessagePackMember(3)]
-        public int characteristic1_type; // 0x28
-        [MessagePackMember(4)]
-        public int characteristic1_effect_type; // 0x2C
-        [MessagePackMember(5)]
-        public int characteristic1_effect_subtype; // 0x30
-        [MessagePackMember(6)]
-        public int characteristic1_rate; // 0x34
-        [MessagePackMember(7)]
-        public int characteristic1_effect_value; // 0x38
-        [MessagePackMember(8)]
-        public string characteristic1_icon_filename; // 0x40
-        [MessagePackMember(9)]
-        public string characteristic2_name; // 0x48
-        [MessagePackMember(10)]
-        public string characteristic2_description; // 0x50
-        [MessagePackMember(11)]
-        public int characteristic2_type; // 0x58
-        [MessagePackMember(12)]
-        public int characteristic2_effect_type; // 0x5C
-        [MessagePackMember(13)]
-        public int characteristic2_effect_subtype; // 0x60
-        [MessagePackMember(14)]
-        public int characteristic2_rate; // 0x64
-        [MessagePackMember(15)]
-        public int characteristic2_effect_value; // 0x68
-        [MessagePackMember(16)]
-        public string characteristic2_icon_filename; // 0x70
-        [MessagePackMember(17)]
-        public string characteristic3_name; // 0x78
-        [MessagePackMember(18)]
-        public string characteristic3_description; // 0x80
-        [MessagePackMember(19)]
-        public int characteristic3_type; // 0x88
-        [MessagePackMember(20)]
-        public int characteristic3_effect_type; // 0x8C
-        [MessagePackMember(21)]
-        public int characteristic3_effect_subtype; // 0x90
-        [MessagePackMember(22)]
-        public int characteristic3_rate; // 0x94
-        [MessagePackMember(23)]
-        public int characteristic3_effect_value; // 0x98
-        [MessagePackMember(24)]
-        public string characteristic3_icon_filename; // 0xA0
-        [MessagePackMember(25)]
-        public string trust_characteristic_name; // 0xA8
-        [MessagePackMember(26)]
-        public string trust_characteristic_description; // 0xB0
-        [MessagePackMember(27)]
-        public int trust_characteristic_rear_effect_type; // 0xB8
-        [MessagePackMember(28)]
-        public int trust_characteristic_rear_effect_subtype; // 0xBC
-        [MessagePackMember(29)]
-        public int trust_characteristic_avent_effect_type; // 0xC0
-        [MessagePackMember(30)]
-        public int trust_characteristic_avent_effect_subtype; // 0xC4
+        public int id; // 0x8
+        public string characteristic1_name; // 0xC
+        public string characteristic1_description; // 0x10
+        public int characteristic1_type; // 0x14
+        public int characteristic1_effect_type; // 0x18
+        public int characteristic1_effect_subtype; // 0x1C
+        public int characteristic1_rate; // 0x20
+        public int characteristic1_effect_value; // 0x24
+        public string characteristic1_icon_filename; // 0x28
+        public string characteristic2_name; // 0x2C
+        public string characteristic2_description; // 0x30
+        public int characteristic2_type; // 0x34
+        public int characteristic2_effect_type; // 0x38
+        public int characteristic2_effect_subtype; // 0x3C
+        public int characteristic2_rate; // 0x40
+        public int characteristic2_effect_value; // 0x44
+        public string characteristic2_icon_filename; // 0x48
+        public string characteristic3_name; // 0x4C
+        public string characteristic3_description; // 0x50
+        public int characteristic3_type; // 0x54
+        public int characteristic3_effect_type; // 0x58
+        public int characteristic3_effect_subtype; // 0x5C
+        public int characteristic3_rate; // 0x60
+        public int characteristic3_effect_value; // 0x64
+        public string characteristic3_icon_filename; // 0x68
+        public string trust_characteristic_name; // 0x6C
+        public string trust_characteristic_description; // 0x70
+        public int trust_characteristic_rear_effect_type; // 0x74
+        public int trust_characteristic_rear_effect_subtype; // 0x78
+        public int trust_characteristic_avent_effect_type; // 0x7C
+        public int trust_characteristic_avent_effect_subtype; // 0x80
     }
 
     [Serializable]
-    public class CharacteristicTable : MasterTable<int, CharacteristicRecord> // TypeDefIndex: 1251
+    public class CharacteristicTable : MasterTable<int, CharacteristicRecord> // TypeDefIndex: 6668
     {
         // Fields
     }
 
-    public class CharacteristicMaster // TypeDefIndex: 1250
+    public class CharacteristicMaster // TypeDefIndex: 6667
     {
         // Fields
     }

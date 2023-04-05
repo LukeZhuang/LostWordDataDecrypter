@@ -6,23 +6,23 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class ArenaEnemyRecord : EnemyRecord // TypeDefIndex: 1190
+    public class ArenaEnemyRecord : EnemyRecord // TypeDefIndex: 6607
     {
         // Fields
-        private int bk_yang_attack; // 0x124
-        private int bk_yang_defence; // 0x128
-        private int bk_yin_attack; // 0x12C
-        private int bk_yin_defence; // 0x130
-        private int bk_speed; // 0x134
+        private int bk_yang_attack; // 0x114
+        private int bk_yang_defence; // 0x118
+        private int bk_yin_attack; // 0x11C
+        private int bk_yin_defence; // 0x120
+        private int bk_speed; // 0x124
     }
 
     [Serializable]
-    public class ArenaEnemyTable : MasterTable<int, ArenaEnemyRecord> // TypeDefIndex: 1189
+    public class ArenaEnemyTable : MasterTable<int, ArenaEnemyRecord> // TypeDefIndex: 6605
     {
         // Fields
     }
 
-    public class ArenaEnemyMaster // TypeDefIndex: 1187
+    public class ArenaEnemyMaster // TypeDefIndex: 6604
     {
         // Fields
     }
