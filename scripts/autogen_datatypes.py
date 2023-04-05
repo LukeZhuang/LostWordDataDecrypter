@@ -1,7 +1,6 @@
 import re
 
 INDENT = "    "
-VER = "ver3"
 
 
 def get_class_content(class_line_num, lines):
@@ -38,7 +37,7 @@ def get_class_content(class_line_num, lines):
 	return result
 
 
-f = open('dump(' + VER + ').cs')
+f = open('dump.cs')
 lines = []
 master_line_num = {}
 table_line_num = {}
@@ -79,7 +78,7 @@ for k in master_line_num:
 	fo.write("using System;\n")
 	fo.write("using System.Collections.Generic;\n")
 	fo.write("\n")
-	fo.write("namespace LostWordDataDecrypter.DataTypes.DataTypes_" + VER + "\n")
+	fo.write("namespace LostWordDataDecrypter.DataTypes.DataTypes\n")
 	fo.write("{\n")
 	if k in records:
 		for l in records[k]:
