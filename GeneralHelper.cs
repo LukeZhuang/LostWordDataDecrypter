@@ -226,24 +226,31 @@ namespace LostWordDataDecrypter
                     IList<string> record_strs = new List<string>();
                     foreach (var field in record)
                     {
-                        Type type = field.GetType();
-                        string s = field.ToString();
-                        if (type == typeof(string))
+                        string s = "";
+                        if (field != null)
                         {
-                            s = s.Replace("\r\n", "<ret>");
-                            s = s.Replace("\n", "<ret>");
-                            s = s.Replace(",", "|");
-                            string emptyPattern = @"^\s*$";
-                            Match m = Regex.Match(s, emptyPattern, RegexOptions.IgnoreCase);
-                            if (m.Success)
+                            Type type = field.GetType();
+                            s = field.ToString();
+                            if (type == typeof(string))
                             {
-                                s = "(empty)";
+                                s = s.Replace("\r\n", "<ret>");
+                                s = s.Replace("\n", "<ret>");
+                                s = s.Replace(",", "|");
+                                string emptyPattern = @"^\s*$";
+                                Match m = Regex.Match(s, emptyPattern, RegexOptions.IgnoreCase);
+                                if (m.Success)
+                                {
+                                    s = "(empty)";
+                                }
                             }
-                        }
-                        else if (type != typeof(int) && type != typeof(float))
+                            else if (type != typeof(int) && type != typeof(float))
+                            {
+                                /* currently only support int, float and string */
+                                throw new NotImplementedException();
+                            }
+                        } else
                         {
-                            /* currently only support int, float and string */
-                            throw new NotImplementedException();
+                            s = "(empty)";
                         }
                         record_strs.Add(s);
                     }
