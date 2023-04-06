@@ -258,6 +258,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="scripts\autogen_datatypes.py" />
+    <None Include="scripts\extract_unit_picture_thumbsquare.py" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
