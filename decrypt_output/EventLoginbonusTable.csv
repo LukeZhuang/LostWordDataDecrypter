@@ -125,6 +125,7 @@ id,event_id,day_count,reward_group_id,background_image,front_image,unit_position
 3440,3440,1,2111013,Event_LoginBonus_bg_3440,Event_LogInBonus_title_3440,10190101,219
 3450,3450,12,2111014,Event_LoginBonus_bg_3450,Event_LogInBonus_title_3450,10200101,218
 3480,3480,10,2112012,Event_LoginBonus_bg_3480,Event_LogInBonus_title_3480,10880101,222
+3491,3491,10,2112015,Event_LoginBonus_bg_2621,Event_LogInBonus_title_3491,10130201,113
 3511,3511,10,2112071,Event_LoginBonus_bg_3511,Event_LogInBonus_title_3511,10810201,86
 3550,3550,7,2112151,Event_LoginBonus_bg_2800,Event_LogInBonus_title_3550,10030301,75
 3560,3560,10,2112142,Event_LoginBonus_bg_3560,Event_LogInBonus_title_3560,10300101,224
@@ -194,11 +195,11 @@ id,event_id,day_count,reward_group_id,background_image,front_image,unit_position
 4901,4901,10,2206081,Event_LoginBonus_bg_1091,Event_LogInBonus_title_4901,10360201,34
 4921,4921,7,2206151,Event_LoginBonus_bg_comic,Event_LogInBonus_title1_comic|Event_LogInBonus_title2_4921,10260101,247
 4930,4930,7,2206152,Event_LoginBonus_bg_tower,Event_LogInBonus_title_4930,10030301,75
-4940,4940,10,2206153,Event_LoginBonus_bg_4940,Event_LogInBonus_title1_4940|Event_LogInBonus_title2_4940,11050101,344
+4940,4940,10,2206153,Event_LoginBonus_bg_4940,Event_LogInBonus_title_4940,11050101,344
 4950,4950,7,2206154,Event_LoginBonus_bg_4950,Event_LogInBonus_title1_4950|Event_LogInBonus_title2_4950,10550101,345
-4961,4961,7,2206231,Event_LoginBonus_bg_4961,Event_LogInBonus_title1_4961|Event_LogInBonus_title2_4961,11180301,346
-4964,4964,7,2206301,Event_LoginBonus_bg_4964,Event_LogInBonus_title1_4964|Event_LogInBonus_title2_4964,10400301,347
-4980,4980,15,2206302,Event_LoginBonus_bg_4980,Event_LogInBonus_title1_reinc|Event_LogInBonus_title2_4980,10620101,351
+4961,4961,7,2206231,Event_LoginBonus_bg_4961,Event_LogInBonus_title_4961,11180301,346
+4964,4964,7,2206301,Event_LoginBonus_bg_4964,Event_LogInBonus_title_4964,10400301,347
+4980,4980,9,2206302,Event_LoginBonus_bg_4980,Event_LogInBonus_title_4980,10620101,351
 5000,5000,10,2206303,Event_LoginBonus_bg_5000,Event_LogInBonus_title1_5000|Event_LogInBonus_title2_5000,10710101,350
 5030,5030,7,2206304,Event_LoginBonus_bg_5030,Event_LogInBonus_title1_5030|Event_LogInBonus_title2_5030,10720101,361
 5041,5041,10,2207071,Event_LoginBonus_bg_2074,Event_LogInBonus_title_5041,10320201,45

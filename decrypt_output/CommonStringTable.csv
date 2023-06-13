@@ -293,7 +293,7 @@ APP_MENU_SWITCH_CODE_EMPTY,代码发送后，将会展示,APP_MENU_SWITCH_CODE_E
 APP_MISSION_END_TIME_FORMAT,{0:D2}月{1:D2}日{2:D2}:{3:D2}结束,{0}/{1} {2:D2}:{3:D2} UTC,(empty),(empty)
 APP_MISSION_TITLE_NAME,任务,APP_MISSION_TITLE_NAME,(empty),(empty)
 APP_NETWORK_ERROR_MESSAGE,出现连接错误。,(empty),(empty),(empty)
-APP_NETWORK_ERROR_WITH_RETRY_MESSAGE,当前网络连接发生波动<ret>可在本界面等待10秒后点击“决定”按钮重试连接,(empty),(empty),(empty)
+APP_NETWORK_ERROR_WITH_RETRY_MESSAGE,当前网络连接发生波动，请尝试重新连接,(empty),(empty),(empty)
 APP_NOT_ENOUGH_REMAINING,剩余次数不足,APP_NOT_ENOUGH_REMAINING,(empty),(empty)
 APP_NO_MORE_EXCHANGES,无法进行更多交换了,APP_NO_MORE_EXCHANGES,(empty),(empty)
 APP_NUMBER_TO_KANJI_0,(empty),APP_NUMBER_TO_KANJI_0,(empty),(empty)
