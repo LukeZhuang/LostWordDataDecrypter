@@ -17,7 +17,7 @@ namespace LostWordDataDecrypter
 
         static void Main(string[] args)
         {
-            bool doSeparateDecrypt = true;
+            bool doSeparateDecrypt = false;
             MasterMsgPack.Initialize();  // not sure if it's needed
 
             string[] dirs = Directory.GetDirectories(Path.Combine(ROOT_DIR, INPUT_DIR), "*", SearchOption.TopDirectoryOnly);

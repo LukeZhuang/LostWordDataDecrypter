@@ -1,5 +1,6 @@
 id,title,info,jacket_path,bgm_path,preview_start_time,preview_play_time,normal_score_path,hard_score_path,lunatic_score_path,display_order
 199001,ロストワードクロニカル,乐曲：ロストワードクロニカル<ret>艺术家：いとうかなこ × 豚乙女<ret>原曲：東方妖怪小町,Music_Jacket_001.png,rhythm_music_199001.ogg,59950,26050,199001_normal.json,199001_hard.json,199001_lunatic.json,1
-199002,指先の熱,乐曲：指先の熱<ret>艺术家：東方LostWord feat.島みやえい子 × 幽閉サテライト<ret>原曲：亡き王女の為のセプテット,Music_Jacket_002.png,rhythm_music_199002.ogg,74000,32000,199002_normal.json,199002_hard.json,199002_lunatic.json,2
-199003,斑にマーガレット,乐曲：斑にマーガレット<ret>艺术家：東方LostWord feat.konoco × 森羅万象<ret>原曲：人形裁判　～ 人の形弄びし少女,Music_Jacket_003.png,rhythm_music_199003.ogg,63150,33400,199003_normal.json,199003_hard.json,199003_lunatic.json,3
-199004,月と十六夜,乐曲：月と十六夜<ret>艺术家：東方LostWord feat.ナノ × 岸田教団&THE明星ロケッツ<ret>原曲：月時計　～ ルナ·ダイアル,Music_Jacket_004.png,rhythm_music_199004.ogg,41800,28200,199004_normal.json,199004_hard.json,199004_lunatic.json,4
+199002,指先の熱,乐曲：指先の熱<ret>艺术家：东方归言录 feat.島みやえい子 × 幽閉サテライト<ret>原曲：亡き王女の為のセプテット,Music_Jacket_002.png,rhythm_music_199002.ogg,74000,32000,199002_normal.json,199002_hard.json,199002_lunatic.json,2
+199003,斑にマーガレット,乐曲：斑にマーガレット<ret>艺术家：东方归言录 feat.konoco × 森羅万象<ret>原曲：人形裁判　～ 人の形弄びし少女,Music_Jacket_003.png,rhythm_music_199003.ogg,63150,33400,199003_normal.json,199003_hard.json,199003_lunatic.json,3
+199004,月と十六夜,乐曲：月と十六夜<ret>艺术家：东方归言录 feat.ナノ × 岸田教団&THE明星ロケッツ<ret>原曲：月時計　～ ルナ·ダイアル,Music_Jacket_004.png,rhythm_music_199004.ogg,41800,28200,199004_normal.json,199004_hard.json,199004_lunatic.json,4
+199006,白銀の風,乐曲：白銀の風<ret>艺术家：东方归言录 feat.相川七瀬 × 豚乙女 <ret>原曲：月まで届け、不死の煙,Music_Jacket_006.png,rhythm_music_199006.ogg,53500,28100,199006_normal.json,199006_hard.json,199006_lunatic.json,5

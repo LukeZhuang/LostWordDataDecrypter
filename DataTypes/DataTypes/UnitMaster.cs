@@ -82,7 +82,13 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         [MessagePackMember(35)]
         public int spellcard_bgm_id; // 0xC4
         [MessagePackMember(36)]
-        public int is_show; // 0xC8
+        public string name_sub; // 0xC8
+        [MessagePackMember(37)]
+        public string name_kana_sub; // 0xD0
+        [MessagePackMember(38)]
+        public string short_name_sub; // 0xD8
+        [MessagePackMember(39)]
+        public int is_show; // 0xE0
     }
 
     [Serializable]
