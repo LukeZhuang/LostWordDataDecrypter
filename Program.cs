@@ -17,7 +17,12 @@ namespace LostWordDataDecrypter
 
         static void Main(string[] args)
         {
+            /* ------------ CONFIGURATIONS ------------ */
             bool doSeparateDecrypt = false;
+            bool writeCSVFiles = true;
+            bool writeJSONFiles = true;
+            /* ---------------------------------------- */
+
             MasterMsgPack.Initialize();  // not sure if it's needed
 
             string[] dirs = Directory.GetDirectories(Path.Combine(ROOT_DIR, INPUT_DIR), "*", SearchOption.TopDirectoryOnly);
@@ -142,6 +147,7 @@ namespace LostWordDataDecrypter
                 {
                     string fileName = tableToFileName[tableName];
                     string outputFileName = Path.Combine(outputDir, tableName + ".csv");
+                    string outputJSONFileName = Path.Combine(outputDir, tableName + ".json");
                     Console.Write("Deserializing " + tableName + ": " + fileName.Substring(0, 10) + " ... ");
                     byte[] src = GeneralHelper.FileToBytes(Path.Combine(dir, fileName));
 
@@ -155,7 +161,10 @@ namespace LostWordDataDecrypter
                             // UnitTable st = MasterMsgPack.Unpack<UnitTable>(src);
                             // st.to_csv(Path.Combine(ROOT_DIR, Path.Combine(OUTPUT_DIR, table_name + ".csv")));
                             var st = unpackMethod.Invoke(null, new Object[] { src });
-                            TableType.GetMethod("ToCSV").Invoke(st, new Object[] { outputFileName });
+                            if (writeCSVFiles)
+                                TableType.GetMethod("ToCSV").Invoke(st, new Object[] { outputFileName });
+                            if (writeJSONFiles)
+                                TableType.GetMethod("ToJSON").Invoke(st, new Object[] { outputJSONFileName });
                             Console.WriteLine("successful");
                             succDataTypeCount++;
                         }

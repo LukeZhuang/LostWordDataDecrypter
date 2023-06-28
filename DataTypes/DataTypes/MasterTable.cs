@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -44,6 +45,18 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
                 records.Add(record);
             }
             GeneralHelper.TableToCSV(fullPath, fieldNames, records);
+        }
+
+        public void ToJSON(string fullPath)
+        {
+            using (StreamWriter writer = new StreamWriter(fullPath))
+            {
+                foreach (KeyValuePair<TKey, TRec> p in m_table)
+                {
+                    string jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(p.Value);
+                    writer.WriteLine(jsonStr);
+                }
+            }
         }
 
     }
