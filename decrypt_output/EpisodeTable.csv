@@ -1370,6 +1370,34 @@ id,chapter_id,section_id,title,sub_title,number,type,normal_battle_id,hard_battl
 204800104,2048,2048001,造型的造诣,战斗！3,4,0,204860,204863,204866,Event24/Extra/Episode3.asset,1,(empty),0
 204800105,2048,2048001,少女的肖像,终幕,5,1,0,0,0,Event24/Extra/Episode4.asset,1,(empty),0
 204900001,2049,2049000,VS复灵「雾雨魔理沙（A6）」,袭来BOSS战,1,0,204901,0,0,Daily/Wave1.asset,0,(empty),1
+205000001,2050,2050000,欢迎来到古老的愿望,开店,1,1,0,0,0,Event13/Episode0.asset,0,(empty),1
+205000002,2050,2050000,去青娥的仙界游玩吧,第一家,2,0,205001,205023,205045,Event13/Episode1.asset,1,(empty),1
+205000003,2050,2050000,芳香的最终面试时间！,自由战斗,3,0,205002,205024,205046,Event13/FreeBattle1.asset,1,(empty),1
+205000004,2050,2050000,供应点在那个地方！,第二家,4,0,205003,205025,205047,Event13/Episode2.asset,1,(empty),1
+205000005,2050,2050000,来吧，开店当日！,第三家,5,0,205004,205026,205048,Event13/Episode3.asset,2,{"start_at":"2023-07-19 00:00:00"},1
+205000006,2050,2050000,加入弹幕订单！,自由战斗,6,0,205005,205027,205049,Event13/FreeBattle2.asset,1,(empty),1
+205000007,2050,2050000,妖精·在·大厅！,自由战斗,7,0,205006,205028,205050,Event13/FreeBattle3.asset,1,(empty),1
+205000008,2050,2050000,狸猫怪的大量订单！？,自由战斗,8,0,205007,205029,205051,Event13/FreeBattle4.asset,1,(empty),1
+205000009,2050,2050000,要凉了！烦恼商谈！,第四家,9,0,205008,205030,205052,Event13/Episode4.asset,2,{"start_at":"2023-07-20 00:00:00"},1
+205000010,2050,2050000,蕾蒂·在·冰上！,自由战斗,10,0,205009,205031,205053,Event13/FreeBattle5.asset,1,(empty),1
+205000011,2050,2050000,聊天、美食、弹幕我都要,自由战斗,11,0,205010,205032,205054,Event13/FreeBattle6.asset,1,(empty),1
+205000012,2050,2050000,要来点甜点吗？,自由战斗,12,0,205011,205033,205055,Event13/FreeBattle7.asset,1,(empty),1
+205000013,2050,2050000,VS对手！强力的帮手？,第五家,13,0,205012,205034,205056,Event13/Episode5.asset,2,{"start_at":"2023-07-21 00:00:00"},1
+205000014,2050,2050000,恐怖的课程！现代篇！,第六家,14,0,205013,205035,205057,Event13/Episode6.asset,1,(empty),1
+205000015,2050,2050000,红魔怪谈「配菜消失」,第七家,15,0,205014,205036,205058,Event13/Episode7.asset,1,(empty),1
+205000016,2050,2050000,无名的怪谈话,第八家,16,0,205015,205037,205059,Event13/Episode8.asset,1,(empty),1
+205000017,2050,2050000,梦之店「糖果·梦境」,♪9,17,0,205016,205038,205060,Event13/Episode9.asset,1,(empty),1
+205000018,2050,2050000,梦中的利己主义者――。,♪10,18,0,205017,205039,205061,Event13/Episode10.asset,1,(empty),1
+205000019,2050,2050000,然而僧侣喝起了热水,第十一家,19,0,205018,205040,205062,Event13/Episode11.asset,2,{"start_at":"2023-07-22 00:00:00"},1
+205000020,2050,2050000,奇怪规则的头脑战！？,第十二家,20,0,205019,205041,205063,Event13/Episode12.asset,1,(empty),1
+205000021,2050,2050000,自由风格的弹幕将棋,自由战斗,21,0,205020,205042,205064,Event13/FreeBattle8.asset,1,(empty),1
+205000022,2050,2050000,意外的来店注意警报！？,第十三家,22,0,205021,205043,205065,Event13/Episode13.asset,1,(empty),1
+205000023,2050,2050000,通向闭店的倒计时！？,闭店,23,0,205022,205044,205066,Event13/Episode14.asset,1,(empty),1
+205000101,2050,2050001,自律妖精与新的社交场！？,序幕,1,0,205067,205070,205073,Event13/Extra/Episode0.asset,0,(empty),0
+205000102,2050,2050001,最先端的S·N·S！,一,2,1,0,0,0,Event13/Extra/Episode1.asset,1,(empty),0
+205000103,2050,2050001,捕捉『相机』吧！,二,3,0,205068,205071,205074,Event13/Extra/Episode2.asset,1,(empty),0
+205000104,2050,2050001,建立『网络？』吧？,三,4,0,205069,205072,205075,Event13/Extra/Episode3.asset,1,(empty),0
+205000105,2050,2050001,琪露诺的最强社交场！,完成,5,1,0,0,0,Event13/Extra/Episode4.asset,1,(empty),0
 205100001,2051,2051000,淑女的社交场，再临,序幕,1,1,0,0,0,Event25/Episode0.asset,0,(empty),1
 205100002,2051,2051000,犯规·禁忌·绝对秘神,第一件,2,1,0,0,0,Event25/Episode1.asset,1,(empty),1
 205100003,2051,2051000,开始最初的测试,第二件,3,0,205101,205118,205135,Event25/Episode2.asset,1,(empty),1
@@ -1537,10 +1565,37 @@ id,chapter_id,section_id,title,sub_title,number,type,normal_battle_id,hard_battl
 205910003,2059,2059100,上镜的妹妹们,第2话,3,0,205977,205980,205983,Event4/Extra/Episode2.asset,1,(empty),0
 205910004,2059,2059100,姐妹们的保护者战争,第3话,4,0,205978,205981,205984,Event4/Extra/Episode3.asset,1,(empty),0
 205910005,2059,2059100,成千上万的姐姐,终幕,5,1,0,0,0,Event4/Extra/Episode4.asset,1,(empty),0
+206100001,2061,2061000,此思念，响彻彼方的VOICE,序幕,1,1,0,0,0,Event28/Episode0.asset,0,(empty),1
+206100002,2061,2061000,别吵了，Two-Piece Band,Tour Day1,2,1,0,0,0,Event28/Episode1.asset,1,(empty),1
+206100003,2061,2061000,遥远地底的，小小的BRAVERY,Tour Day2,3,0,206101,206116,206131,Event28/Episode2.asset,1,(empty),1
+206100004,2061,2061000,相遇总会伴随ACCIDENT,Tour Day3,4,1,0,0,0,Event28/Episode3.asset,1,(empty),1
+206100005,2061,2061000,开演的，优美OPERETTA,Tour Day4,5,0,206102,206117,206132,Event28/Episode4.asset,1,(empty),1
+206100006,2061,2061000,在这个世界，华丽歌唱,MC 第1回,6,0,206103,206118,206133,Event28/FreeBattle1.asset,1,(empty),1
+206100007,2061,2061000,蔓延开的不安，就像Sound Wave,Tour Day5,7,1,0,0,0,Event28/Episode5.asset,2,{"start_at":"2023-08-02 00:00:00"},1
+206100008,2061,2061000,此勇气，萌发MOMENT,Tour Day6,8,1,0,0,0,Event28/Episode6.asset,1,(empty),1
+206100009,2061,2061000,觉醒吧！ 踢开吧！ 向内心Shooting！,Tour Day7,9,0,206104,206119,206134,Event28/Episode7.asset,1,(empty),1
+206100010,2061,2061000,到来的是，无可救药的TRAGEDY,Tour Day8,10,0,206105,206120,206135,Event28/Episode8.asset,1,(empty),1
+206100011,2061,2061000,觉醒，Rocking VOICE！！,Tour Day9,11,0,206106,206121,206136,Event28/Episode9.asset,1,(empty),1
+206100012,2061,2061000,黎明，开始的LEGEND,Tour Day10,12,0,206107,206122,206137,Event28/Episode10.asset,1,(empty),1
+206100013,2061,2061000,邂逅，然后LIVE or LIVE,Tour Day11,13,0,206108,206123,206138,Event28/Episode11.asset,2,{"start_at":"2023-08-03 00:00:00"},1
+206100014,2061,2061000,旋转吧，起舞吧，华丽地,MC 第2回,14,0,206109,206124,206139,Event28/FreeBattle2.asset,1,(empty),1
+206100015,2061,2061000,山野震响，炽热Aesthetic,Tour Day12,15,0,206110,206125,206140,Event28/Episode12.asset,1,(empty),1
+206100016,2061,2061000,跑起来，永不停息止的SOUL！,Tour Day13,16,0,206111,206126,206141,Event28/Episode13.asset,1,(empty),1
+206100017,2061,2061000,呐喊吧，登上去，明天空的Stage！,Tour Day14,17,0,206112,206127,206142,Event28/Episode14.asset,1,(empty),1
+206100018,2061,2061000,Finale后的痛苦，还为时过早,Tour Day15,18,0,206113,206128,206143,Event28/Episode15.asset,2,{"start_at":"2023-08-04 00:00:00"},1
+206100019,2061,2061000,继续挣扎，朝向未来的Shout,Tour Day16,19,0,206114,206129,206144,Event28/Episode16.asset,1,(empty),1
+206100020,2061,2061000,铭刻，响彻世间，决战的Beat,Tour Day17,20,0,206115,206130,206145,Event28/Episode17.asset,1,(empty),1
+206100021,2061,2061000,没有尽头，Endless Live！！,终幕,21,1,0,0,0,Event28/Episode18.asset,1,(empty),1
+206100101,2061,2061001,开始，Rocking History,序幕,1,1,0,0,0,Event28/Extra/Episode0.asset,0,(empty),0
+206100102,2061,2061001,说服是靠，Power or Power,追加公演第1日,2,0,206146,206149,206152,Event28/Extra/Episode1.asset,1,(empty),0
+206100103,2061,2061001,视线前方的，OVERHEAT,追加公演第2日,3,0,206147,206150,206153,Event28/Extra/Episode2.asset,1,(empty),0
+206100104,2061,2061001,「现在是演出时间。请回到座位。」,追加公演第3日,4,0,206148,206151,206154,Event28/Extra/Episode3.asset,1,(empty),0
+206100105,2061,2061001,不会结束，Rocking Night,终幕,5,1,0,0,0,Event28/Extra/Episode4.asset,1,(empty),0
 206200001,2062,2062000,VS复灵「八云紫(C3)」,袭来BOSS战,1,0,206201,0,0,Daily/Wave1.asset,0,(empty),1
 206600101,2066,2066001,VS复灵「古明地觉(S2)」,袭来BOSS战,1,0,206601,0,0,Daily/Wave1.asset,0,(empty),1
 207000001,2070,2070000,VS复灵「赫卡提亚·拉碧斯拉祖利(C3)」,袭来BOSS战,1,0,207001,0,0,Daily/Wave1.asset,0,(empty),1
 207300001,2073,2073000,VS复灵「古明地恋(F1)」,袭来BOSS战,1,0,207301,0,0,Daily/Wave1.asset,0,(empty),1
+207600001,2076,2076000,VS复灵「博丽灵梦(C3)」,袭来BOSS战,1,0,207601,0,0,Daily/Wave1.asset,0,(empty),1
 300100101,3001,3001001,一个人的茶会？　第1话,记号B3·第1节,1,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section01/Episode1.asset,0,(empty),1
 300100102,3001,3001001,一个人的茶会？　第2话,记号B3·第1节,2,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section01/Episode2.asset,1,(empty),1
 300100103,3001,3001001,一个人的茶会？　第3话,记号B3·第1节,3,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section01/Episode3.asset,1,(empty),1
