@@ -33,7 +33,7 @@ id,name,icon_filename
 605,结界异常「黑暗」,skill_icon_barrier_blind
 801,加速,skill_icon_fast
 802,蓄力,skill_icon_sprit_charge
-900,结界异常回复,skill_icon_cleen_barrier
+900,结界异常回复,skill_icon_purification
 1200,弹种特防,skill_icon_resist_bullet
 1301,日属性特防,skill_icon_resist_type1
 1302,月属性特防,skill_icon_resist_type2

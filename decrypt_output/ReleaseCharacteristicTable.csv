@@ -13,6 +13,9 @@ id,characteristic_name,characteristic_description,characteristic_type,characteri
 1005013,快速休息,回合开始时，自身<color=#CCAA00>灵力</color><color=#00CC66>上升</color>0.35  [发生率50%],2,5,0,50,7,characteristic_icon_31
 1005211,女仆学习术,攻撃された後、自身の<color=#CCAA00>速力</color>を1段階<color=#FF6600>アップ</color> (3T) [発生率65%],4,1,5,65,1,characteristic_icon_5
 1005311,女仆学习术,攻撃された後、自身の<color=#CCAA00>速力</color>を1段階<color=#FF6600>アップ</color> (3T) [発生率75%],4,1,5,75,1,characteristic_icon_5
+1008011,大図書館の司書,攻撃された後、自身の<color=#CCAA00>速力</color>を1段階<color=#FF6600>アップ</color> (3T) [発生率75%],4,1,5,75,1,characteristic_icon_5
+1008012,魔界の風,Wave開始時、相手単体に結界異常「<color=#CCAA00>暗闇</color>」を1枚<color=#0066FF>付与</color>  (3T) [発生率75%],1,6,5,75,1,characteristic_icon_29
+1008013,魔界の稲妻,Wave開始時、相手単体の<color=#CCAA00>陰防</color>を1段階<color=#0066FF>ダウン</color> (3T) [発生率75%],1,2,4,75,1,characteristic_icon_16
 1010011,亡灵体质,攻撃された時、<color=#CCAA00>肉弾</color>から受けるダメージを35%<color=#0066FF>ダウン</color> [発生率100%],3,12,3,100,35,characteristic_icon_40
 1010012,冥界管理员,攻撃された時、<color=#CCAA00>霊的存在</color>から受けるダメージを35%<color=#0066FF>ダウン</color> [発生率100%],3,14,8,100,35,characteristic_icon_56
 1010013,生与死的境界,攻撃された後、自身の<color=#CCAA00>陽攻</color>を1段階<color=#FF6600>アップ</color> (3T) [発生率50%],4,1,1,50,1,characteristic_icon_1
@@ -20,15 +23,29 @@ id,characteristic_name,characteristic_description,characteristic_type,characteri
 1011012,白楼剑之气,攻撃された後、自身の<color=#CCAA00>陽攻</color>を1段階<color=#FF6600>アップ</color> (3T) [発生率40%],4,1,1,40,1,characteristic_icon_1
 1011013,楼观剑之气,攻撃された後、自身の<color=#CCAA00>陰攻</color>を1段階<color=#FF6600>アップ</color> (3T) [発生率40%],4,1,3,40,1,characteristic_icon_3
 1011211,剑士的直觉,攻撃された時、<color=#CCAA00>斬撃</color>から受けるダメージを30%<color=#0066FF>ダウン</color> [発生率100%],3,12,4,100,30,characteristic_icon_40
+1012011,暖気ガード,攻撃された時、<color=#CCAA00>冷気</color>から受けるダメージを35%<color=#0066FF>ダウン</color> [発生率100%],3,14,83,100,35,characteristic_icon_56
+1012012,解放ムード,ターン開始時、自身の<color=#CCAA00>結界異常</color>を1枚<color=#00CC66>回復</color>  [発生率80%],2,9,0,80,1,characteristic_icon_34
+1012013,あふれる生命,ターン開始時、自身の<color=#CCAA00>体力</color>を15%<color=#00CC66>回復</color> [発生率40%],2,3,0,40,15,characteristic_icon_30
+1013011,九字護身法,攻撃された時、<color=#CCAA00>妖怪</color>から受けるダメージを30%<color=#0066FF>ダウン</color> [発生率100%],3,14,5,100,30,characteristic_icon_56
+1013012,賢者の式,攻撃された後、自身の<color=#CCAA00>陽攻</color>を1段階<color=#FF6600>アップ</color> (3T) [発生率75%],4,1,1,75,1,characteristic_icon_1
+1013013,妖狐の直感,攻撃された後、自身の<color=#CCAA00>命中</color>を1段階<color=#FF6600>アップ</color> (3T) [発生率50%],4,1,6,50,1,characteristic_icon_6
+1014011,化猫エンジン,攻撃された後、自身の<color=#CCAA00>速力</color>を1段階<color=#FF6600>アップ</color> (3T) [発生率80%],4,1,5,80,1,characteristic_icon_5
+1014012,高速砂かけ,Wave開始時、相手単体の<color=#CCAA00>速力</color>を1段階<color=#0066FF>ダウン</color> (3T) [発生率80%],1,2,5,80,1,characteristic_icon_17
+1014013,[P]アイテム拾い,ターン開始時、自身の<color=#CCAA00>霊力</color>を0.75<color=#00CC66>上昇</color>  [発生率30%],2,5,0,30,15,characteristic_icon_31
 1018011,万能药师,回合开始时，自身<color=#00CC66>回复</color>1个<color=#CCAA00>禁止状态或强度下降状态</color>  [发生率60%],2,10,0,60,1,characteristic_icon_33
 1018211,万能药师,回合开始时，自身<color=#00CC66>回复</color>1个<color=#CCAA00>禁止状态或强度下降状态</color>  [发生率70%],2,10,0,70,1,characteristic_icon_33
 1018311,万能药师,回合开始时，自身<color=#00CC66>回复</color>1个<color=#CCAA00>禁止状态或强度下降状态</color>  [发生率80%],2,10,0,80,1,characteristic_icon_33
 1018411,万能药师,回合开始时，自身<color=#00CC66>回复</color>1个<color=#CCAA00>禁止状态或强度下降状态</color>  [发生率90%],2,10,0,90,1,characteristic_icon_33
 1018511,万能药师,回合开始时，自身<color=#00CC66>回复</color>1个<color=#CCAA00>禁止状态或强度下降状态</color>  [发生率100%],2,10,0,100,1,characteristic_icon_33
+1020011,リベンジャー,攻撃された後、自身の<color=#CCAA00>陽攻</color>を1段階<color=#FF6600>アップ</color> (3T) [発生率75%],4,1,1,75,1,characteristic_icon_1
+1020012,不意の延焼,Wave開始時、相手単体に結界異常「<color=#CCAA00>燃焼</color>」を1枚<color=#0066FF>付与</color>  (3T) [発生率75%],1,6,1,75,1,characteristic_icon_25
 1020013,不死鸟体质,回合开始时，自身<color=#CCAA00>体力</color><color=#00CC66>回复</color>15% [发生率40%],2,3,0,40,15,characteristic_icon_30
 1020213,不死鸟体质,回合开始时，自身<color=#CCAA00>体力</color><color=#00CC66>回复</color>15% [发生率60%],2,3,0,60,15,characteristic_icon_30
 1020313,不死鸟体质,回合开始时，自身<color=#CCAA00>体力</color><color=#00CC66>回复</color>15% [发生率80%],2,3,0,80,15,characteristic_icon_30
 1020413,不死鸟体质,回合开始时，自身<color=#CCAA00>体力</color><color=#00CC66>回复</color>15% [发生率100%],2,3,0,100,15,characteristic_icon_30
+1021011,危険察知,攻撃された後、自身の<color=#CCAA00>速力</color>を1段階<color=#FF6600>アップ</color> (3T) [発生率75%],4,1,5,75,1,characteristic_icon_5
+1021012,2式発煙筒,Wave開始時、相手単体に結界異常「<color=#CCAA00>暗闇</color>」を1枚<color=#0066FF>付与</color>  (3T) [発生率50%],1,6,5,50,1,characteristic_icon_29
+1021013,4式撹乱幕,Wave開始時、相手単体の<color=#CCAA00>CRI攻撃</color>を1段階<color=#0066FF>ダウン</color> (3T) [発生率75%],1,2,8,75,1,characteristic_icon_20
 1023011,月之防卫术,被攻击时，受到来自<color=#CCAA00>妖怪</color>的伤害<color=#0066FF>下降</color>25% [发生率100%],3,14,5,100,25,characteristic_icon_56
 1023012,训练的结果,被攻击时，受到来自<color=#CCAA00>通常弹</color>的伤害<color=#0066FF>下降</color>25% [发生率100%],3,12,1,100,25,characteristic_icon_40
 1031011,恶作剧高手,被攻击时，受到来自<color=#CCAA00>人类</color>的伤害<color=#0066FF>下降</color>35% [发生率100%],3,14,1,100,35,characteristic_icon_56

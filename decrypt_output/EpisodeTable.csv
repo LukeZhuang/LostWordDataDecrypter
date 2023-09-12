@@ -574,9 +574,9 @@ id,chapter_id,section_id,title,sub_title,number,type,normal_battle_id,hard_battl
 201000042,2010,2012000,明天也一定是晴天！,终幕,5,1,0,0,0,Event8/Extra/Episode4.asset,1,(empty),0
 201100001,2011,2011000,序,第1话,1,1,0,0,0,Special/NewYear2021/Episode1.asset,0,(empty),1
 201100002,2011,2011000,【初级】从卫星落下的弹幕,第1话,2,0,201101,0,0,Daily/Wave1.asset,1,(empty),1
-201100003,2011,2011000,破　其之一,第2话,3,1,0,0,0,Special/NewYear2021/Episode2.asset,1,(empty),1
-201100004,2011,2011000,破　其之二,第2话,4,1,0,0,0,Special/NewYear2021/Episode3.asset,1,(empty),1
-201100005,2011,2011000,破　其之三,第2话,5,1,0,0,0,Special/NewYear2021/Episode4.asset,1,(empty),1
+201100003,2011,2011000,破 其之一,第2话,3,1,0,0,0,Special/NewYear2021/Episode2.asset,1,(empty),1
+201100004,2011,2011000,破 其之二,第2话,4,1,0,0,0,Special/NewYear2021/Episode3.asset,1,(empty),1
+201100005,2011,2011000,破 其之三,第2话,5,1,0,0,0,Special/NewYear2021/Episode4.asset,1,(empty),1
 201100006,2011,2011000,急,第3话,6,1,0,0,0,Special/NewYear2021/Episode5.asset,1,(empty),1
 201100007,2011,2011000,【中级】从卫星落下的弹幕,第3话,7,0,201102,0,0,Daily/Wave1.asset,1,(empty),1
 201100008,2011,2011000,【上级】从卫星落下的弹幕,第3话,8,0,201103,0,0,Daily/Wave1.asset,1,(empty),1
@@ -598,7 +598,7 @@ id,chapter_id,section_id,title,sub_title,number,type,normal_battle_id,hard_battl
 201300016,2013,2013000,妖怪狸直传秘方,第15粒,16,0,201315,201331,201347,Event9/Episode15.asset,2,{"start_at":"2022-04-03 00:00:00"},1
 201300017,2013,2013000,复仇赛，鬼VS豆子！,第16粒,17,0,201316,201332,201348,Event9/Episode16.asset,1,(empty),1
 201300018,2013,2013000,最后的完美冻结！,终幕,18,1,0,0,0,Event9/Episode17.asset,1,(empty),1
-201300019,2013,2013001,分发豆子来战胜豆子！？　,序幕,1,1,0,0,0,Event9/Extra/Episode0.asset,0,(empty),0
+201300019,2013,2013001,分发豆子来战胜豆子！？ ,序幕,1,1,0,0,0,Event9/Extra/Episode0.asset,0,(empty),0
 201300020,2013,2013001,这边的豆子更甜哦！？,第1粒,2,0,201349,201352,201355,Event9/Extra/Episode1.asset,1,(empty),0
 201300021,2013,2013001,猫&豆子点心,第2粒,3,0,201350,201353,201356,Event9/Extra/Episode2.asset,1,(empty),0
 201300022,2013,2013001,无法回家！暴风雪的黑幕,第3粒,4,0,201351,201354,201357,Event9/Extra/Episode3.asset,1,(empty),0
@@ -1181,7 +1181,7 @@ id,chapter_id,section_id,title,sub_title,number,type,normal_battle_id,hard_battl
 204100016,2041,2041000,妖怪狸直传秘方,第15粒,16,0,204115,204131,204147,Event9/Episode15.asset,2,{"start_at":"2023-02-05 00:00:00"},1
 204100017,2041,2041000,复仇赛，鬼VS豆子！,第16粒,17,0,204116,204132,204148,Event9/Episode16.asset,1,(empty),1
 204100018,2041,2041000,最后的完美冻结！,终幕,18,1,0,0,0,Event9/Episode17.asset,1,(empty),1
-204100019,2041,2041001,分发豆子来战胜豆子！？　,序幕,1,1,0,0,0,Event9/Extra/Episode0.asset,0,(empty),0
+204100019,2041,2041001,分发豆子来战胜豆子！？ ,序幕,1,1,0,0,0,Event9/Extra/Episode0.asset,0,(empty),0
 204100020,2041,2041001,这边的豆子更甜哦！？,第1粒,2,0,204149,204152,204155,Event9/Extra/Episode1.asset,1,(empty),0
 204100021,2041,2041001,猫&豆子点心,第2粒,3,0,204150,204153,204156,Event9/Extra/Episode2.asset,1,(empty),0
 204100022,2041,2041001,无法回家！暴风雪的黑幕,第3粒,4,0,204151,204154,204157,Event9/Extra/Episode3.asset,1,(empty),0
@@ -1623,31 +1623,85 @@ id,chapter_id,section_id,title,sub_title,number,type,normal_battle_id,hard_battl
 206300103,2063,2063001,姐妹音乐对决！,第2话,3,0,206368,206371,206374,Event14/Extra/Episode2.asset,1,(empty),0
 206300104,2063,2063001,再挑战的调音！,第3话,4,0,206369,206372,206375,Event14/Extra/Episode3.asset,1,(empty),0
 206300105,2063,2063001,就是这样享受音乐,终幕,5,1,0,0,0,Event14/Extra/Episode4.asset,1,(empty),0
+206400001,2064,2064000,再见·自由·幻想乡,序幕,1,1,0,0,0,Event17/Episode0.asset,0,(empty),1
+206400002,2064,2064000,从幻想乡开始满怀爱意,第1件,2,0,206401,206420,206439,Event17/Episode1.asset,1,(empty),1
+206400003,2064,2064000,那么，开始初次接触吧,第2件,3,0,206402,206421,206440,Event17/Episode2.asset,1,(empty),1
+206400004,2064,2064000,燃烧吧怪盗团！,第3件,4,1,0,0,0,Event17/Episode3.asset,1,(empty),1
+206400005,2064,2064000,初始的记忆,第4件,5,0,206403,206422,206441,Event17/Episode4.asset,1,(empty),1
+206400006,2064,2064000,妖精的策略,第5件,6,0,206404,206423,206442,Event17/Episode5.asset,1,(empty),1
+206400007,2064,2064000,路径·或是·天花板,第6件,7,0,206405,206424,206443,Event17/Episode6.asset,2,{"start_at":"2023-09-13 00:00:00"},1
+206400008,2064,2064000,◆自由战斗：第1件,自由战斗1,8,0,206406,206425,206444,Event17/FreeBattle1.asset,1,(empty),1
+206400009,2064,2064000,红雾之谜,第7件,9,0,206407,206426,206445,Event17/Episode7.asset,1,(empty),1
+206400010,2064,2064000,恶魔的绘画就是噩梦的预感,第8件,10,1,0,0,0,Event17/Episode8.asset,1,(empty),1
+206400011,2064,2064000,塑料模型收藏,第9件,11,0,206408,206427,206446,Event17/Episode9.asset,1,(empty),1
+206400012,2064,2064000,再见·搭档,第10件,12,0,206409,206428,206447,Event17/Episode10.asset,1,(empty),1
+206400013,2064,2064000,爆破监狱,第11件,13,0,206410,206429,206448,Event17/Episode11.asset,2,{"start_at":"2023-09-14 00:00:00"},1
+206400014,2064,2064000,永远的团队合作,第12件,14,0,206411,206430,206449,Event17/Episode12.asset,1,(empty),1
+206400015,2064,2064000,来了劲牙组,第13件,15,0,206412,206431,206450,Event17/Episode13.asset,1,(empty),1
+206400016,2064,2064000,宝藏强夺大作战！,第14件,16,0,206413,206432,206451,Event17/Episode14.asset,1,(empty),1
+206400017,2064,2064000,◆自由战斗：第2件,自由战斗2,17,0,206414,206433,206452,Event17/FreeBattle2.asset,1,(empty),1
+206400018,2064,2064000,◆自由战斗：第3件,自由战斗3,18,0,206415,206434,206453,Event17/FreeBattle3.asset,1,(empty),1
+206400019,2064,2064000,坠落的武神,第15件,19,1,0,0,0,Event17/Episode15.asset,2,{"start_at":"2023-09-15 00:00:00"},1
+206400020,2064,2064000,快追依神的姐姐！！,第16件,20,0,206416,206435,206454,Event17/Episode16.asset,1,(empty),1
+206400021,2064,2064000,◆自由战斗：第4件,自由战斗4,21,0,206417,206436,206455,Event17/FreeBattle4.asset,1,(empty),1
+206400022,2064,2064000,被隐藏的最强姐妹,第17件,22,0,206418,206437,206456,Event17/Episode17.asset,1,(empty),1
+206400023,2064,2064000,姐妹的不幸之日,第18件,23,0,206419,206438,206457,Event17/Episode18.asset,1,(empty),1
+206400024,2064,2064000,终幕·假想东方见闻录,终幕,24,1,0,0,0,Event17/Episode19.asset,1,(empty),1
+206400101,2064,2064001,重回游戏,序幕,1,1,0,0,0,Event17/Extra/Episode0.asset,1,(empty),0
+206400102,2064,2064001,怪盗结社的阴谋,版本1,2,0,206458,206461,206464,Event17/Extra/Episode1.asset,1,(empty),0
+206400103,2064,2064001,水獭VS狼,版本2,3,0,206459,206462,206465,Event17/Extra/Episode2.asset,1,(empty),0
+206400104,2064,2064001,失落糖果骑士,版本3,4,0,206460,206463,206466,Event17/Extra/Episode3.asset,1,(empty),0
+206400105,2064,2064001,再见，可爱的义贼怪盗,终幕,5,1,0,0,0,Event17/Extra/Episode4.asset,1,(empty),0
+206500001,2065,2065000,光明的侦探，无形的弹丸,序幕,1,1,0,0,0,Event29/Episode0.asset,0,(empty),1
+206500002,2065,2065000,起源，事件的发展过程是,调查记录 No.１,2,1,0,0,0,Event29/Episode1.asset,1,(empty),1
+206500003,2065,2065000,然后，事件拉开了序幕,调查记录 No.２,3,1,0,0,0,Event29/Episode2.asset,1,(empty),1
+206500004,2065,2065000,解开，在这之后迎来的事物,调查记录 No.３,4,0,206501,206513,206525,Event29/Episode3.asset,1,(empty),1
+206500005,2065,2065000,新的事件，黑之疑惑,调查记录 No.４,5,0,206502,206514,206526,Event29/Episode4.asset,1,(empty),1
+206500006,2065,2065000,立刻出发，收集情报,调查记录 No.５,6,0,206503,206515,206527,Event29/Episode5.asset,2,{"start_at":"2023-08-30 00:00:00"},1
+206500007,2065,2065000,进展与阴天与,调查记录 No.６,7,1,0,0,0,Event29/Episode6.asset,1,(empty),1
+206500008,2065,2065000,即便如此，依然相信,调查记录 No.７,8,0,206504,206516,206528,Event29/Episode7.asset,1,(empty),1
+206500009,2065,2065000,黑与黑相遇之时,调查记录 No.８,9,0,206505,206517,206529,Event29/Episode8.asset,1,(empty),1
+206500010,2065,2065000,血气方刚的追逐者,特记事项 其一,10,0,206506,206518,206530,Event29/FreeBattle1.asset,1,(empty),1
+206500011,2065,2065000,线索十分细小,特记事项 其二,11,0,206507,206519,206531,Event29/FreeBattle2.asset,1,(empty),1
+206500012,2065,2065000,状况与忘却,调查记录 No.９,12,1,0,0,0,Event29/Episode9.asset,2,{"start_at":"2023-08-31 00:00:00"},1
+206500013,2065,2065000,发现的事物是『卡片』,调查记录 No.１０,13,1,0,0,0,Event29/Episode10.asset,1,(empty),1
+206500014,2065,2065000,然后，推理开始加速,调查记录 No.１１,14,0,206508,206520,206532,Event29/Episode11.asset,1,(empty),1
+206500015,2065,2065000,暗夜中跳舞的身姿,调查记录 No.１２,15,0,206509,206521,206533,Event29/Episode12.asset,1,(empty),1
+206500016,2065,2065000,月下，不能让步的事,调查记录 No.１３,16,0,206510,206522,206534,Event29/Episode13.asset,1,(empty),1
+206500017,2065,2065000,正义，在智谋的尽头,调查记录 No.１４,17,0,206511,206523,206535,Event29/Episode14.asset,2,{"start_at":"2023-09-01 00:00:00"},1
+206500018,2065,2065000,子时，侦探在笑,调查记录 No.１５,18,1,0,0,0,Event29/Episode15.asset,1,(empty),1
+206500019,2065,2065000,在明乌啼叫之时,调查记录 No.１６,19,0,206512,206524,206536,Event29/Episode16.asset,1,(empty),1
+206500020,2065,2065000,事件伴随晓光顺利解决,终幕,20,1,0,0,0,Event29/Episode17.asset,1,(empty),1
+206500101,2065,2065001,交汇，怪盗与侦探,序幕,1,1,0,0,0,Event29/Extra/Episode0.asset,0,(empty),0
+206500102,2065,2065001,目标的夺取与大笑的身影,调查记录·追记 其一,2,0,206537,206540,206543,Event29/Extra/Episode1.asset,1,(empty),0
+206500103,2065,2065001,出现异常,调查记录·追记 其二,3,0,206538,206541,206544,Event29/Extra/Episode2.asset,1,(empty),0
+206500104,2065,2065001,侦探vs侦探,调查记录·追记 其三,4,0,206539,206542,206545,Event29/Extra/Episode3.asset,1,(empty),0
+206500105,2065,2065001,约定,终幕,5,1,0,0,0,Event29/Extra/Episode4.asset,1,(empty),0
 206600101,2066,2066001,VS复灵「古明地觉(S2)」,袭来BOSS战,1,0,206601,0,0,Daily/Wave1.asset,0,(empty),1
 207000001,2070,2070000,VS复灵「赫卡提亚·拉碧斯拉祖利(C3)」,袭来BOSS战,1,0,207001,0,0,Daily/Wave1.asset,0,(empty),1
 207300001,2073,2073000,VS复灵「古明地恋(F1)」,袭来BOSS战,1,0,207301,0,0,Daily/Wave1.asset,0,(empty),1
 207600001,2076,2076000,VS复灵「博丽灵梦(C3)」,袭来BOSS战,1,0,207601,0,0,Daily/Wave1.asset,0,(empty),1
-300100101,3001,3001001,一个人的茶会？　第1话,记号B3·第1节,1,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section01/Episode1.asset,0,(empty),1
-300100102,3001,3001001,一个人的茶会？　第2话,记号B3·第1节,2,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section01/Episode2.asset,1,(empty),1
-300100103,3001,3001001,一个人的茶会？　第3话,记号B3·第1节,3,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section01/Episode3.asset,1,(empty),1
-300100104,3001,3001001,一个人的茶会？　第4话,记号B3·第1节,4,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section01/Episode4.asset,1,(empty),1
-300100201,3001,3001002,宁静的地方　第1话,记号B3·第2节,1,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section02/Episode1.asset,1,(empty),1
-300100202,3001,3001002,宁静的地方　第2话,记号B3·第2节,2,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section02/Episode2.asset,1,(empty),1
-300100203,3001,3001002,宁静的地方　第3话,记号B3·第2节,3,0,300101,300109,300117,Another/St0000_SecretSealing_MoonBattleType/Section02/Episode3.asset,1,(empty),1
-300100204,3001,3001002,宁静的地方　第4话,记号B3·第2节,4,0,300102,300110,300118,Another/St0000_SecretSealing_MoonBattleType/Section02/Episode4.asset,1,(empty),1
-300100205,3001,3001002,宁静的地方　第5话,记号B3·第2节,5,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section02/Episode5.asset,1,(empty),1
-300100301,3001,3001003,你喜欢的日常　第1话,记号B3·第3节,1,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section03/Episode1.asset,1,(empty),1
-300100302,3001,3001003,你喜欢的日常　第2话,记号B3·第3节,2,0,300103,300111,300119,Another/St0000_SecretSealing_MoonBattleType/Section03/Episode2.asset,1,(empty),1
-300100303,3001,3001003,你喜欢的日常　第3话,记号B3·第3节,3,0,300104,300112,300120,Another/St0000_SecretSealing_MoonBattleType/Section03/Episode3.asset,1,(empty),1
-300100304,3001,3001003,你喜欢的日常　第4话,记号B3·第3节,4,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section03/Episode4.asset,1,(empty),1
-300100401,3001,3001004,重要的告诫　第1话,记号B3·第4节,1,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section04/Episode1.asset,1,(empty),1
-300100402,3001,3001004,重要的告诫　第2话,记号B3·第4节,2,0,300105,300113,300121,Another/St0000_SecretSealing_MoonBattleType/Section04/Episode2.asset,1,(empty),1
-300100403,3001,3001004,重要的告诫　第3话,记号B3·第4节,3,0,300106,300114,300122,Another/St0000_SecretSealing_MoonBattleType/Section04/Episode3.asset,1,(empty),1
-300100404,3001,3001004,重要的告诫　第4话,记号B3·第4节,4,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section04/Episode4.asset,1,(empty),1
-300100501,3001,3001005,失去的言语　第1话,记号B3·第5节,1,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section05/Episode1.asset,1,(empty),1
-300100502,3001,3001005,失去的言语　第2话,记号B3·第5节,2,0,300107,300115,300123,Another/St0000_SecretSealing_MoonBattleType/Section05/Episode2.asset,1,(empty),1
-300100503,3001,3001005,失去的言语　第3话,记号B3·第5节,3,0,300108,300116,300124,Another/St0000_SecretSealing_MoonBattleType/Section05/Episode3.asset,1,(empty),1
-300100504,3001,3001005,失去的言语　第4话,记号B3·第5节,4,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section05/Episode4.asset,1,(empty),1
+300100101,3001,3001001,一个人的茶会？ 第1话,记号B3·第1节,1,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section01/Episode1.asset,0,(empty),1
+300100102,3001,3001001,一个人的茶会？ 第2话,记号B3·第1节,2,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section01/Episode2.asset,1,(empty),1
+300100103,3001,3001001,一个人的茶会？ 第3话,记号B3·第1节,3,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section01/Episode3.asset,1,(empty),1
+300100104,3001,3001001,一个人的茶会？ 第4话,记号B3·第1节,4,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section01/Episode4.asset,1,(empty),1
+300100201,3001,3001002,宁静的地方 第1话,记号B3·第2节,1,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section02/Episode1.asset,1,(empty),1
+300100202,3001,3001002,宁静的地方 第2话,记号B3·第2节,2,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section02/Episode2.asset,1,(empty),1
+300100203,3001,3001002,宁静的地方 第3话,记号B3·第2节,3,0,300101,300109,300117,Another/St0000_SecretSealing_MoonBattleType/Section02/Episode3.asset,1,(empty),1
+300100204,3001,3001002,宁静的地方 第4话,记号B3·第2节,4,0,300102,300110,300118,Another/St0000_SecretSealing_MoonBattleType/Section02/Episode4.asset,1,(empty),1
+300100205,3001,3001002,宁静的地方 第5话,记号B3·第2节,5,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section02/Episode5.asset,1,(empty),1
+300100301,3001,3001003,你喜欢的日常 第1话,记号B3·第3节,1,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section03/Episode1.asset,1,(empty),1
+300100302,3001,3001003,你喜欢的日常 第2话,记号B3·第3节,2,0,300103,300111,300119,Another/St0000_SecretSealing_MoonBattleType/Section03/Episode2.asset,1,(empty),1
+300100303,3001,3001003,你喜欢的日常 第3话,记号B3·第3节,3,0,300104,300112,300120,Another/St0000_SecretSealing_MoonBattleType/Section03/Episode3.asset,1,(empty),1
+300100304,3001,3001003,你喜欢的日常 第4话,记号B3·第3节,4,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section03/Episode4.asset,1,(empty),1
+300100401,3001,3001004,重要的告诫 第1话,记号B3·第4节,1,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section04/Episode1.asset,1,(empty),1
+300100402,3001,3001004,重要的告诫 第2话,记号B3·第4节,2,0,300105,300113,300121,Another/St0000_SecretSealing_MoonBattleType/Section04/Episode2.asset,1,(empty),1
+300100403,3001,3001004,重要的告诫 第3话,记号B3·第4节,3,0,300106,300114,300122,Another/St0000_SecretSealing_MoonBattleType/Section04/Episode3.asset,1,(empty),1
+300100404,3001,3001004,重要的告诫 第4话,记号B3·第4节,4,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section04/Episode4.asset,1,(empty),1
+300100501,3001,3001005,失去的言语 第1话,记号B3·第5节,1,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section05/Episode1.asset,1,(empty),1
+300100502,3001,3001005,失去的言语 第2话,记号B3·第5节,2,0,300107,300115,300123,Another/St0000_SecretSealing_MoonBattleType/Section05/Episode2.asset,1,(empty),1
+300100503,3001,3001005,失去的言语 第3话,记号B3·第5节,3,0,300108,300116,300124,Another/St0000_SecretSealing_MoonBattleType/Section05/Episode3.asset,1,(empty),1
+300100504,3001,3001005,失去的言语 第4话,记号B3·第5节,4,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section05/Episode4.asset,1,(empty),1
 300100601,3001,3001006,保守一个秘密,记号B3·第6节,5,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Section06/Episode1.asset,1,(empty),1
 300110101,3001,3001101,「迷途·羊羔」,记号Bm3·第1话,1,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Extra/Section01/Episode1.asset,0,(empty),0
 300110102,3001,3001101,「魔力学之母」,记号Bm3·第2话,2,1,0,0,0,Another/St0000_SecretSealing_MoonBattleType/Extra/Section01/Episode2.asset,1,(empty),0
