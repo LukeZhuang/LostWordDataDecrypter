@@ -51,6 +51,10 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         public int purge_barrier_diffusion_type; // 0x80
         [MessagePackMember(20)]
         public int purge_barrier_diffusion_range; // 0x84
+        [MessagePackMember(21)]
+        public int boost_buff_effect_type; // 0x88
+        [MessagePackMember(22)]
+        public int purge_buff_effect_type; // 0x8C
     }
 
     [Serializable]

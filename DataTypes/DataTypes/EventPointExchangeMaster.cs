@@ -25,6 +25,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         public int object_value; // 0x28
         [MessagePackMember(7)]
         public int display_order; // 0x2C
+        [MessagePackMember(8)]
+        public int goods_type; // 0x30
+        [MessagePackMember(9)]
+        public string exchange_start_at; // 0x38
+        [MessagePackMember(10)]
+        public string exchange_end_at; // 0x40
     }
 
     [Serializable]
@@ -36,6 +42,8 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     public class EventPointExchangeMaster
     {
         // Fields
+        public const int GoodsTypeNormal = 0;
+        public const int GoodsTypeDaily = 1;
     }
 
 }
