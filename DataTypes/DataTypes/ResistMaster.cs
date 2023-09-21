@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class ResistRecord : MasterRecord<int> // TypeDefIndex: 1540
+    public class ResistRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -34,12 +34,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class ResistTable : MasterTable<int, ResistRecord> // TypeDefIndex: 1539
+    public class ResistTable : MasterTable<int, ResistRecord>
     {
         // Fields
     }
 
-    public class ResistMaster // TypeDefIndex: 1538
+    public class ResistMaster
     {
         // Fields
         public const int ELEMENT_RESISTANCE_WEAK = 0;

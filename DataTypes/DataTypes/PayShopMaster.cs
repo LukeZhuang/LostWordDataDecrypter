@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PayShopRecord : MasterRecord<int> // TypeDefIndex: 1468
+    public class PayShopRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -48,12 +48,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class PayShopTable : MasterTable<int, PayShopRecord> // TypeDefIndex: 1467
+    public class PayShopTable : MasterTable<int, PayShopRecord>
     {
         // Fields
     }
 
-    public class PayShopMaster // TypeDefIndex: 1466
+    public class PayShopMaster
     {
         // Fields
     }

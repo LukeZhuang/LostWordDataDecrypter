@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class BulletCriticalRaceRecord : MasterRecord<long> // TypeDefIndex: 1233
+    public class BulletCriticalRaceRecord : MasterRecord<long>
     {
         // Fields
         [MessagePackMember(0)]
@@ -18,12 +18,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class BulletCriticalRaceTable : MasterTable<long, BulletCriticalRaceRecord> // TypeDefIndex: 1232
+    public class BulletCriticalRaceTable : MasterTable<long, BulletCriticalRaceRecord>
     {
         // Fields
     }
 
-    public class BulletCriticalRaceMaster // TypeDefIndex: 1231
+    public class BulletCriticalRaceMaster
     {
         // Fields
     }

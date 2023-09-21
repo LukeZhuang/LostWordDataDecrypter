@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class EventTotalPointGroupRecord : MasterRecord<long> // TypeDefIndex: 1357
+    public class EventTotalPointGroupRecord : MasterRecord<long>
     {
         // Fields
         [MessagePackMember(0)]
@@ -22,12 +22,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class EventTotalPointGroupTable : MasterTable<long, EventTotalPointGroupRecord> // TypeDefIndex: 1356
+    public class EventTotalPointGroupTable : MasterTable<long, EventTotalPointGroupRecord>
     {
         // Fields
     }
 
-    public class EventTotalPointGroupMaster // TypeDefIndex: 1355
+    public class EventTotalPointGroupMaster
     {
         // Fields
     }

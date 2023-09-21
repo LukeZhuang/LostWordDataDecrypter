@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class BulletRecord : MasterRecord<int> // TypeDefIndex: 1239
+    public class BulletRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -54,12 +54,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class BulletTable : MasterTable<int, BulletRecord> // TypeDefIndex: 1238
+    public class BulletTable : MasterTable<int, BulletRecord>
     {
         // Fields
     }
 
-    public class BulletMaster // TypeDefIndex: 1237
+    public class BulletMaster
     {
         // Fields
     }

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class EventMenuRecord : MasterRecord<long> // TypeDefIndex: 1341
+    public class EventMenuRecord : MasterRecord<long>
     {
         // Fields
         [MessagePackMember(0)]
@@ -26,12 +26,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class EventMenuTable : MasterTable<long, EventMenuRecord> // TypeDefIndex: 1340
+    public class EventMenuTable : MasterTable<long, EventMenuRecord>
     {
         // Fields
     }
 
-    public class EventMenuMaster // TypeDefIndex: 1339
+    public class EventMenuMaster
     {
         // Fields
     }

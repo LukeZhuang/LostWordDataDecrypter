@@ -8,7 +8,7 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
 
 
     [Serializable]
-    public class AssetLoaderManifestMasterInfo // TypeDefIndex: 215
+    public class AssetLoaderManifestMasterInfo
     {
         // Fields
         public long EndAt; // 0x10

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitSpellcardReleaseRecord : MasterRecord<int> // TypeDefIndex: 1690
+    public class UnitSpellcardReleaseRecord : MasterRecord<int>
     {
         // Fields
         private List<int> m_resetSkillIndexes; // 0x10
@@ -95,12 +95,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class UnitSpellcardReleaseTable : MasterTable<int, UnitSpellcardReleaseRecord> // TypeDefIndex: 1689
+    public class UnitSpellcardReleaseTable : MasterTable<int, UnitSpellcardReleaseRecord>
     {
         // Fields
     }
 
-    public class UnitSpellcardReleaseMaster // TypeDefIndex: 1686
+    public class UnitSpellcardReleaseMaster
     {
         // Fields
         public const int TargetIndex1 = 1;

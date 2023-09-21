@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PriceRecord : MasterRecord<int> // TypeDefIndex: 1522
+    public class PriceRecord : MasterRecord<int>
     {
         // Fields
         public int id; // 0x10
@@ -22,12 +22,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class PriceTable : MasterTable<int, PriceRecord> // TypeDefIndex: 1521
+    public class PriceTable : MasterTable<int, PriceRecord>
     {
         // Fields
     }
 
-    public class PriceMaster // TypeDefIndex: 1520
+    public class PriceMaster
     {
         // Fields
         public const string CURRENCY_CODE = "RMB";

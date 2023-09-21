@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class OrbExchangeSubCategoryRecord : MasterRecord<int> // TypeDefIndex: 1465
+    public class OrbExchangeSubCategoryRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -18,12 +18,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class OrbExchangeSubCategoryTable : MasterTable<int, OrbExchangeSubCategoryRecord> // TypeDefIndex: 1464
+    public class OrbExchangeSubCategoryTable : MasterTable<int, OrbExchangeSubCategoryRecord>
     {
         // Fields
     }
 
-    public class OrbExchangeSubCategoryMaster // TypeDefIndex: 1463
+    public class OrbExchangeSubCategoryMaster
     {
         // Fields
     }

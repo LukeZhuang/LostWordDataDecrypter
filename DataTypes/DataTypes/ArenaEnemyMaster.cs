@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class ArenaEnemyRecord : EnemyRecord // TypeDefIndex: 1190
+    public class ArenaEnemyRecord : EnemyRecord
     {
         // Fields
         private int bk_yang_attack; // 0x124
@@ -17,12 +17,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class ArenaEnemyTable : MasterTable<int, ArenaEnemyRecord> // TypeDefIndex: 1189
+    public class ArenaEnemyTable : MasterTable<int, ArenaEnemyRecord>
     {
         // Fields
     }
 
-    public class ArenaEnemyMaster // TypeDefIndex: 1187
+    public class ArenaEnemyMaster
     {
         // Fields
     }

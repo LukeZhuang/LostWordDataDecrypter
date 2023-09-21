@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class ValuePackShopRecord : MasterRecord<int> // TypeDefIndex: 1704
+    public class ValuePackShopRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -46,12 +46,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class ValuePackShopTable : MasterTable<int, ValuePackShopRecord> // TypeDefIndex: 1703
+    public class ValuePackShopTable : MasterTable<int, ValuePackShopRecord>
     {
         // Fields
     }
 
-    public class ValuePackShopMaster // TypeDefIndex: 1702
+    public class ValuePackShopMaster
     {
         // Fields
         public const int ShopType_StepUp = 4;

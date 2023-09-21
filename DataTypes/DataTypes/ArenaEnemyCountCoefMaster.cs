@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class ArenaEnemyCountCoefRecord : MasterRecord<int> // TypeDefIndex: 1186
+    public class ArenaEnemyCountCoefRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -22,12 +22,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class ArenaEnemyCountCoefTable : MasterTable<int, ArenaEnemyCountCoefRecord> // TypeDefIndex: 1185
+    public class ArenaEnemyCountCoefTable : MasterTable<int, ArenaEnemyCountCoefRecord>
     {
         // Fields
     }
 
-    public class ArenaEnemyCountCoefMaster // TypeDefIndex: 1183
+    public class ArenaEnemyCountCoefMaster
     {
         // Fields
         public const int TYPE_LIFE_POINT = 0;

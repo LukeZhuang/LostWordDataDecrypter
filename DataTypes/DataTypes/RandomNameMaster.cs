@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class RandomNameRecord : MasterRecord<int> // TypeDefIndex: 3872
+    public class RandomNameRecord : MasterRecord<int>
     {
         // Fields
         public int id; // 0x10
@@ -15,12 +15,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class RandomNameTable : MasterTable<int, RandomNameRecord> // TypeDefIndex: 3871
+    public class RandomNameTable : MasterTable<int, RandomNameRecord>
     {
         // Fields
     }
 
-    public class RandomNameMaster // TypeDefIndex: 3870
+    public class RandomNameMaster
     {
         // Fields
     }

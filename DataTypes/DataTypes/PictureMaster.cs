@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PictureRecord : MasterRecord<int> // TypeDefIndex: 1497
+    public class PictureRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -92,12 +92,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class PictureTable : MasterTable<int, PictureRecord> // TypeDefIndex: 1496
+    public class PictureTable : MasterTable<int, PictureRecord>
     {
         // Fields
     }
 
-    public class PictureMaster // TypeDefIndex: 1495
+    public class PictureMaster
     {
         // Fields
         public const int CORRECTION_TYPE_LIFE_POINT = 1;

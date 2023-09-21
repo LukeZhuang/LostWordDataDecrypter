@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class RhythmGameMusicRecord : MasterRecord<int> // TypeDefIndex: 1543
+    public class RhythmGameMusicRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -34,12 +34,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class RhythmGameMusicTable : MasterTable<int, RhythmGameMusicRecord> // TypeDefIndex: 1542
+    public class RhythmGameMusicTable : MasterTable<int, RhythmGameMusicRecord>
     {
         // Fields
     }
 
-    public class RhythmGameMusicMaster // TypeDefIndex: 1541
+    public class RhythmGameMusicMaster
     {
         // Fields
     }

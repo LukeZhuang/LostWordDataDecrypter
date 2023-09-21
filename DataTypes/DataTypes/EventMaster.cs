@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class EventRecord : MasterRecord<int> // TypeDefIndex: 1338
+    public class EventRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -63,12 +63,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class EventTable : MasterTable<int, EventRecord> // TypeDefIndex: 1337
+    public class EventTable : MasterTable<int, EventRecord>
     {
         // Fields
     }
 
-    public class EventMaster // TypeDefIndex: 1331
+    public class EventMaster
     {
         // Fields
         public const int EVENT_TYPE_LOTTERY_COUNT = 1;

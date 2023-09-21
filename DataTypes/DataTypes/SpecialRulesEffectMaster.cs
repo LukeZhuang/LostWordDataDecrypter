@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class SpecialRulesEffectRecord : MasterRecord<int> // TypeDefIndex: 1586
+    public class SpecialRulesEffectRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -26,12 +26,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class SpecialRulesEffectTable : MasterTable<int, SpecialRulesEffectRecord> // TypeDefIndex: 1585
+    public class SpecialRulesEffectTable : MasterTable<int, SpecialRulesEffectRecord>
     {
         // Fields
     }
 
-    public class SpecialRulesEffectMaster // TypeDefIndex: 1584
+    public class SpecialRulesEffectMaster
     {
         // Fields
     }

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class EventPointGachaRecord : MasterRecord<long> // TypeDefIndex: 1354
+    public class EventPointGachaRecord : MasterRecord<long>
     {
         // Fields
         [MessagePackMember(0)]
@@ -26,12 +26,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class EventPointGachaTable : MasterTable<long, EventPointGachaRecord> // TypeDefIndex: 1353
+    public class EventPointGachaTable : MasterTable<long, EventPointGachaRecord>
     {
         // Fields
     }
 
-    public class EventPointGachaMaster // TypeDefIndex: 1352
+    public class EventPointGachaMaster
     {
         // Fields
     }

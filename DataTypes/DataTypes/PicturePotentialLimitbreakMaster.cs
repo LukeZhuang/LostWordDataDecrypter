@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PicturePotentialLimitbreakRecord : MasterRecord<long> // TypeDefIndex: 1502
+    public class PicturePotentialLimitbreakRecord : MasterRecord<long>
     {
         // Fields
         [MessagePackMember(0)]
@@ -24,12 +24,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class PicturePotentialLimitbreakTable : MasterTable<long, PicturePotentialLimitbreakRecord> // TypeDefIndex: 1501
+    public class PicturePotentialLimitbreakTable : MasterTable<long, PicturePotentialLimitbreakRecord>
     {
         // Fields
     }
 
-    public class PicturePotentialLimitbreakMaster // TypeDefIndex: 1498
+    public class PicturePotentialLimitbreakMaster
     {
         // Fields
     }

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class VoiceTypeRecord : MasterRecord<int> // TypeDefIndex: 1716
+    public class VoiceTypeRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -20,12 +20,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class VoiceTypeTable : MasterTable<int, VoiceTypeRecord> // TypeDefIndex: 1715
+    public class VoiceTypeTable : MasterTable<int, VoiceTypeRecord>
     {
         // Fields
     }
 
-    public class VoiceTypeMaster // TypeDefIndex: 1714
+    public class VoiceTypeMaster
     {
         // Fields
         public const int VOICE_TYPE_TRUST_1 = 2;

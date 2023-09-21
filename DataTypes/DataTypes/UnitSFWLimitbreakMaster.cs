@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitSFWLimitbreakRecord : MasterRecord<long> // TypeDefIndex: 1677
+    public class UnitSFWLimitbreakRecord : MasterRecord<long>
     {
         // Fields
         [MessagePackMember(0)]
@@ -20,12 +20,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class UnitSFWLimitbreakTable : MasterTable<long, UnitSFWLimitbreakRecord> // TypeDefIndex: 1676
+    public class UnitSFWLimitbreakTable : MasterTable<long, UnitSFWLimitbreakRecord>
     {
         // Fields
     }
 
-    public class UnitSFWLimitbreakMaster // TypeDefIndex: 1675
+    public class UnitSFWLimitbreakMaster
     {
         // Fields
     }

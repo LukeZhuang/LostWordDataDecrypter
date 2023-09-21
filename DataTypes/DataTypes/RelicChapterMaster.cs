@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class RelicChapterRecord : MasterRecord<int> // TypeDefIndex: 1534
+    public class RelicChapterRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -22,12 +22,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class RelicChapterTable : MasterTable<int, RelicChapterRecord> // TypeDefIndex: 1533
+    public class RelicChapterTable : MasterTable<int, RelicChapterRecord>
     {
         // Fields
     }
 
-    public class RelicChapterMaster // TypeDefIndex: 1532
+    public class RelicChapterMaster
     {
         // Fields
     }

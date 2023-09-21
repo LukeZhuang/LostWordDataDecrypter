@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class BgmRecord : MasterRecord<int> // TypeDefIndex: 1227
+    public class BgmRecord : MasterRecord<int>
     {
         // Fields
         private HashSet<int> m_unitIDs; // 0x10
@@ -29,12 +29,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class BgmTable : MasterTable<int, BgmRecord> // TypeDefIndex: 1226
+    public class BgmTable : MasterTable<int, BgmRecord>
     {
         // Fields
     }
 
-    public class BgmMaster // TypeDefIndex: 1225
+    public class BgmMaster
     {
         // Fields
     }

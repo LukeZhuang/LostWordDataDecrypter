@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class UnitReincarnationReleaseRecord : MasterRecord<int> // TypeDefIndex: 1674
+    public class UnitReincarnationReleaseRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -62,12 +62,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class UnitReincarnationReleaseTable : MasterTable<int, UnitReincarnationReleaseRecord> // TypeDefIndex: 1673
+    public class UnitReincarnationReleaseTable : MasterTable<int, UnitReincarnationReleaseRecord>
     {
         // Fields
     }
 
-    public class UnitReincarnationReleaseMaster // TypeDefIndex: 1665
+    public class UnitReincarnationReleaseMaster
     {
         // Fields
         public const string RELEASE_TYPE_STAGE_UP = "1";

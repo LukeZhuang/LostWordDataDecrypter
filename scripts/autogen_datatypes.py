@@ -63,6 +63,8 @@ masters = get_class_content(master_line_num, lines)
 tables = get_class_content(table_line_num, lines)
 records = get_class_content(record_line_num, lines)
 
+def str_wrapper(s):
+	return re.sub(' // TypeDefIndex:.*', '', s)
 
 for k in record_line_num:
 	assert k in table_line_num
@@ -82,15 +84,15 @@ for k in master_line_num:
 	fo.write("{\n")
 	if k in records:
 		for l in records[k]:
-			fo.write(INDENT + l + "\n")
+			fo.write(INDENT + str_wrapper(l) + "\n")
 	fo.write("\n")
 	if k in tables:
 		for l in tables[k]:
-			fo.write(INDENT + l + "\n")
+			fo.write(INDENT + str_wrapper(l) + "\n")
 	fo.write("\n")
 	if k in masters:
 		for l in masters[k]:
-			fo.write(INDENT + l + "\n")
+			fo.write(INDENT + str_wrapper(l) + "\n")
 	fo.write("\n")
 	fo.write("}\n")
 	fo.close()

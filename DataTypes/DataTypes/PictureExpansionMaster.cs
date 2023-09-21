@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
     [Serializable]
-    public class PictureExpansionRecord : MasterRecord<int> // TypeDefIndex: 1494
+    public class PictureExpansionRecord : MasterRecord<int>
     {
         // Fields
         [MessagePackMember(0)]
@@ -18,12 +18,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     }
 
     [Serializable]
-    public class PictureExpansionTable : MasterTable<int, PictureExpansionRecord> // TypeDefIndex: 1493
+    public class PictureExpansionTable : MasterTable<int, PictureExpansionRecord>
     {
         // Fields
     }
 
-    public class PictureExpansionMaster // TypeDefIndex: 1491
+    public class PictureExpansionMaster
     {
         // Fields
     }
