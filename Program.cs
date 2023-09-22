@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -18,7 +19,7 @@ namespace LostWordDataDecrypter
         static void Main(string[] args)
         {
             /* ------------ CONFIGURATIONS ------------ */
-            bool doSeparateDecrypt = false;
+            bool doSeparateDecrypt = true;
             bool writeCSVFiles = true;
             bool writeJSONFiles = true;
             /* ---------------------------------------- */
@@ -111,22 +112,30 @@ namespace LostWordDataDecrypter
                  *   if we have tableToFileName, just look at each table
                  *   if not, then go through each file to see if the first 16 bytes (IV) are all alphabet chars
                  */
-                if (doSeparateDecrypt)
+                if (true || doSeparateDecrypt)
                 {
                     Console.WriteLine("Step 2: trying to decrypt files");
                     int succCount = 0;
-                    foreach (string tableName in tableToFileName.Keys)
+                    //foreach (string tableName in tableToFileName.Keys)
+                    string tableName = "UnitTable";
                     {
                         string fileName = tableToFileName[tableName];
                         Console.Write("Decrypting " + tableName + ": " + fileName + " ... ");
                         byte[] src = GeneralHelper.FileToBytes(Path.Combine(dir, fileName));
-                        try
+                        bool succ = false;
+                        for (int i = -1; i <= 26; i++)
                         {
-                            GeneralHelper.DecryptToFile(Path.Combine(outputDir, tableName + "(" + fileName + ")_decrypted"), src);
-                            succCount++;
-                            Console.WriteLine("successful");
+                            try
+                            {
+                                GeneralHelper.DecryptToFile(Path.Combine(outputDir, tableName + "(" + fileName + ")_decrypted"), src, tableName, i == -1 ? "" : new string(Convert.ToChar('a' + i), 1));
+                                succCount++;
+                                Console.WriteLine("successful");
+                                succ = true;
+                                break;
+                            }
+                            catch (Exception) {}
                         }
-                        catch (Exception)
+                        if (!succ)
                         {
                             Console.WriteLine("failed");
                         }
@@ -155,29 +164,39 @@ namespace LostWordDataDecrypter
                     if (TableType != null)
                     {
                         var unpackMethod = typeof(MasterMsgPack).GetMethod("Unpack").MakeGenericMethod(TableType);
-                        try
+                        bool succ = false;
+                        for (int i = -1; i < 26; i++)
                         {
-                            // One example of the following code is like this:
-                            // UnitTable st = MasterMsgPack.Unpack<UnitTable>(src);
-                            // st.to_csv(Path.Combine(ROOT_DIR, Path.Combine(OUTPUT_DIR, table_name + ".csv")));
-                            var st = unpackMethod.Invoke(null, new Object[] { src });
-                            if (writeCSVFiles)
-                                TableType.GetMethod("ToCSV").Invoke(st, new Object[] { outputFileName });
-                            if (writeJSONFiles)
-                                TableType.GetMethod("ToJSON").Invoke(st, new Object[] { outputJSONFileName });
-                            Console.WriteLine("successful");
-                            succDataTypeCount++;
+                            Console.WriteLine(tableName + " " + i);
+                            try
+                            {
+                                // One example of the following code is like this:
+                                // UnitTable st = MasterMsgPack.Unpack<UnitTable>(src);
+                                // st.to_csv(Path.Combine(ROOT_DIR, Path.Combine(OUTPUT_DIR, table_name + ".csv")));
+                                var st = unpackMethod.Invoke(null, new Object[] { src, tableName, i == -1 ? "" : new string(Convert.ToChar('a' + i), 1) });
+                                if (writeCSVFiles)
+                                    TableType.GetMethod("ToCSV").Invoke(st, new Object[] { outputFileName });
+                                if (writeJSONFiles)
+                                    TableType.GetMethod("ToJSON").Invoke(st, new Object[] { outputJSONFileName });
+                                Console.WriteLine("successful");
+                                succDataTypeCount++;
+                                succ = true;
+                                break;
+                            }
+                            catch (Exception e)
+                            {
+                                GeneralHelper.CreateFileForAnonymousType(src, outputFileName, fileName.Replace("Table", "Master"), i == -1 ? "" : new string(Convert.ToChar('a' + i), 1));
+                            }
                         }
-                        catch (Exception e)
+                        if (!succ)
                         {
-                            GeneralHelper.CreateFileForAnonymousType(src, outputFileName);
                             Console.WriteLine("type implemented but deserializing failed. Creating anonymous type");
                             deserializeFailedDataTypeCount++;
                         }
                     }
                     else
                     {
-                        GeneralHelper.CreateFileForAnonymousType(src, outputFileName);
+                        GeneralHelper.CreateFileForAnonymousType(src, outputFileName, fileName.Replace("Table", "Master"), "");
                         Console.WriteLine("type not implemented. Creating anonymous type");
                         unImplementedDataTypeCount++;
                     }

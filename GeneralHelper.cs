@@ -52,8 +52,7 @@ namespace LostWordDataDecrypter
 
     public static class MasterMsgPack
     {
-        public const string SECRET_KEY = "bhVDLWfSBWureNR3";
-        public const byte XOR = 100;
+        public const string SECRET_KEY = "jR3GTK6vR6gPz2MNA7hPiGEYbG6vBsMAS5jaretmHu4PS78zz3YcijFBM9yJha5HL7wn3DFYd4XaFNLB";
         public static SerializationContext m_context;
 
         public static void Initialize()
@@ -65,32 +64,54 @@ namespace LostWordDataDecrypter
             m_context.SerializationMethod = 0;
         }
 
-        public static string GenerateEncryptionKey(string secret_key, byte xor)
+        public static int GetByteCount(string enckey)
         {
-            char[] result = secret_key.ToCharArray();
-            for (int i = 0; i < secret_key.Length; i++)
+            char c = enckey[0];
+            byte a = Convert.ToByte(c);
+            byte b = Convert.ToByte(0x61);
+            if ((a & 0xff) < (b & 0xff))
+                b = Convert.ToByte(0x41);
+            return 1 << ((a & 0xff) - (b & 0x1f));
+        }
+
+        public static string GenerateEncryptionKey(string name, int length, ref int index)
+        {
+            char[] result = new char[length];
+            for (int i = 0; i < length; i++)
             {
-                char c = secret_key[i];
-                byte b = System.Convert.ToByte(c);
-                char newc = System.Convert.ToChar((uint)xor << ((byte)i & 1) ^ b & 0xff);
-                result[i] = newc;
+                byte nameByte = Convert.ToByte(name[i % name.Length]);
+                byte keyByte = Convert.ToByte(SECRET_KEY[index % SECRET_KEY.Length]);
+                result[i] = Convert.ToChar(nameByte ^ keyByte);
+                index += nameByte;
             }
             return new string(result);
         }
 
-        public static byte[] Decrypt(byte[] src)
+        public static byte[] Decrypt(byte[] src, string name, string enckey)
         {
-            MemoryStream ifs = new MemoryStream(src);
+            int length = src.Length;
+            byte[] modifiedSrc = new byte[length];
+            Array.Copy(src, 0, modifiedSrc, 0, length);
+            if (!String.IsNullOrEmpty(enckey))
+            {
+                int byteCount = GetByteCount(enckey) % (src.Length / 3);
+                // which means move the last "byteCount" bytes to the beginning
+                byte[] tmp = new byte[length];
+                Array.Copy(modifiedSrc, 0, tmp, 0, length);
+                Array.Copy(tmp, length - byteCount, modifiedSrc, 0, byteCount);
+                Array.Copy(tmp, 0, modifiedSrc, byteCount, length - byteCount);
+            }
+            MemoryStream ifs = new MemoryStream(modifiedSrc);
             MemoryStream ofs = new MemoryStream();
-            string key = MasterMsgPack.GenerateEncryptionKey(SECRET_KEY, XOR);
+            int index = name.Length;
+            string key = GenerateEncryptionKey(name, 0x10, ref index);
             FileEncryptor.Decrypt(ifs, ofs, key);
-            byte[] res = ofs.ToArray();
-            return res;
+            return ofs.ToArray();
         }
 
-        public static T Unpack<T>(byte[] src)
+        public static T Unpack<T>(byte[] src, string name, string enckey)
         {
-            byte[] output_buff = MasterMsgPack.Decrypt(src);
+            byte[] output_buff = MasterMsgPack.Decrypt(src, name, enckey);
             byte[] newbuff = new byte[output_buff.Length + 1];
             newbuff[0] = (byte)(0x91);  // unpack needs a list wrapper
             for (int i = 0; i < output_buff.Length; i++)
@@ -113,9 +134,9 @@ namespace LostWordDataDecrypter
             input_buff = br.ReadBytes((int)numBytes);
             return input_buff;
         }
-        public static void DecryptToFile(string output_filename, byte[] src)
+        public static void DecryptToFile(string output_filename, byte[] src, string name, string enckey)
         {
-            byte[] output_buff = MasterMsgPack.Decrypt(src);
+            byte[] output_buff = MasterMsgPack.Decrypt(src, name, enckey);
             FileStream ofs = File.Create(output_filename);
             ofs.Write(output_buff, 0, output_buff.Length);
         }
@@ -184,9 +205,9 @@ namespace LostWordDataDecrypter
                 throw new NotImplementedException();
             }
         }
-        public static void CreateFileForAnonymousType(byte[] src, string fullPath)
+        public static void CreateFileForAnonymousType(byte[] src, string fullPath, string name, string enckey)
         {
-            byte[] output_buff = MasterMsgPack.Decrypt(src);
+            byte[] output_buff = MasterMsgPack.Decrypt(src, name, enckey);
             Stream stream = new MemoryStream(output_buff);
 
             List<string> fieldNames = new List<string>();
