@@ -11,16 +11,6 @@ namespace LostWordDataDecrypter
         private const int IV_LENGTH = 16;
         private const string SECRET_KEY = "jR3GTK6vR6gPz2MNA7hPiGEYbG6vBsMAS5jaretmHu4PS78zz3YcijFBM9yJha5HL7wn3DFYd4XaFNLB";
 
-        private static byte[] GenerateBytes(string key)
-        {
-            Encoding utf8 = Encoding.UTF8;
-            byte[] bytes = utf8.GetBytes(key);
-            byte[] result = new byte[KEY_LENGTH];
-            for (int i = 0; i < KEY_LENGTH; i++)
-                result[i] = bytes[i];
-            return result;
-        }
-
         private static byte[] ShuffuleSrc(byte[] src, string encKey)
         {
             int srcLen = src.Length;
@@ -51,8 +41,7 @@ namespace LostWordDataDecrypter
             }
 
             string key = new string(keyArr);
-            Encoding utf8 = Encoding.UTF8;
-            byte[] keyBytes = utf8.GetBytes(key);
+            byte[] keyBytes = Encoding.UTF8.GetBytes(key);
             byte[] result = new byte[KEY_LENGTH];
             Array.Copy(keyBytes, 0, result, 0, KEY_LENGTH);
             return result;
