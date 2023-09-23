@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LostWordDataDecrypter.DataTypes.DataTypes
 {
@@ -24,14 +20,12 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
             m_table = new Dictionary<TKey, TRec>();
         }
 
-        public void ToCSV(string fullPath)
+        public void ToCSV(string outputFilePath)
         {
             List<string> fieldNames = new List<string>();
             FieldInfo[] fields = typeof(TRec).GetFields();
             foreach (FieldInfo field in fields)
-            {
                 fieldNames.Add(field.Name);
-            }
 
             List<List<object>> records = new List<List<object>>();
             foreach (KeyValuePair<TKey, TRec> p in m_table)
@@ -44,19 +38,18 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
                 }
                 records.Add(record);
             }
-            GeneralHelper.TableToCSV(fullPath, fieldNames, records);
+            GeneralHelper.TableToCSVFile(outputFilePath, fieldNames, records);
         }
 
-        public void ToJSON(string fullPath)
+        public void ToJSON(string outputFilePath)
         {
-            using (StreamWriter writer = new StreamWriter(fullPath))
+            List<string> jsonStrs = new List<string>();
+            foreach (KeyValuePair<TKey, TRec> p in m_table)
             {
-                foreach (KeyValuePair<TKey, TRec> p in m_table)
-                {
-                    string jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(p.Value);
-                    writer.WriteLine(jsonStr);
-                }
+                string jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(p.Value);
+                jsonStrs.Add(jsonStr);
             }
+            GeneralHelper.TableToJSONFile(outputFilePath, jsonStrs);
         }
 
     }

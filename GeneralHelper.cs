@@ -1,250 +1,71 @@
-﻿using MsgPack;
+﻿using LostWordDataDecrypter.DataTypes;
+using MsgPack;
 using MsgPack.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Security.Cryptography;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace LostWordDataDecrypter
 {
-    public class FileEncryptor
-    {
-        public const int KEY_LENGTH = 16;
-        public const int IV_LENGTH = 16;
-
-        public static byte[] GenerateBytes(string password, int length)
-        {
-            Encoding utf8 = Encoding.UTF8;
-            byte[] bytes = utf8.GetBytes(password);
-            byte[] result = new byte[length];
-            for (int i = 0; i < length; i++)
-            {
-                result[i] = bytes[i];
-            }
-            return result;
-        }
-
-        public static void Decrypt(Stream ifs, Stream ofs, string key)
-        {
-            byte[] key_bytes = GenerateBytes(key, KEY_LENGTH);
-            byte[] iv_bytes = new byte[IV_LENGTH];
-            ifs.Read(iv_bytes, 0, IV_LENGTH);
-
-            using (Aes aesAlg = Aes.Create())
-            {
-                aesAlg.Key = key_bytes;
-                aesAlg.IV = iv_bytes;
-                aesAlg.Mode = CipherMode.CBC;
-
-                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
-                using (CryptoStream csDecrypt = new CryptoStream(ifs, decryptor, CryptoStreamMode.Read))
-                {
-                    int data;
-                    while ((data = csDecrypt.ReadByte()) != -1)
-                        ofs.WriteByte((byte)data);
-                }
-            }
-        }
-
-    }
-
-    public static class MasterMsgPack
-    {
-        public const string SECRET_KEY = "jR3GTK6vR6gPz2MNA7hPiGEYbG6vBsMAS5jaretmHu4PS78zz3YcijFBM9yJha5HL7wn3DFYd4XaFNLB";
-        public static SerializationContext m_context;
-
-        public static void Initialize()
-        {
-            MsgPack.Serialization.MessagePackSerializer.PrepareType<int>();
-            MsgPack.Serialization.MessagePackSerializer.PrepareType<long>();
-            MsgPack.Serialization.MessagePackSerializer.PrepareType<float>();
-            m_context = MsgPack.Serialization.SerializationContext.Default;
-            m_context.SerializationMethod = 0;
-        }
-
-        public static int GetByteCount(string enckey)
-        {
-            char c = enckey[0];
-            byte a = Convert.ToByte(c);
-            byte b = Convert.ToByte(0x61);
-            if ((a & 0xff) < (b & 0xff))
-                b = Convert.ToByte(0x41);
-            return 1 << ((a & 0xff) - (b & 0x1f));
-        }
-
-        public static string GenerateEncryptionKey(string name, int length, ref int index)
-        {
-            char[] result = new char[length];
-            for (int i = 0; i < length; i++)
-            {
-                byte nameByte = Convert.ToByte(name[i % name.Length]);
-                byte keyByte = Convert.ToByte(SECRET_KEY[index % SECRET_KEY.Length]);
-                result[i] = Convert.ToChar(nameByte ^ keyByte);
-                index += nameByte;
-            }
-            return new string(result);
-        }
-
-        public static byte[] Decrypt(byte[] src, string name, string enckey)
-        {
-            int length = src.Length;
-            byte[] modifiedSrc = new byte[length];
-            Array.Copy(src, 0, modifiedSrc, 0, length);
-            if (!String.IsNullOrEmpty(enckey))
-            {
-                int byteCount = GetByteCount(enckey) % (src.Length / 3);
-                // which means move the last "byteCount" bytes to the beginning
-                byte[] tmp = new byte[length];
-                Array.Copy(modifiedSrc, 0, tmp, 0, length);
-                Array.Copy(tmp, length - byteCount, modifiedSrc, 0, byteCount);
-                Array.Copy(tmp, 0, modifiedSrc, byteCount, length - byteCount);
-            }
-            MemoryStream ifs = new MemoryStream(modifiedSrc);
-            MemoryStream ofs = new MemoryStream();
-            int index = name.Length;
-            string key = GenerateEncryptionKey(name, 0x10, ref index);
-            FileEncryptor.Decrypt(ifs, ofs, key);
-            return ofs.ToArray();
-        }
-
-        public static T Unpack<T>(byte[] src, string name, string enckey)
-        {
-            byte[] output_buff = MasterMsgPack.Decrypt(src, name, enckey);
-            byte[] newbuff = new byte[output_buff.Length + 1];
-            newbuff[0] = (byte)(0x91);  // unpack needs a list wrapper
-            for (int i = 0; i < output_buff.Length; i++)
-            {
-                newbuff[i + 1] = output_buff[i];
-            }
-            return m_context.GetSerializer<T>().UnpackSingleObject(newbuff);
-        }
-
-    }
-
     public class GeneralHelper
     {
-        public static byte[] FileToBytes(string input_filename)
-        {
-            byte[] input_buff = null;
-            FileStream ifs = new FileStream(input_filename, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(ifs);
-            long numBytes = new FileInfo(input_filename).Length;
-            input_buff = br.ReadBytes((int)numBytes);
-            return input_buff;
+        public enum DecryptStatus {
+            Success = 0,
+            DecryptionFail = 1,
+            DeserializeFail = 2,
+            AnonymousDeserializeFail = 3,
         }
-        public static void DecryptToFile(string output_filename, byte[] src, string name, string enckey)
+        private static byte[] TryDecrypt(string inputFilePath, string tableName)
         {
-            byte[] output_buff = MasterMsgPack.Decrypt(src, name, enckey);
-            FileStream ofs = File.Create(output_filename);
-            ofs.Write(output_buff, 0, output_buff.Length);
+            byte[] originalBytes = File.ReadAllBytes(inputFilePath);
+            for (int key = -1; key <= 26; key++)
+            {
+                string encKey = (key == -1) ? "" : new string(Convert.ToChar('a' + key), 1);
+                byte[] decryptOutput = MasterDecrypter.Decrypt(originalBytes, tableName, encKey);
+                if (decryptOutput.Length == 0)
+                    continue;
+                return decryptOutput;
+            }
+            return new byte[0];
         }
-        public static void HandleFields(MessagePackObject field, List<string> fieldNames, List<object> record,
-                                        ref int intTypeId, ref int strTypeId, ref int floatTypeId, bool createHeader)
-        {
-            if (field.IsTypeOf<Int32>().GetValueOrDefault())
-            {
-                int v = field.AsInt32();
-                record.Add(v);
-                if (createHeader)
-                {
-                    fieldNames.Add("AnonymousInt" + intTypeId);
-                    intTypeId++;
-                }
-            }
-            else if (field.IsTypeOf<string>().GetValueOrDefault())
-            {
-                string s = field.AsString();
-                record.Add(s);
-                if (createHeader)
-                {
-                    fieldNames.Add("AnonymousStr" + strTypeId);
-                    strTypeId++;
-                }
-            }
-            else if (field.IsTypeOf<Single>().GetValueOrDefault())
-            {
-                float f = field.AsSingle();
-                record.Add(f);
-                if (createHeader)
-                {
-                    fieldNames.Add("AnonymousFloat" + floatTypeId);
-                    floatTypeId++;
-                }
-            }
-            else if (field.IsNil)
-            {
-                record.Add("");
-                if (createHeader)
-                {
-                    fieldNames.Add("AnonymousStr" + strTypeId);
-                    strTypeId++;
-                }
-            }
-            else if (field.IsList)
-            {
-                var fieldList = field.AsList();
-                List<string> strs = new List<string>();
-                foreach (var subfield in fieldList)
-                {
-                    if (!subfield.IsTypeOf<Int32>().GetValueOrDefault())
-                        throw new NotImplementedException();
-                    strs.Add(subfield.AsInt32().ToString());
-                }
-                string concatStr = string.Join("|", strs);
-                record.Add(concatStr);
-                if (createHeader)
-                {
-                    fieldNames.Add("AnonymousStr" + strTypeId);
-                    strTypeId++;
-                }
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
-        }
-        public static void CreateFileForAnonymousType(byte[] src, string fullPath, string name, string enckey)
-        {
-            byte[] output_buff = MasterMsgPack.Decrypt(src, name, enckey);
-            Stream stream = new MemoryStream(output_buff);
 
-            List<string> fieldNames = new List<string>();
-            List<List<object>> records = new List<List<object>>();
-            int intTypeId = 1;
-            int strTypeId = 1;
-            int floatTypeId = 1;
-            bool createHeader = true;
-
-            using (var unpacker = Unpacker.Create(stream))
-            {
-                for (var data = unpacker.ReadItem(); data != null; data = unpacker.ReadItem())
-                {
-                    MessagePackObjectDictionary dict = data.Value.AsDictionary();
-                    foreach (var key in dict.Keys)
-                    {
-                        var anonymousList = dict[key].AsList();
-                        List<object> record = new List<object>();
-                        foreach (var field in anonymousList)
-                        {
-                            HandleFields(field, fieldNames, record, ref intTypeId, ref strTypeId, ref floatTypeId, createHeader);
-                        }
-                        createHeader = false;
-                        records.Add(record);
-                    }
-                }
-            }
-            TableToCSV(fullPath, fieldNames, records);
-        }
-        public static void TableToCSV(string fullPath, List<string> fieldNames, List<List<object>> records)
+        public static DecryptStatus DecryptFile(string tableName, string inputDirectory, string outputDirectory, string originalFileName, 
+                                                bool writeDecryptFile, bool writeCSVFile, bool writeJSONFile)
         {
-            using (StreamWriter writer = new StreamWriter(fullPath))
+            byte[] decryptOutput = TryDecrypt(Path.Combine(inputDirectory, originalFileName), tableName);
+            if (decryptOutput.Length == 0)
+                return DecryptStatus.DecryptionFail;
+
+            if (writeDecryptFile)
+                File.WriteAllBytes(Path.Combine(outputDirectory, tableName + "(" + originalFileName + ")_decrypted"), decryptOutput);
+
+            bool unpackSucc = MasterDeserializer.UnpackToFile(decryptOutput, tableName, outputDirectory, writeCSVFile, writeJSONFile);
+            if (!unpackSucc)
+            {
+                try
+                {
+                    CreateJSONFileForAnonymousType(decryptOutput, Path.Combine(outputDirectory, tableName + ".anonymous.json"));
+                }
+                catch (Exception)
+                {
+                    return DecryptStatus.AnonymousDeserializeFail;
+                }
+                return DecryptStatus.DeserializeFail;
+            }
+            return DecryptStatus.Success;
+        }
+
+        public static void TableToCSVFile(string csvOutputPath, List<string> fieldNames, List<List<object>> records)
+        {
+            using (StreamWriter writer = new StreamWriter(csvOutputPath))
             {
                 writer.WriteLine(string.Join(",", fieldNames));
                 foreach (var record in records)
                 {
-                    IList<string> record_strs = new List<string>();
+                    IList<string> recordStrs = new List<string>();
                     foreach (var field in record)
                     {
                         string s = "";
@@ -273,12 +94,83 @@ namespace LostWordDataDecrypter
                         {
                             s = "(empty)";
                         }
-                        record_strs.Add(s);
+                        recordStrs.Add(s);
                     }
-                    string record_str = string.Join(",", record_strs);
-                    writer.WriteLine(record_str);
+                    string recordStr = string.Join(",", recordStrs);
+                    writer.WriteLine(recordStr);
                 }
             }
+        }
+
+        public static void TableToJSONFile(string jsonOutputPath, List<string> jsonStrs)
+        {
+            using (StreamWriter writer = new StreamWriter(jsonOutputPath))
+            {
+                foreach (string jsonStr in jsonStrs)
+                    writer.WriteLine(jsonStr);
+            }
+        }
+
+        private static void CreateJSONFileForAnonymousType(byte[] decryptOutput, string anonymousOutputPath)
+        {
+            using (StreamWriter writer = new StreamWriter(anonymousOutputPath))
+            {
+                Stream stream = new MemoryStream(decryptOutput);
+                MessagePackObject data = MessagePackSerializer.UnpackMessagePackObject(stream);
+                string jsonStr = data.ToString();
+                JObject json = JObject.Parse(jsonStr);
+                writer.Write(json);
+            }
+        }
+
+        public static string AutoDetectManifestFile(string sourceDir)
+        {
+            if (Directory.Exists(Path.Combine(sourceDir, "manifest.json")))
+                return Path.Combine(sourceDir, "manifest.json");
+
+            string[] files = Directory.GetFiles(sourceDir, "*", SearchOption.TopDirectoryOnly);
+            foreach (string file in files)
+            {
+                using (StreamReader r = new StreamReader(file))
+                {
+                    int header = r.Read();
+                    if (header == Convert.ToInt32('{'))
+                    {
+                        try
+                        {
+                            string json;
+                            using (StreamReader ifs = new StreamReader(file))
+                            {
+                                json = ifs.ReadToEnd();
+                                ManifestJSON manifestJSON = JsonConvert.DeserializeObject<ManifestJSON>(json);
+                            }
+                            if (json.Contains("Master.bytes"))
+                                return file;
+                        } catch (Exception) { }
+                    }
+                }
+            }
+            return "";
+        }
+
+        public static Dictionary<string, string> GetTableInfoFromManifest(string manifestFilePath)
+        {
+            Dictionary<string, string> tableToFileName = new Dictionary<string, string>();
+            using (StreamReader ifs = new StreamReader(manifestFilePath))
+            {
+                string json = ifs.ReadToEnd();
+                ManifestJSON manifestJSON = JsonConvert.DeserializeObject<ManifestJSON>(json);
+                foreach (AssestInfo assestInfo in manifestJSON.AssetInfos)
+                {
+                    if (assestInfo.IsMasterData())
+                    {
+                        string tableName = assestInfo.GetTableName();
+                        string tableFileName = assestInfo.Name;
+                        tableToFileName[tableName] = tableFileName;
+                    }
+                }
+            }
+            return tableToFileName;
         }
 
     }

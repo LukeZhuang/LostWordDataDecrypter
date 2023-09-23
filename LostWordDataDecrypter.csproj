@@ -156,7 +156,6 @@
     <Compile Include="DataTypes\DataTypes\LoadingSettingMaster.cs" />
     <Compile Include="DataTypes\DataTypes\LoginbonusMaster.cs" />
     <Compile Include="DataTypes\DataTypes\LoginbonusRewardMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\MasterTable.cs" />
     <Compile Include="DataTypes\DataTypes\MiniGameMaster.cs" />
     <Compile Include="DataTypes\DataTypes\MissionMaster.cs" />
     <Compile Include="DataTypes\DataTypes\MissionRewardGroupMaster.cs" />
@@ -248,8 +247,11 @@
     <Compile Include="DataTypes\DataTypes\VotivePictureExchangeMaster.cs" />
     <Compile Include="DataTypes\DataTypes\VotivePictureMaster.cs" />
     <Compile Include="DataTypes\ManifestJSON.cs" />
+    <Compile Include="DataTypes\MasterTable.cs" />
     <Compile Include="DataTypes\DataTypes\PictureMaster.cs" />
     <Compile Include="GeneralHelper.cs" />
+    <Compile Include="MasterDecrypter.cs" />
+    <Compile Include="MasterDeserializer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

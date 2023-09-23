@@ -4,12 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.Net;
 using System.Text.RegularExpressions;
 
 namespace LostWordDataDecrypter
 {
     internal class Program
     {
+        public const string DOWNLOAD_URL = "https://thcdn.gggamedownload.com/source/Master_v{0}/";
         public const string ROOT_DIR = @".\";
         public const string INPUT_DIR = @"original_files";
         public const string OUTPUT_DIR = @"output_files";
@@ -18,193 +20,193 @@ namespace LostWordDataDecrypter
 
         static void Main(string[] args)
         {
-            /* ------------ CONFIGURATIONS ------------ */
-            bool doSeparateDecrypt = true;
-            bool writeCSVFiles = true;
-            bool writeJSONFiles = true;
-            /* ---------------------------------------- */
-
-            MasterMsgPack.Initialize();  // not sure if it's needed
-
-            string[] dirs = Directory.GetDirectories(Path.Combine(ROOT_DIR, INPUT_DIR), "*", SearchOption.TopDirectoryOnly);
-
-            foreach (string dir in dirs)
+            string input;
+            Console.WriteLine("Please input the version number:");
+            input = Console.ReadLine();
+            uint verNum;
+            try
             {
-                Console.WriteLine("Processing: " + dir);
+                verNum = Convert.ToUInt32(input);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine(string.Format("The format of version number {0} is not correct!", input));
+                goto End;
+            }
 
+            Console.WriteLine("Using master version: " + verNum);
+            string sourceDir = Path.Combine(ROOT_DIR, "ch_master_v" + verNum);
+            if (!Directory.Exists(sourceDir))
+            {
+                Console.WriteLine("creating output directory: " + sourceDir);
+                Directory.CreateDirectory(sourceDir);
+            }
 
-                /* Step 0: Creating output dir if exists
-                 */
-                string apkVersionName = new DirectoryInfo(dir).Name;
-                string outputDir = Path.Combine(ROOT_DIR, Path.Combine(OUTPUT_DIR, apkVersionName));
-                bool outputDirExists = Directory.Exists(outputDir);
-                if (!outputDirExists)
+            Console.WriteLine("Download files? (Y/N)");
+            bool downloadFile;
+            input = Console.ReadLine();
+            if (input.ToLower().Equals("y"))
+                downloadFile = true;
+            else if (input.ToLower().Equals("n"))
+                downloadFile = false;
+            else
+            {
+                Console.WriteLine("Invalid input!");
+                goto End;
+            }
+
+            string manifestFilePath;
+            if (downloadFile)
+            {
+                Console.WriteLine("trying download manifest...");
+                manifestFilePath = Path.Combine(sourceDir, "manifest.json");
+                try
                 {
-                    Console.WriteLine("creating output directory: " + outputDir);
-                    Directory.CreateDirectory(outputDir);
-                }
-
-                /* Step 1: Find manifest file (first char is "{" and can fit into ManifestJSON)
-                 */
-                Console.WriteLine("Step 1: trying to find manifest file");
-                string[] files = Directory.GetFiles(dir, "*", SearchOption.TopDirectoryOnly);
-                Dictionary<string, string> tableToFileName = new Dictionary<string, string>();
-                foreach (string file in files)
-                {
-                    using (StreamReader r = new StreamReader(file))
+                    using (var client = new WebClient())
                     {
-                        int header = r.Read();
-                        if (header == Convert.ToInt32('{'))
-                        {
-                            Console.WriteLine("find a manifest file: " + file);
-                            Console.Write("trying to convert to JSON ... ");
-                            try
-                            {
-                                r.DiscardBufferedData();
-                                using (StreamReader rr = new StreamReader(file))
-                                {
-                                    string json = rr.ReadToEnd();
-                                    ManifestJSON manifestJSON = JsonConvert.DeserializeObject<ManifestJSON>(json);
-                                    Console.WriteLine("successful");
-                                    foreach (AssestInfo assestInfo in manifestJSON.AssetInfos)
-                                    {
-                                        if (assestInfo.IsMasterData())
-                                        {
-                                            string tableName = assestInfo.GetTableName();
-                                            string tableFileName = assestInfo.Name;
-                                            Console.WriteLine("table: " + tableName + ", file: " + tableFileName);
-                                            tableToFileName[tableName] = tableFileName;
-                                        }
-                                    }
-                                }
-                            }
-                            catch (Exception)
-                            {
-                                Console.WriteLine("failed");
-                            }
-                            Console.WriteLine();
-                        }
+                        client.DownloadFile(string.Format(DOWNLOAD_URL, verNum) + "manifest.json", manifestFilePath);
                     }
                 }
-                if (tableToFileName.Count == 0)
+                catch (Exception)
                 {
-                    foreach (string file in files)
-                    {
-                        Console.WriteLine(file);
-                        using (StreamReader r = new StreamReader(file))
-                        {
-                            char[] header = new char[16];
-                            r.Read(header, 0, 16);
-                            string tableName = new string(header);
-                            tableName = tableName.TrimEnd('\0');
-                            if (Regex.IsMatch(tableName, @"^[a-zA-Z]+Table$"))
-                            {
-                                string tableFileName = Path.GetFileName(file);
-                                Console.WriteLine("table: " + tableName + ", file: " + tableFileName);
-                                tableToFileName[tableName] = tableFileName;
-                            }
-                        }
-                    }
+                    Console.WriteLine("Fail to download " + string.Format(DOWNLOAD_URL, verNum) + "manifest.json" + ", file does not exist!");
+                    goto End;
                 }
-                Console.WriteLine();
-
-                /* Step 2: Decrypt each file
-                 *   if we have tableToFileName, just look at each table
-                 *   if not, then go through each file to see if the first 16 bytes (IV) are all alphabet chars
-                 */
-                if (true || doSeparateDecrypt)
+            }
+            else
+            {
+                manifestFilePath = GeneralHelper.AutoDetectManifestFile(sourceDir);
+                if (string.IsNullOrEmpty(manifestFilePath))
                 {
-                    Console.WriteLine("Step 2: trying to decrypt files");
-                    int succCount = 0;
-                    //foreach (string tableName in tableToFileName.Keys)
-                    string tableName = "UnitTable";
-                    {
-                        string fileName = tableToFileName[tableName];
-                        Console.Write("Decrypting " + tableName + ": " + fileName + " ... ");
-                        byte[] src = GeneralHelper.FileToBytes(Path.Combine(dir, fileName));
-                        bool succ = false;
-                        for (int i = -1; i <= 26; i++)
-                        {
-                            try
-                            {
-                                GeneralHelper.DecryptToFile(Path.Combine(outputDir, tableName + "(" + fileName + ")_decrypted"), src, tableName, i == -1 ? "" : new string(Convert.ToChar('a' + i), 1));
-                                succCount++;
-                                Console.WriteLine("successful");
-                                succ = true;
-                                break;
-                            }
-                            catch (Exception) {}
-                        }
-                        if (!succ)
-                        {
-                            Console.WriteLine("failed");
-                        }
-
-                    }
-                    Console.WriteLine("Finished decrypting, successfult rate: {0}/{1}", succCount, tableToFileName.Count);
-                    Console.WriteLine();
+                    Console.WriteLine("Cannot find valid manifest file");
+                    goto End;
                 }
+                Console.WriteLine("Find a manifest file: " + manifestFilePath);
+            }
 
-                /* Step 3: Deserialize every data types
-                 *   if the data type is not implemented or deserialize failed, the create an anonymous type
-                 */
-                Console.WriteLine("Step 3: trying to deserialize implemented data types");
-                int succDataTypeCount = 0;
-                int deserializeFailedDataTypeCount = 0;
-                int unImplementedDataTypeCount = 0;
+            Dictionary<string, string> tableToFileName;
+            try
+            {
+                tableToFileName = GeneralHelper.GetTableInfoFromManifest(manifestFilePath);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Manifest file format is not valid, please check its content!");
+                goto End;
+            }
+
+            if (tableToFileName.Count == 0)
+            {
+                Console.WriteLine("Cannot find master table in manifest file, please check its content!");
+                goto End;
+            }
+            Console.WriteLine("Successfully get table info list!");
+
+            if (downloadFile)
+            {
                 foreach (string tableName in tableToFileName.Keys)
                 {
                     string fileName = tableToFileName[tableName];
-                    string outputFileName = Path.Combine(outputDir, tableName + ".csv");
-                    string outputJSONFileName = Path.Combine(outputDir, tableName + ".json");
-                    Console.Write("Deserializing " + tableName + ": " + fileName.Substring(0, 10) + " ... ");
-                    byte[] src = GeneralHelper.FileToBytes(Path.Combine(dir, fileName));
-
-                    Type TableType = Type.GetType("LostWordDataDecrypter.DataTypes.DataTypes." + tableName);
-                    if (TableType != null)
+                    Console.WriteLine(string.Format("downloading table {0} file {1}", tableName, fileName));
+                    try
                     {
-                        var unpackMethod = typeof(MasterMsgPack).GetMethod("Unpack").MakeGenericMethod(TableType);
-                        bool succ = false;
-                        for (int i = -1; i < 26; i++)
+                        using (var client = new WebClient())
                         {
-                            Console.WriteLine(tableName + " " + i);
-                            try
-                            {
-                                // One example of the following code is like this:
-                                // UnitTable st = MasterMsgPack.Unpack<UnitTable>(src);
-                                // st.to_csv(Path.Combine(ROOT_DIR, Path.Combine(OUTPUT_DIR, table_name + ".csv")));
-                                var st = unpackMethod.Invoke(null, new Object[] { src, tableName, i == -1 ? "" : new string(Convert.ToChar('a' + i), 1) });
-                                if (writeCSVFiles)
-                                    TableType.GetMethod("ToCSV").Invoke(st, new Object[] { outputFileName });
-                                if (writeJSONFiles)
-                                    TableType.GetMethod("ToJSON").Invoke(st, new Object[] { outputJSONFileName });
-                                Console.WriteLine("successful");
-                                succDataTypeCount++;
-                                succ = true;
-                                break;
-                            }
-                            catch (Exception e)
-                            {
-                                GeneralHelper.CreateFileForAnonymousType(src, outputFileName, fileName.Replace("Table", "Master"), i == -1 ? "" : new string(Convert.ToChar('a' + i), 1));
-                            }
-                        }
-                        if (!succ)
-                        {
-                            Console.WriteLine("type implemented but deserializing failed. Creating anonymous type");
-                            deserializeFailedDataTypeCount++;
+                            client.DownloadFile(string.Format(DOWNLOAD_URL, verNum) + fileName, Path.Combine(sourceDir, fileName));
                         }
                     }
-                    else
+                    catch (Exception)
                     {
-                        GeneralHelper.CreateFileForAnonymousType(src, outputFileName, fileName.Replace("Table", "Master"), "");
-                        Console.WriteLine("type not implemented. Creating anonymous type");
-                        unImplementedDataTypeCount++;
+                        Console.WriteLine("Fail to download table " + tableName + ", exit!");
+                        goto End;
                     }
                 }
-                Console.WriteLine("Finished deserializing, successful rate: {0}/{1}/{2}", succDataTypeCount, deserializeFailedDataTypeCount, unImplementedDataTypeCount);
-                Console.WriteLine("\n\n");
             }
 
+            string destinationDir = Path.Combine(sourceDir, "output");
+            if (!Directory.Exists(destinationDir))
+                Directory.CreateDirectory(destinationDir);
+
+            bool writeDecryptFile, writeCSVFile, writeJSONFile;
+
+            Console.WriteLine("write decrypted binary files? (Y/N)");
+            input = Console.ReadLine();
+            if (input.ToLower().Equals("y"))
+                writeDecryptFile = true;
+            else if (input.ToLower().Equals("n"))
+                writeDecryptFile = false;
+            else
+            {
+                Console.WriteLine("Invalid input!");
+                goto End;
+            }
+
+            Console.WriteLine("Choose output formats:");
+            Console.WriteLine("1: only csv");
+            Console.WriteLine("2: only json");
+            Console.WriteLine("3: both csv and json");
+
+            input = Console.ReadLine();
+            if (input.Equals("1"))
+            {
+                writeCSVFile = true;
+                writeJSONFile = false;
+            }
+            else if (input.Equals("2"))
+            {
+                writeCSVFile = false;
+                writeJSONFile = true;
+            }
+            else if (input.Equals("3"))
+            {
+                writeCSVFile = writeJSONFile = true;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input!");
+                goto End;
+            }
+
+            int totalFile = 0, success = 0, decryptFail = 0, deserializeFail = 0, anonymousDeserializeFail = 0;
+            foreach (string tableName in tableToFileName.Keys)
+            {
+                string fileName = tableToFileName[tableName];
+                GeneralHelper.DecryptStatus res = GeneralHelper.DecryptFile(tableName, sourceDir, destinationDir, fileName, writeDecryptFile, writeCSVFile, writeJSONFile);
+                if (res == GeneralHelper.DecryptStatus.Success)
+                {
+                    Console.WriteLine(string.Format("Decrypting and Deserializing {0}({1}) successful.", tableName, fileName));
+                    success++;
+                }
+                else if (res == GeneralHelper.DecryptStatus.DecryptionFail)
+                {
+                    Console.WriteLine(string.Format("Decrypting {0}({1}) failed.", tableName, fileName));
+                    decryptFail++;
+                }
+                else if (res == GeneralHelper.DecryptStatus.DeserializeFail)
+                {
+                    Console.WriteLine(string.Format("Decrypting {0}({1}) successfully but deserializing failed, creating anonymous json.", tableName, fileName));
+                    deserializeFail++;
+                }
+                else if (res == GeneralHelper.DecryptStatus.AnonymousDeserializeFail)
+                {
+                    Console.WriteLine(string.Format("Decrypting {0}({1}) successfully but deserializing failed, and not able to create anonymous json.", tableName, fileName));
+                    anonymousDeserializeFail++;
+                }
+                else
+                {
+                    throw new InvalidDataException("unhandled decrypt status type");
+                }
+                totalFile++;
+            }
+
+            Console.WriteLine("\nJob finished!");
+            Console.WriteLine("Number of total tables: " + totalFile);
+            Console.WriteLine("Number of successful tables: " + success);
+            Console.WriteLine("Number of decrypting failed tables: " + decryptFail);
+            Console.WriteLine("Number of deserializing failed tables (still created anonymous json): " + deserializeFail);
+            Console.WriteLine("Number of deserializing failed tables (cannot create anonymous json): " + anonymousDeserializeFail);
+
+        End:
             Console.WriteLine("\npress any key to exit the process...");
             Console.ReadKey();
         }
