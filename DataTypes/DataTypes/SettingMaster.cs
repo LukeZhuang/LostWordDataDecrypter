@@ -10,11 +10,11 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public string key; // 0x10
+        public string key; // 0x8
         [MessagePackMember(1)]
-        public string value; // 0x18
+        public string value; // 0xC
         [MessagePackMember(2)]
-        public string description; // 0x20
+        public string description; // 0x10
     }
 
     [Serializable]
@@ -25,7 +25,6 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
 
     public class SettingMaster
     {
-        // Fields
     }
 
 }

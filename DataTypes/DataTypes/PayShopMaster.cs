@@ -10,52 +10,50 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int pop_type; // 0x14
+        public int pop_type; // 0xC
         [MessagePackMember(2)]
-        public int main_category_type; // 0x18
+        public int main_category_type; // 0x10
         [MessagePackMember(3)]
-        public int sub_category_master_id; // 0x1C
+        public int sub_category_master_id; // 0x14
         [MessagePackMember(4)]
-        public int type; // 0x20
+        public int type; // 0x18
         [MessagePackMember(5)]
-        public string name; // 0x28
+        public string name; // 0x1C
         [MessagePackMember(6)]
-        public string description; // 0x30
+        public string description; // 0x20
         [MessagePackMember(7)]
-        public int purchase_orb_value; // 0x38
+        public int purchase_orb_value; // 0x24
         [MessagePackMember(8)]
-        public int free_orb_value; // 0x3C
+        public int free_orb_value; // 0x28
         [MessagePackMember(9)]
-        public int available_count; // 0x40
+        public int available_count; // 0x2C
         [MessagePackMember(10)]
-        public int monthly_available_count; // 0x44
+        public int monthly_available_count; // 0x30
         [MessagePackMember(11)]
-        public int daily_available_count; // 0x48
+        public int daily_available_count; // 0x34
         [MessagePackMember(12)]
-        public int price_id; // 0x4C
+        public int price_id; // 0x38
         [MessagePackMember(13)]
-        public int open_shop_id; // 0x50
+        public int open_shop_id; // 0x3C
         [MessagePackMember(14)]
-        public string banner_image; // 0x58
+        public string banner_image; // 0x40
         [MessagePackMember(15)]
-        public int display_order; // 0x60
+        public int display_order; // 0x44
         [MessagePackMember(16)]
-        public string start_at; // 0x68
+        public string start_at; // 0x48
         [MessagePackMember(17)]
-        public string end_at; // 0x70
+        public string end_at; // 0x4C
     }
 
     [Serializable]
     public class PayShopTable : MasterTable<int, PayShopRecord>
     {
-        // Fields
     }
 
     public class PayShopMaster
     {
-        // Fields
     }
 
 }

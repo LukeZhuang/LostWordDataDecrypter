@@ -10,96 +10,94 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public string description; // 0x20
+        public string description; // 0x10
         [MessagePackMember(3)]
-        public string specification; // 0x28
+        public string specification; // 0x14
         [MessagePackMember(4)]
-        public int magazine0_bullet_id; // 0x30
+        public int magazine0_bullet_id; // 0x18
         [MessagePackMember(5)]
-        public int magazine0_bullet_range; // 0x34
+        public int magazine0_bullet_range; // 0x1C
         [MessagePackMember(6)]
-        public int magazine0_bullet_value; // 0x38
+        public int magazine0_bullet_value; // 0x20
         [MessagePackMember(7)]
-        public int magazine0_bullet_power_rate; // 0x3C
+        public int magazine0_bullet_power_rate; // 0x24
         [MessagePackMember(8)]
-        public int magazine1_boost_count; // 0x40
+        public int magazine1_boost_count; // 0x28
         [MessagePackMember(9)]
-        public int magazine1_bullet_id; // 0x44
+        public int magazine1_bullet_id; // 0x2C
         [MessagePackMember(10)]
-        public int magazine1_bullet_range; // 0x48
+        public int magazine1_bullet_range; // 0x30
         [MessagePackMember(11)]
-        public int magazine1_bullet_value; // 0x4C
+        public int magazine1_bullet_value; // 0x34
         [MessagePackMember(12)]
-        public int magazine1_bullet_power_rate; // 0x50
+        public int magazine1_bullet_power_rate; // 0x38
         [MessagePackMember(13)]
-        public int magazine2_boost_count; // 0x54
+        public int magazine2_boost_count; // 0x3C
         [MessagePackMember(14)]
-        public int magazine2_bullet_id; // 0x58
+        public int magazine2_bullet_id; // 0x40
         [MessagePackMember(15)]
-        public int magazine2_bullet_range; // 0x5C
+        public int magazine2_bullet_range; // 0x44
         [MessagePackMember(16)]
-        public int magazine2_bullet_value; // 0x60
+        public int magazine2_bullet_value; // 0x48
         [MessagePackMember(17)]
-        public int magazine2_bullet_power_rate; // 0x64
+        public int magazine2_bullet_power_rate; // 0x4C
         [MessagePackMember(18)]
-        public int magazine3_boost_count; // 0x68
+        public int magazine3_boost_count; // 0x50
         [MessagePackMember(19)]
-        public int magazine3_bullet_id; // 0x6C
+        public int magazine3_bullet_id; // 0x54
         [MessagePackMember(20)]
-        public int magazine3_bullet_range; // 0x70
+        public int magazine3_bullet_range; // 0x58
         [MessagePackMember(21)]
-        public int magazine3_bullet_value; // 0x74
+        public int magazine3_bullet_value; // 0x5C
         [MessagePackMember(22)]
-        public int magazine3_bullet_power_rate; // 0x78
+        public int magazine3_bullet_power_rate; // 0x60
         [MessagePackMember(23)]
-        public int magazine4_boost_count; // 0x7C
+        public int magazine4_boost_count; // 0x64
         [MessagePackMember(24)]
-        public int magazine4_bullet_id; // 0x80
+        public int magazine4_bullet_id; // 0x68
         [MessagePackMember(25)]
-        public int magazine4_bullet_range; // 0x84
+        public int magazine4_bullet_range; // 0x6C
         [MessagePackMember(26)]
-        public int magazine4_bullet_value; // 0x88
+        public int magazine4_bullet_value; // 0x70
         [MessagePackMember(27)]
-        public int magazine4_bullet_power_rate; // 0x8C
+        public int magazine4_bullet_power_rate; // 0x74
         [MessagePackMember(28)]
-        public int magazine5_boost_count; // 0x90
+        public int magazine5_boost_count; // 0x78
         [MessagePackMember(29)]
-        public int magazine5_bullet_id; // 0x94
+        public int magazine5_bullet_id; // 0x7C
         [MessagePackMember(30)]
-        public int magazine5_bullet_range; // 0x98
+        public int magazine5_bullet_range; // 0x80
         [MessagePackMember(31)]
-        public int magazine5_bullet_value; // 0x9C
+        public int magazine5_bullet_value; // 0x84
         [MessagePackMember(32)]
-        public int magazine5_bullet_power_rate; // 0xA0
+        public int magazine5_bullet_power_rate; // 0x88
         [MessagePackMember(33)]
-        public int phantasm_power_up_rate; // 0xA4
+        public int phantasm_power_up_rate; // 0x8C
         [MessagePackMember(34)]
-        public int shot_level0_power_rate; // 0xA8
+        public int shot_level0_power_rate; // 0x90
         [MessagePackMember(35)]
-        public int shot_level1_power_rate; // 0xAC
+        public int shot_level1_power_rate; // 0x94
         [MessagePackMember(36)]
-        public int shot_level2_power_rate; // 0xB0
+        public int shot_level2_power_rate; // 0x98
         [MessagePackMember(37)]
-        public int shot_level3_power_rate; // 0xB4
+        public int shot_level3_power_rate; // 0x9C
         [MessagePackMember(38)]
-        public int shot_level4_power_rate; // 0xB8
+        public int shot_level4_power_rate; // 0xA0
         [MessagePackMember(39)]
-        public int shot_level5_power_rate; // 0xBC
+        public int shot_level5_power_rate; // 0xA4
     }
 
     [Serializable]
     public class ShotTable : MasterTable<int, ShotRecord>
     {
-        // Fields
     }
 
     public class ShotMaster
     {
-        // Fields
     }
 
 }

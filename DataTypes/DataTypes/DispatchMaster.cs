@@ -10,62 +10,60 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int group_id; // 0x14
+        public int group_id; // 0xC
         [MessagePackMember(2)]
-        public string name; // 0x18
+        public string name; // 0x10
         [MessagePackMember(3)]
-        public string description; // 0x20
+        public string description; // 0x14
         [MessagePackMember(4)]
-        public int icon; // 0x28
+        public int icon; // 0x18
         [MessagePackMember(5)]
-        public int need_time; // 0x2C
+        public int need_time; // 0x1C
         [MessagePackMember(6)]
-        public int appearance_period; // 0x30
+        public int appearance_period; // 0x20
         [MessagePackMember(7)]
-        public int consume_phantasm_point; // 0x34
+        public int consume_phantasm_point; // 0x24
         [MessagePackMember(8)]
-        public int open_player_level_lower_limit; // 0x38
+        public int open_player_level_lower_limit; // 0x28
         [MessagePackMember(9)]
-        public int open_player_level_upper_limit; // 0x3C
+        public int open_player_level_upper_limit; // 0x2C
         [MessagePackMember(10)]
-        public int open_episode_id; // 0x40
+        public int open_episode_id; // 0x30
         [MessagePackMember(11)]
-        public int need_unit_level; // 0x44
+        public int need_unit_level; // 0x34
         [MessagePackMember(12)]
-        public int need_unit_level_count; // 0x48
+        public int need_unit_level_count; // 0x38
         [MessagePackMember(13)]
-        public int need_unit_count; // 0x4C
+        public int need_unit_count; // 0x3C
         [MessagePackMember(14)]
-        public int need_role_combination_id; // 0x50
+        public int need_role_combination_id; // 0x40
         [MessagePackMember(15)]
-        public int reward_group1_id; // 0x54
+        public int reward_group1_id; // 0x44
         [MessagePackMember(16)]
-        public int reward_group2_id; // 0x58
+        public int reward_group2_id; // 0x48
         [MessagePackMember(17)]
-        public int reward_group3_id; // 0x5C
+        public int reward_group3_id; // 0x4C
         [MessagePackMember(18)]
-        public int reward_group4_id; // 0x60
+        public int reward_group4_id; // 0x50
         [MessagePackMember(19)]
-        public int reward_group5_id; // 0x64
+        public int reward_group5_id; // 0x54
         [MessagePackMember(20)]
-        public int display_order; // 0x68
+        public int display_order; // 0x58
         [MessagePackMember(21)]
-        public string start_at; // 0x70
+        public string start_at; // 0x5C
         [MessagePackMember(22)]
-        public string end_at; // 0x78
+        public string end_at; // 0x60
     }
 
     [Serializable]
     public class DispatchTable : MasterTable<int, DispatchRecord>
     {
-        // Fields
     }
 
     public class DispatchMaster
     {
-        // Fields
     }
 
 }

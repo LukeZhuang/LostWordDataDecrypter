@@ -10,36 +10,34 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int multiple_spirits_weekly_master_id; // 0x14
+        public int multiple_spirits_weekly_master_id; // 0xC
         [MessagePackMember(2)]
-        public int level; // 0x18
+        public int level; // 0x10
         [MessagePackMember(3)]
-        public int first_clear_reward_object_type; // 0x1C
+        public int first_clear_reward_object_type; // 0x14
         [MessagePackMember(4)]
-        public int first_clear_reward_object_id; // 0x20
+        public int first_clear_reward_object_id; // 0x18
         [MessagePackMember(5)]
-        public int first_clear_reward_object_value; // 0x24
+        public int first_clear_reward_object_value; // 0x1C
         [MessagePackMember(6)]
-        public int drop_group1_id; // 0x28
+        public int drop_group1_id; // 0x20
         [MessagePackMember(7)]
-        public int drop_group2_id; // 0x2C
+        public int drop_group2_id; // 0x24
         [MessagePackMember(8)]
-        public int drop_group3_id; // 0x30
+        public int drop_group3_id; // 0x28
         [MessagePackMember(9)]
-        public int drop_group4_id; // 0x34
+        public int drop_group4_id; // 0x2C
     }
 
     [Serializable]
     public class MultipleSpiritsWeeklyRewardTable : MasterTable<int, MultipleSpiritsWeeklyRewardRecord>
     {
-        // Fields
     }
 
     public class MultipleSpiritsWeeklyRewardMaster
     {
-        // Fields
     }
 
 }

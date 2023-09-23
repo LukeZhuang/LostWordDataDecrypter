@@ -10,156 +10,154 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int unit_id; // 0x14
+        public int unit_id; // 0xC
         [MessagePackMember(2)]
-        public string name; // 0x18
+        public string name; // 0x10
         [MessagePackMember(3)]
-        public int life_point_min; // 0x20
+        public int life_point_min; // 0x14
         [MessagePackMember(4)]
-        public int yang_attack_min; // 0x24
+        public int yang_attack_min; // 0x18
         [MessagePackMember(5)]
-        public int yang_defence_min; // 0x28
+        public int yang_defence_min; // 0x1C
         [MessagePackMember(6)]
-        public int yin_attack_min; // 0x2C
+        public int yin_attack_min; // 0x20
         [MessagePackMember(7)]
-        public int yin_defence_min; // 0x30
+        public int yin_defence_min; // 0x24
         [MessagePackMember(8)]
-        public int speed_min; // 0x34
+        public int speed_min; // 0x28
         [MessagePackMember(9)]
-        public int life_point_max; // 0x38
+        public int life_point_max; // 0x2C
         [MessagePackMember(10)]
-        public int yang_attack_max; // 0x3C
+        public int yang_attack_max; // 0x30
         [MessagePackMember(11)]
-        public int yang_defence_max; // 0x40
+        public int yang_defence_max; // 0x34
         [MessagePackMember(12)]
-        public int yin_attack_max; // 0x44
+        public int yin_attack_max; // 0x38
         [MessagePackMember(13)]
-        public int yin_defence_max; // 0x48
+        public int yin_defence_max; // 0x3C
         [MessagePackMember(14)]
-        public int speed_max; // 0x4C
+        public int speed_max; // 0x40
         [MessagePackMember(15)]
-        public int shot1_id; // 0x50
+        public int shot1_id; // 0x44
         [MessagePackMember(16)]
-        public int shot1_level; // 0x54
+        public int shot1_level; // 0x48
         [MessagePackMember(17)]
-        public int shot1_boost_count; // 0x58
+        public int shot1_boost_count; // 0x4C
         [MessagePackMember(18)]
-        public int shot2_id; // 0x5C
+        public int shot2_id; // 0x50
         [MessagePackMember(19)]
-        public int shot2_level; // 0x60
+        public int shot2_level; // 0x54
         [MessagePackMember(20)]
-        public int shot2_boost_count; // 0x64
+        public int shot2_boost_count; // 0x58
         [MessagePackMember(21)]
-        public int spellcard1_id; // 0x68
+        public int spellcard1_id; // 0x5C
         [MessagePackMember(22)]
-        public int spellcard1_level; // 0x6C
+        public int spellcard1_level; // 0x60
         [MessagePackMember(23)]
-        public int spellcard1_boost_count; // 0x70
+        public int spellcard1_boost_count; // 0x64
         [MessagePackMember(24)]
-        public int spellcard2_id; // 0x74
+        public int spellcard2_id; // 0x68
         [MessagePackMember(25)]
-        public int spellcard2_level; // 0x78
+        public int spellcard2_level; // 0x6C
         [MessagePackMember(26)]
-        public int spellcard2_boost_count; // 0x7C
+        public int spellcard2_boost_count; // 0x70
         [MessagePackMember(27)]
-        public int spellcard3_id; // 0x80
+        public int spellcard3_id; // 0x74
         [MessagePackMember(28)]
-        public int spellcard3_level; // 0x84
+        public int spellcard3_level; // 0x78
         [MessagePackMember(29)]
-        public int spellcard3_boost_count; // 0x88
+        public int spellcard3_boost_count; // 0x7C
         [MessagePackMember(30)]
-        public int spellcard4_id; // 0x8C
+        public int spellcard4_id; // 0x80
         [MessagePackMember(31)]
-        public int spellcard4_level; // 0x90
+        public int spellcard4_level; // 0x84
         [MessagePackMember(32)]
-        public int spellcard4_boost_count; // 0x94
+        public int spellcard4_boost_count; // 0x88
         [MessagePackMember(33)]
-        public int spellcard5_id; // 0x98
+        public int spellcard5_id; // 0x8C
         [MessagePackMember(34)]
-        public int spellcard5_level; // 0x9C
+        public int spellcard5_level; // 0x90
         [MessagePackMember(35)]
-        public int spellcard5_boost_count; // 0xA0
+        public int spellcard5_boost_count; // 0x94
         [MessagePackMember(36)]
-        public int skill1_id; // 0xA4
+        public int skill1_id; // 0x98
         [MessagePackMember(37)]
-        public int skill1_level; // 0xA8
+        public int skill1_level; // 0x9C
         [MessagePackMember(38)]
-        public int skill2_id; // 0xAC
+        public int skill2_id; // 0xA0
         [MessagePackMember(39)]
-        public int skill2_level; // 0xB0
+        public int skill2_level; // 0xA4
         [MessagePackMember(40)]
-        public int skill3_id; // 0xB4
+        public int skill3_id; // 0xA8
         [MessagePackMember(41)]
-        public int skill3_level; // 0xB8
+        public int skill3_level; // 0xAC
         [MessagePackMember(42)]
-        public int costume_id; // 0xBC
+        public int costume_id; // 0xB0
         [MessagePackMember(43)]
-        public int special_action_gauge_limit; // 0xC0
+        public int special_action_gauge_limit; // 0xB4
         [MessagePackMember(44)]
-        public int barrier_count; // 0xC4
+        public int barrier_count; // 0xB8
         [MessagePackMember(45)]
-        public int normal_action_shot1_weight; // 0xC8
+        public int normal_action_shot1_weight; // 0xBC
         [MessagePackMember(46)]
-        public int normal_action_shot2_weight; // 0xCC
+        public int normal_action_shot2_weight; // 0xC0
         [MessagePackMember(47)]
-        public int condition_action_over50_skill1_weight; // 0xD0
+        public int condition_action_over50_skill1_weight; // 0xC4
         [MessagePackMember(48)]
-        public int condition_action_over50_skill2_weight; // 0xD4
+        public int condition_action_over50_skill2_weight; // 0xC8
         [MessagePackMember(49)]
-        public int condition_action_over50_skill3_weight; // 0xD8
+        public int condition_action_over50_skill3_weight; // 0xCC
         [MessagePackMember(50)]
-        public int condition_action_over50_normal_weight; // 0xDC
+        public int condition_action_over50_normal_weight; // 0xD0
         [MessagePackMember(51)]
-        public int condition_action_over25_skill1_weight; // 0xE0
+        public int condition_action_over25_skill1_weight; // 0xD4
         [MessagePackMember(52)]
-        public int condition_action_over25_skill2_weight; // 0xE4
+        public int condition_action_over25_skill2_weight; // 0xD8
         [MessagePackMember(53)]
-        public int condition_action_over25_skill3_weight; // 0xE8
+        public int condition_action_over25_skill3_weight; // 0xDC
         [MessagePackMember(54)]
-        public int condition_action_over25_normal_weight; // 0xEC
+        public int condition_action_over25_normal_weight; // 0xE0
         [MessagePackMember(55)]
-        public int condition_action_over10_skill1_weight; // 0xF0
+        public int condition_action_over10_skill1_weight; // 0xE4
         [MessagePackMember(56)]
-        public int condition_action_over10_skill2_weight; // 0xF4
+        public int condition_action_over10_skill2_weight; // 0xE8
         [MessagePackMember(57)]
-        public int condition_action_over10_skill3_weight; // 0xF8
+        public int condition_action_over10_skill3_weight; // 0xEC
         [MessagePackMember(58)]
-        public int condition_action_over10_normal_weight; // 0xFC
+        public int condition_action_over10_normal_weight; // 0xF0
         [MessagePackMember(59)]
-        public int condition_action_lessthan10_skill1_weight; // 0x100
+        public int condition_action_lessthan10_skill1_weight; // 0xF4
         [MessagePackMember(60)]
-        public int condition_action_lessthan10_skill2_weight; // 0x104
+        public int condition_action_lessthan10_skill2_weight; // 0xF8
         [MessagePackMember(61)]
-        public int condition_action_lessthan10_skill3_weight; // 0x108
+        public int condition_action_lessthan10_skill3_weight; // 0xFC
         [MessagePackMember(62)]
-        public int condition_action_lessthan10_normal_weight; // 0x10C
+        public int condition_action_lessthan10_normal_weight; // 0x100
         [MessagePackMember(63)]
-        public int special_action_spellcard1_weight; // 0x110
+        public int special_action_spellcard1_weight; // 0x104
         [MessagePackMember(64)]
-        public int special_action_spellcard2_weight; // 0x114
+        public int special_action_spellcard2_weight; // 0x108
         [MessagePackMember(65)]
-        public int special_action_spellcard3_weight; // 0x118
+        public int special_action_spellcard3_weight; // 0x10C
         [MessagePackMember(66)]
-        public int special_action_spellcard4_weight; // 0x11C
+        public int special_action_spellcard4_weight; // 0x110
         [MessagePackMember(67)]
-        public int special_action_spellcard5_weight; // 0x120
+        public int special_action_spellcard5_weight; // 0x114
         [MessagePackMember(68)]
-        public int enemy_boss_id; // 0x124
+        public int enemy_boss_id; // 0x118
         [MessagePackMember(69)]
-        public int resist_id; // 0x128
+        public int resist_id; // 0x11C
     }
 
     [Serializable]
     public class MultipleSpiritsWeeklyEnemyTable : MasterTable<int, MultipleSpiritsWeeklyEnemyRecord>
     {
-        // Fields
     }
 
     public class MultipleSpiritsWeeklyEnemyMaster
     {
-        // Fields
     }
 
 }

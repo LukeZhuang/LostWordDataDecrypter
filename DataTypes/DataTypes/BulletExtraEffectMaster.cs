@@ -10,32 +10,30 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public string description; // 0x20
+        public string description; // 0x10
         [MessagePackMember(3)]
-        public int target; // 0x28
+        public int target; // 0x14
         [MessagePackMember(4)]
-        public int turn; // 0x2C
+        public int turn; // 0x18
         [MessagePackMember(5)]
-        public int type; // 0x30
+        public int type; // 0x1C
         [MessagePackMember(6)]
-        public int subtype; // 0x34
+        public int subtype; // 0x20
         [MessagePackMember(7)]
-        public int value; // 0x38
+        public int value; // 0x24
     }
 
     [Serializable]
     public class BulletExtraEffectTable : MasterTable<int, BulletExtraEffectRecord>
     {
-        // Fields
     }
 
     public class BulletExtraEffectMaster
     {
-        // Fields
     }
 
 }

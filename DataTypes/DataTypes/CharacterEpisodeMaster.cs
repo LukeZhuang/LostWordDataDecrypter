@@ -10,28 +10,26 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int unit_id; // 0x14
+        public int unit_id; // 0xC
         [MessagePackMember(2)]
-        public string title; // 0x18
+        public string title; // 0x10
         [MessagePackMember(3)]
-        public string sub_title; // 0x20
+        public string sub_title; // 0x14
         [MessagePackMember(4)]
-        public int number; // 0x28
+        public int number; // 0x18
         [MessagePackMember(5)]
-        public string comic_filepath; // 0x30
+        public string comic_filepath; // 0x1C
     }
 
     [Serializable]
     public class CharacterEpisodeTable : MasterTable<int, CharacterEpisodeRecord>
     {
-        // Fields
     }
 
     public class CharacterEpisodeMaster
     {
-        // Fields
     }
 
 }

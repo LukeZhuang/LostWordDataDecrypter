@@ -10,28 +10,24 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int daily_quest_id; // 0x14
+        public int daily_quest_id; // 0xC
         [MessagePackMember(2)]
-        public string title; // 0x18
+        public string title; // 0x10
         [MessagePackMember(3)]
-        public int open_level; // 0x20
+        public int open_level; // 0x14
         [MessagePackMember(4)]
-        public int battle_id; // 0x24
-        [MessagePackMember(5)]
-        public int is_mop_up; // 0x28
+        public int battle_id; // 0x18
     }
 
     [Serializable]
     public class DailyQuestStageTable : MasterTable<int, DailyQuestStageRecord>
     {
-        // Fields
     }
 
     public class DailyQuestStageMaster
     {
-        // Fields
     }
 
 }

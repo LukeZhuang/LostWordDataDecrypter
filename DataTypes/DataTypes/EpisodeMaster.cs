@@ -10,43 +10,40 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int chapter_id; // 0x14
+        public int chapter_id; // 0xC
         [MessagePackMember(2)]
-        public int section_id; // 0x18
+        public int section_id; // 0x10
         [MessagePackMember(3)]
-        public string title; // 0x20
+        public string title; // 0x14
         [MessagePackMember(4)]
-        public string sub_title; // 0x28
+        public string sub_title; // 0x18
         [MessagePackMember(5)]
-        public int number; // 0x30
+        public int number; // 0x1C
         [MessagePackMember(6)]
-        public int type; // 0x34
+        public int type; // 0x20
         [MessagePackMember(7)]
-        public int normal_battle_id; // 0x38
+        public int normal_battle_id; // 0x24
         [MessagePackMember(8)]
-        public int hard_battle_id; // 0x3C
+        public int hard_battle_id; // 0x28
         [MessagePackMember(9)]
-        public int lunatic_battle_id; // 0x40
+        public int lunatic_battle_id; // 0x2C
         [MessagePackMember(10)]
-        public string comic_filepath; // 0x48
+        public string comic_filepath; // 0x30
         [MessagePackMember(11)]
-        public int open_type; // 0x50
+        public int open_type; // 0x34
         [MessagePackMember(12)]
-        public string open_param; // 0x58
-        [MessagePackMember(13)]
-        public int is_mop_up; // 0x60
-        private DateTime m_startAt; // 0x68
-        private int m_eventPointTotal; // 0x70
-        private int m_openPage; // 0x74
-        private Dictionary<string, object> m_open_param; // 0x78
+        public string open_param; // 0x38
+        private DateTime m_startAt; // 0x40
+        private int m_eventPointTotal; // 0x48
+        private int m_openPage; // 0x4C
+        private Dictionary<string, object> m_open_param; // 0x50
     }
 
     [Serializable]
     public class EpisodeTable : MasterTable<int, EpisodeRecord>
     {
-        // Fields
     }
 
     public class EpisodeMaster

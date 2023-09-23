@@ -10,62 +10,56 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public string description; // 0x20
+        public string description; // 0x10
         [MessagePackMember(3)]
-        public string resist_ability_description; // 0x28
+        public string resist_ability_description; // 0x14
         [MessagePackMember(4)]
-        public int good_element_take_damage_rate; // 0x30
+        public int good_element_take_damage_rate; // 0x18
         [MessagePackMember(5)]
-        public int weak_element_take_damage_rate; // 0x34
+        public int weak_element_take_damage_rate; // 0x1C
         [MessagePackMember(6)]
-        public string element_ability_description; // 0x38
+        public string element_ability_description; // 0x20
         [MessagePackMember(7)]
-        public int good_element_give_damage_rate; // 0x40
+        public int good_element_give_damage_rate; // 0x24
         [MessagePackMember(8)]
-        public int weak_element_give_damage_rate; // 0x44
+        public int weak_element_give_damage_rate; // 0x28
         [MessagePackMember(9)]
-        public string barrier_ability_description; // 0x48
+        public string barrier_ability_description; // 0x2C
         [MessagePackMember(10)]
-        public int burning_barrier_type; // 0x50
+        public int burning_barrier_type; // 0x30
         [MessagePackMember(11)]
-        public int frozen_barrier_type; // 0x54
+        public int frozen_barrier_type; // 0x34
         [MessagePackMember(12)]
-        public int electrified_barrier_type; // 0x58
+        public int electrified_barrier_type; // 0x38
         [MessagePackMember(13)]
-        public int poisoning_barrier_type; // 0x5C
+        public int poisoning_barrier_type; // 0x3C
         [MessagePackMember(14)]
-        public int blackout_barrier_type; // 0x60
+        public int blackout_barrier_type; // 0x40
         [MessagePackMember(15)]
-        public string boost_ability_description; // 0x68
+        public string boost_ability_description; // 0x44
         [MessagePackMember(16)]
-        public int boost_power_divergence_type; // 0x70
+        public int boost_power_divergence_type; // 0x48
         [MessagePackMember(17)]
-        public int boost_power_divergence_range; // 0x74
+        public int boost_power_divergence_range; // 0x4C
         [MessagePackMember(18)]
-        public string purge_ability_description; // 0x78
+        public string purge_ability_description; // 0x50
         [MessagePackMember(19)]
-        public int purge_barrier_diffusion_type; // 0x80
+        public int purge_barrier_diffusion_type; // 0x54
         [MessagePackMember(20)]
-        public int purge_barrier_diffusion_range; // 0x84
-        [MessagePackMember(21)]
-        public int boost_buff_effect_type; // 0x88
-        [MessagePackMember(22)]
-        public int purge_buff_effect_type; // 0x8C
+        public int purge_barrier_diffusion_range; // 0x58
     }
 
     [Serializable]
     public class AbilityTable : MasterTable<int, AbilityRecord>
     {
-        // Fields
     }
 
     public class AbilityMaster
     {
-        // Fields
     }
 
 }

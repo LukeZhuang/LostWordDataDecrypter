@@ -86,7 +86,6 @@
     <Compile Include="DataTypes\DataTypes\ArenaWaveCoefMaster.cs" />
     <Compile Include="DataTypes\DataTypes\ArenaWeeklyRewardMaster.cs" />
     <Compile Include="DataTypes\DataTypes\AssetLoaderManifestMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\AvatarMaster.cs" />
     <Compile Include="DataTypes\DataTypes\BattleChallengeMaster.cs" />
     <Compile Include="DataTypes\DataTypes\BattleDropGroupMaster.cs" />
     <Compile Include="DataTypes\DataTypes\BattleDropMaster.cs" />
@@ -97,7 +96,6 @@
     <Compile Include="DataTypes\DataTypes\BulletCriticalRaceMaster.cs" />
     <Compile Include="DataTypes\DataTypes\BulletExtraEffectMaster.cs" />
     <Compile Include="DataTypes\DataTypes\BulletMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\ChannelMaster.cs" />
     <Compile Include="DataTypes\DataTypes\ChapterMaster.cs" />
     <Compile Include="DataTypes\DataTypes\CharacterEpisodeMaster.cs" />
     <Compile Include="DataTypes\DataTypes\CharacteristicMaster.cs" />
@@ -105,7 +103,6 @@
     <Compile Include="DataTypes\DataTypes\CharacterQuestMaster.cs" />
     <Compile Include="DataTypes\DataTypes\ComicMaster.cs" />
     <Compile Include="DataTypes\DataTypes\CommonStringMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\CostumeActiveMaster.cs" />
     <Compile Include="DataTypes\DataTypes\CostumeMaster.cs" />
     <Compile Include="DataTypes\DataTypes\CostumeShopMaster.cs" />
     <Compile Include="DataTypes\DataTypes\CostumeShopSubCategoryMaster.cs" />
@@ -138,8 +135,6 @@
     <Compile Include="DataTypes\DataTypes\FortunePowderExchangeGoodsMaster.cs" />
     <Compile Include="DataTypes\DataTypes\FortunePowderExchangeMaster.cs" />
     <Compile Include="DataTypes\DataTypes\FreeItemMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\FuDaiGiftWeightMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\FuDaiMaster.cs" />
     <Compile Include="DataTypes\DataTypes\GachaBonusMaster.cs" />
     <Compile Include="DataTypes\DataTypes\GachaButtonMaster.cs" />
     <Compile Include="DataTypes\DataTypes\GachaMaster.cs" />
@@ -163,24 +158,16 @@
     <Compile Include="DataTypes\DataTypes\MultipleSpiritsWeeklyEnemyMaster.cs" />
     <Compile Include="DataTypes\DataTypes\MultipleSpiritsWeeklyMaster.cs" />
     <Compile Include="DataTypes\DataTypes\MultipleSpiritsWeeklyRewardMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\MusicMaster.cs" />
     <Compile Include="DataTypes\DataTypes\NpcMaster.cs" />
     <Compile Include="DataTypes\DataTypes\ObjectMaster.cs" />
     <Compile Include="DataTypes\DataTypes\OrbExchangeMaster.cs" />
     <Compile Include="DataTypes\DataTypes\OrbExchangeSubCategoryMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\PassCardConfigMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\PassCardMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\PassCardShopGiftMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\PassCardShopMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\PassCardTaskMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PayShopMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PayShopSubCategoryMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PersonMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PersonRelationMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PhantasmBoxMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PhantasmPointShopMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\PictureBookMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\PictureBookTaskMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PictureEnhanceChemicalMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PictureExpansionMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PicturePotentialLimitbreakMaster.cs" />
@@ -192,7 +179,6 @@
     <Compile Include="DataTypes\DataTypes\PriceMaster.cs" />
     <Compile Include="DataTypes\DataTypes\RaceMaster.cs" />
     <Compile Include="DataTypes\DataTypes\RandomLoginBonusMaster.cs" />
-    <Compile Include="DataTypes\DataTypes\RandomNameMaster.cs" />
     <Compile Include="DataTypes\DataTypes\ReleaseCharacteristicMaster.cs" />
     <Compile Include="DataTypes\DataTypes\RelicChapterMaster.cs" />
     <Compile Include="DataTypes\DataTypes\RelicQuestMaster.cs" />

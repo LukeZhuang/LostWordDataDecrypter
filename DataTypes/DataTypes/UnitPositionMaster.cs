@@ -10,27 +10,26 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int costume_id; // 0x14
+        public int costume_id; // 0xC
         [MessagePackMember(2)]
-        public int place; // 0x18
+        public int place; // 0x10
         [MessagePackMember(3)]
-        public float x; // 0x1C
+        public float x; // 0x14
         [MessagePackMember(4)]
-        public float y; // 0x20
+        public float y; // 0x18
         [MessagePackMember(5)]
-        public float center_x; // 0x24
+        public float center_x; // 0x1C
         [MessagePackMember(6)]
-        public float center_y; // 0x28
+        public float center_y; // 0x20
         [MessagePackMember(7)]
-        public float scale; // 0x2C
+        public float scale; // 0x24
     }
 
     [Serializable]
     public class UnitPositionTable : MasterTable<int, UnitPositionRecord>
     {
-        // Fields
     }
 
     public class UnitPositionMaster
@@ -54,7 +53,6 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         public static int PLACE_REINCARNATION_COSTUME_RELEASE2; // 0x3C
         public static int PLACE_REINCARNATION_COSTUME_RELEASE4; // 0x40
         public static int PLACE_HOME_CENTER_SMALL; // 0x44
-        public static int PLACE_LIVE_CENTER; // 0x48
     }
 
 }

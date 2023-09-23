@@ -10,54 +10,52 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int floor; // 0x14
+        public int floor; // 0xC
         [MessagePackMember(2)]
-        public string title; // 0x18
+        public string title; // 0x10
         [MessagePackMember(3)]
-        public string comic_title; // 0x20
+        public string comic_title; // 0x14
         [MessagePackMember(4)]
-        public int battle_id; // 0x28
+        public int battle_id; // 0x18
         [MessagePackMember(5)]
-        public string comic_filepath; // 0x30
+        public string comic_filepath; // 0x1C
         [MessagePackMember(6)]
-        public int preview_type; // 0x38
+        public int preview_type; // 0x20
         [MessagePackMember(7)]
-        public int clear_type; // 0x3C
+        public int clear_type; // 0x24
         [MessagePackMember(8)]
-        public int boss_flg; // 0x40
+        public int boss_flg; // 0x28
         [MessagePackMember(9)]
-        public string floor_select_banner; // 0x48
+        public string floor_select_banner; // 0x2C
         [MessagePackMember(10)]
-        public string floor_background; // 0x50
+        public string floor_background; // 0x30
         [MessagePackMember(11)]
-        public int drop_group1_id_for_first; // 0x58
+        public int drop_group1_id_for_first; // 0x34
         [MessagePackMember(12)]
-        public int drop_group2_id_for_first; // 0x5C
+        public int drop_group2_id_for_first; // 0x38
         [MessagePackMember(13)]
-        public int drop_group3_id_for_first; // 0x60
+        public int drop_group3_id_for_first; // 0x3C
         [MessagePackMember(14)]
-        public int drop_group4_id_for_first; // 0x64
+        public int drop_group4_id_for_first; // 0x40
         [MessagePackMember(15)]
-        public int drop_group1_id_for_repetition; // 0x68
+        public int drop_group1_id_for_repetition; // 0x44
         [MessagePackMember(16)]
-        public int drop_group2_id_for_repetition; // 0x6C
+        public int drop_group2_id_for_repetition; // 0x48
         [MessagePackMember(17)]
-        public int drop_group3_id_for_repetition; // 0x70
+        public int drop_group3_id_for_repetition; // 0x4C
         [MessagePackMember(18)]
-        public int drop_group4_id_for_repetition; // 0x74
+        public int drop_group4_id_for_repetition; // 0x50
     }
 
     [Serializable]
     public class TowerTable : MasterTable<int, TowerRecord>
     {
-        // Fields
     }
 
     public class TowerMaster
     {
-        // Fields
     }
 
 }

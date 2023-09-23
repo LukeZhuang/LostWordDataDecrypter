@@ -9,22 +9,20 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     public class ArenaEnemyRecord : EnemyRecord
     {
         // Fields
-        private int bk_yang_attack; // 0x124
-        private int bk_yang_defence; // 0x128
-        private int bk_yin_attack; // 0x12C
-        private int bk_yin_defence; // 0x130
-        private int bk_speed; // 0x134
+        private int bk_yang_attack; // 0x114
+        private int bk_yang_defence; // 0x118
+        private int bk_yin_attack; // 0x11C
+        private int bk_yin_defence; // 0x120
+        private int bk_speed; // 0x124
     }
 
     [Serializable]
     public class ArenaEnemyTable : MasterTable<int, ArenaEnemyRecord>
     {
-        // Fields
     }
 
     public class ArenaEnemyMaster
     {
-        // Fields
     }
 
 }

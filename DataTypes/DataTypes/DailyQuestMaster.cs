@@ -10,38 +10,36 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public int is_open_week0; // 0x20
+        public int is_open_week0; // 0x10
         [MessagePackMember(3)]
-        public int is_open_week1; // 0x24
+        public int is_open_week1; // 0x14
         [MessagePackMember(4)]
-        public int is_open_week2; // 0x28
+        public int is_open_week2; // 0x18
         [MessagePackMember(5)]
-        public int is_open_week3; // 0x2C
+        public int is_open_week3; // 0x1C
         [MessagePackMember(6)]
-        public int is_open_week4; // 0x30
+        public int is_open_week4; // 0x20
         [MessagePackMember(7)]
-        public int is_open_week5; // 0x34
+        public int is_open_week5; // 0x24
         [MessagePackMember(8)]
-        public int is_open_week6; // 0x38
+        public int is_open_week6; // 0x28
         [MessagePackMember(9)]
-        public int count; // 0x3C
+        public int count; // 0x2C
         [MessagePackMember(10)]
-        public int display_order; // 0x40
+        public int display_order; // 0x30
     }
 
     [Serializable]
     public class DailyQuestTable : MasterTable<int, DailyQuestRecord>
     {
-        // Fields
     }
 
     public class DailyQuestMaster
     {
-        // Fields
     }
 
 }

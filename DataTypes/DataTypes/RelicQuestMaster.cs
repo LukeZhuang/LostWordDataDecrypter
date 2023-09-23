@@ -10,30 +10,28 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int relic_chapter_id; // 0x14
+        public int relic_chapter_id; // 0xC
         [MessagePackMember(2)]
-        public string title; // 0x18
+        public string title; // 0x10
         [MessagePackMember(3)]
-        public int normal_battle_id; // 0x20
+        public int normal_battle_id; // 0x14
         [MessagePackMember(4)]
-        public int hard_battle_id; // 0x24
+        public int hard_battle_id; // 0x18
         [MessagePackMember(5)]
-        public int lunatic_battle_id; // 0x28
+        public int lunatic_battle_id; // 0x1C
         [MessagePackMember(6)]
-        public string comic_filepath; // 0x30
+        public string comic_filepath; // 0x20
     }
 
     [Serializable]
     public class RelicQuestTable : MasterTable<int, RelicQuestRecord>
     {
-        // Fields
     }
 
     public class RelicQuestMaster
     {
-        // Fields
     }
 
 }

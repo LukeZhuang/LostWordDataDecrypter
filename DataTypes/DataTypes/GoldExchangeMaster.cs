@@ -10,36 +10,34 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int gold_exchange_group_id; // 0x14
+        public int gold_exchange_group_id; // 0xC
         [MessagePackMember(2)]
-        public int discount_rate; // 0x18
+        public int discount_rate; // 0x10
         [MessagePackMember(3)]
-        public int consume_gold; // 0x1C
+        public int consume_gold; // 0x14
         [MessagePackMember(4)]
-        public int object_type; // 0x20
+        public int object_type; // 0x18
         [MessagePackMember(5)]
-        public int object_id; // 0x24
+        public int object_id; // 0x1C
         [MessagePackMember(6)]
-        public int object_value; // 0x28
+        public int object_value; // 0x20
         [MessagePackMember(7)]
-        public int display_order; // 0x2C
+        public int display_order; // 0x24
         [MessagePackMember(8)]
-        public string start_at; // 0x30
+        public string start_at; // 0x28
         [MessagePackMember(9)]
-        public string end_at; // 0x38
+        public string end_at; // 0x2C
     }
 
     [Serializable]
     public class GoldExchangeTable : MasterTable<int, GoldExchangeRecord>
     {
-        // Fields
     }
 
     public class GoldExchangeMaster
     {
-        // Fields
     }
 
 }

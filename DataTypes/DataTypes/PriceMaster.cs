@@ -9,28 +9,25 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     public class PriceRecord : MasterRecord<int>
     {
         // Fields
-        public int id; // 0x10
-        public string name; // 0x18
-        public int shop_type; // 0x20
-        public float price; // 0x24
-        public string ios_product_id; // 0x28
-        public string android_product_id; // 0x30
-        public float price_hkd; // 0x38
-        public float price_ntd; // 0x3C
-        public string product_id_usd; // 0x40
-        public string special_product_id; // 0x48
+        [MessagePackMember(0)]
+        public int id; // 0x8
+        [MessagePackMember(1)]
+        public int shop_type; // 0xC
+        [MessagePackMember(2)]
+        public float price; // 0x10
+        [MessagePackMember(3)]
+        public string ios_product_id; // 0x14
+        [MessagePackMember(4)]
+        public string android_product_id; // 0x18
     }
 
     [Serializable]
     public class PriceTable : MasterTable<int, PriceRecord>
     {
-        // Fields
     }
 
     public class PriceMaster
     {
-        // Fields
-        public const string CURRENCY_CODE = "RMB";
     }
 
 }

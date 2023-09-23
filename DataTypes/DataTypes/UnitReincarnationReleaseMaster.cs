@@ -10,61 +10,60 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int unit_id; // 0x14
+        public int unit_id; // 0xC
         [MessagePackMember(2)]
-        public int need_level; // 0x18
+        public int need_level; // 0x10
         [MessagePackMember(3)]
-        public int need_stage; // 0x1C
+        public int need_stage; // 0x14
         [MessagePackMember(4)]
-        public int check_spec_actualize_max; // 0x20
+        public int check_spec_actualize_max; // 0x18
         [MessagePackMember(5)]
-        public string pre_unit_reincarnation_release_id_list; // 0x28
+        public string pre_unit_reincarnation_release_id_list; // 0x1C
         [MessagePackMember(6)]
-        public int step_num; // 0x30
+        public int step_num; // 0x20
         [MessagePackMember(7)]
-        public int slot1_object_type; // 0x34
+        public int slot1_object_type; // 0x24
         [MessagePackMember(8)]
-        public int slot1_object_id; // 0x38
+        public int slot1_object_id; // 0x28
         [MessagePackMember(9)]
-        public int slot1_object_value; // 0x3C
+        public int slot1_object_value; // 0x2C
         [MessagePackMember(10)]
-        public int slot2_object_type; // 0x40
+        public int slot2_object_type; // 0x30
         [MessagePackMember(11)]
-        public int slot2_object_id; // 0x44
+        public int slot2_object_id; // 0x34
         [MessagePackMember(12)]
-        public int slot2_object_value; // 0x48
+        public int slot2_object_value; // 0x38
         [MessagePackMember(13)]
-        public int slot3_object_type; // 0x4C
+        public int slot3_object_type; // 0x3C
         [MessagePackMember(14)]
-        public int slot3_object_id; // 0x50
+        public int slot3_object_id; // 0x40
         [MessagePackMember(15)]
-        public int slot3_object_value; // 0x54
+        public int slot3_object_value; // 0x44
         [MessagePackMember(16)]
-        public int slot4_object_type; // 0x58
+        public int slot4_object_type; // 0x48
         [MessagePackMember(17)]
-        public int slot4_object_id; // 0x5C
+        public int slot4_object_id; // 0x4C
         [MessagePackMember(18)]
-        public int slot4_object_value; // 0x60
+        public int slot4_object_value; // 0x50
         [MessagePackMember(19)]
-        public string release_function; // 0x68
+        public string release_function; // 0x54
         [MessagePackMember(20)]
-        public int position_x; // 0x70
+        public int position_x; // 0x58
         [MessagePackMember(21)]
-        public int position_y; // 0x74
+        public int position_y; // 0x5C
         [MessagePackMember(22)]
-        public string title; // 0x78
+        public string title; // 0x60
         [MessagePackMember(23)]
-        public int same_set; // 0x80
-        private Dictionary<string, object> _release_function_dict; // 0x88
-        private List<int> m_preUnitReincarnationReleaseIDs; // 0x90
+        public int same_set; // 0x64
+        private Dictionary<string, object> _release_function_dict; // 0x68
+        private List<int> m_preUnitReincarnationReleaseIDs; // 0x6C
     }
 
     [Serializable]
     public class UnitReincarnationReleaseTable : MasterTable<int, UnitReincarnationReleaseRecord>
     {
-        // Fields
     }
 
     public class UnitReincarnationReleaseMaster

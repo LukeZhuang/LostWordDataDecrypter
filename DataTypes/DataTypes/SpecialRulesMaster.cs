@@ -10,28 +10,26 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int group_id; // 0x14
+        public int group_id; // 0xC
         [MessagePackMember(2)]
-        public string rules; // 0x18
+        public string rules; // 0x10
         [MessagePackMember(3)]
-        public int add_level; // 0x20
+        public int add_level; // 0x14
         [MessagePackMember(4)]
-        public int special_rules_effect_master_id1; // 0x24
+        public int special_rules_effect_master_id1; // 0x18
         [MessagePackMember(5)]
-        public int special_rules_effect_master_id2; // 0x28
+        public int special_rules_effect_master_id2; // 0x1C
     }
 
     [Serializable]
     public class SpecialRulesTable : MasterTable<int, SpecialRulesRecord>
     {
-        // Fields
     }
 
     public class SpecialRulesMaster
     {
-        // Fields
     }
 
 }

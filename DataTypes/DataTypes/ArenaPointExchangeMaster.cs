@@ -10,26 +10,24 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int reset_interval; // 0x14
+        public int reset_interval; // 0xC
         [MessagePackMember(2)]
-        public string arena_point_exchange_group_ids; // 0x18
+        public string arena_point_exchange_group_ids; // 0x10
         [MessagePackMember(3)]
-        public string start_at; // 0x20
+        public string start_at; // 0x14
         [MessagePackMember(4)]
-        public string end_at; // 0x28
+        public string end_at; // 0x18
     }
 
     [Serializable]
     public class ArenaPointExchangeTable : MasterTable<int, ArenaPointExchangeRecord>
     {
-        // Fields
     }
 
     public class ArenaPointExchangeMaster
     {
-        // Fields
     }
 
 }

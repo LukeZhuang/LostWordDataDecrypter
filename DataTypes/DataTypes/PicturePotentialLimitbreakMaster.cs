@@ -10,28 +10,26 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int rare; // 0x14
+        public int rare; // 0xC
         [MessagePackMember(2)]
-        public int potential_limitbreak; // 0x18
+        public int potential_limitbreak; // 0x10
         [MessagePackMember(3)]
-        public int spec_actualize_limit; // 0x1C
+        public int spec_actualize_limit; // 0x14
         [MessagePackMember(4)]
-        public int consume_same_picture_count; // 0x20
+        public int consume_same_picture_count; // 0x18
         [MessagePackMember(5)]
-        public int consume_gold; // 0x24
+        public int consume_gold; // 0x1C
     }
 
     [Serializable]
     public class PicturePotentialLimitbreakTable : MasterTable<long, PicturePotentialLimitbreakRecord>
     {
-        // Fields
     }
 
     public class PicturePotentialLimitbreakMaster
     {
-        // Fields
     }
 
 }

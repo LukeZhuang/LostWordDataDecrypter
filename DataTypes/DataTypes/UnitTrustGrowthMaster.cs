@@ -10,26 +10,24 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int trust_rank; // 0x14
+        public int trust_rank; // 0xC
         [MessagePackMember(2)]
-        public int trust_upper_limit; // 0x18
+        public int trust_upper_limit; // 0x10
         [MessagePackMember(3)]
-        public float growth_rate; // 0x1C
+        public float growth_rate; // 0x14
         [MessagePackMember(4)]
-        public string description; // 0x20
+        public string description; // 0x18
     }
 
     [Serializable]
     public class UnitTrustGrowthTable : MasterTable<int, UnitTrustGrowthRecord>
     {
-        // Fields
     }
 
     public class UnitTrustGrowthMaster
     {
-        // Fields
     }
 
 }

@@ -10,21 +10,20 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public string description; // 0x20
+        public string description; // 0x10
         [MessagePackMember(3)]
-        public int rare; // 0x28
+        public int rare; // 0x14
         [MessagePackMember(4)]
-        public int display_order; // 0x2C
+        public int display_order; // 0x18
     }
 
     [Serializable]
     public class ObjectTable : MasterTable<int, ObjectRecord>
     {
-        // Fields
     }
 
     public class ObjectMaster
@@ -51,13 +50,6 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         public const int TYPE_FORTUNE_POWDER = 19;
         public const int TYPE_COMIC_POINT = 20;
         public const int TYPE_ARENA_POINT = 21;
-        public const int TYPE_SWEEP = 101;
-        public const int TYPE_AVATAR = 102;
-        public const int TYPE_PASSGIFT = 103;
-        public const int TYPE_SWEE_DAY = 104;
-        public const int TYPE_PASSCOIN = 998;
-        public const int TYPE_PASSEXP = 999;
-        public const int TYPE_TREASURE = 1000;
     }
 
 }

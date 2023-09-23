@@ -10,28 +10,26 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int picture_type; // 0x14
+        public int picture_type; // 0xC
         [MessagePackMember(2)]
-        public int rare; // 0x18
+        public int rare; // 0x10
         [MessagePackMember(3)]
-        public int spec_actualize; // 0x1C
+        public int spec_actualize; // 0x14
         [MessagePackMember(4)]
-        public int item_id; // 0x20
+        public int item_id; // 0x18
         [MessagePackMember(5)]
-        public int item_value; // 0x24
+        public int item_value; // 0x1C
     }
 
     [Serializable]
     public class PictureEnhanceChemicalTable : MasterTable<long, PictureEnhanceChemicalRecord>
     {
-        // Fields
     }
 
     public class PictureEnhanceChemicalMaster
     {
-        // Fields
     }
 
 }

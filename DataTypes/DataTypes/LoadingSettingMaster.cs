@@ -10,28 +10,26 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int picture_id; // 0x14
+        public int picture_id; // 0xC
         [MessagePackMember(2)]
-        public int show_illustrator_name; // 0x18
+        public int show_illustrator_name; // 0x10
         [MessagePackMember(3)]
-        public int show_circle_name; // 0x1C
+        public int show_circle_name; // 0x14
         [MessagePackMember(4)]
-        public string start_at; // 0x20
+        public string start_at; // 0x18
         [MessagePackMember(5)]
-        public string end_at; // 0x28
+        public string end_at; // 0x1C
     }
 
     [Serializable]
     public class LoadingSettingTable : MasterTable<int, LoadingSettingRecord>
     {
-        // Fields
     }
 
     public class LoadingSettingMaster
     {
-        // Fields
     }
 
 }

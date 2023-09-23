@@ -10,38 +10,36 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string title; // 0x18
+        public string title; // 0xC
         [MessagePackMember(2)]
-        public string info; // 0x20
+        public string info; // 0x10
         [MessagePackMember(3)]
-        public string jacket_path; // 0x28
+        public string jacket_path; // 0x14
         [MessagePackMember(4)]
-        public string bgm_path; // 0x30
+        public string bgm_path; // 0x18
         [MessagePackMember(5)]
-        public int preview_start_time; // 0x38
+        public int preview_start_time; // 0x1C
         [MessagePackMember(6)]
-        public int preview_play_time; // 0x3C
+        public int preview_play_time; // 0x20
         [MessagePackMember(7)]
-        public string normal_score_path; // 0x40
+        public string normal_score_path; // 0x24
         [MessagePackMember(8)]
-        public string hard_score_path; // 0x48
+        public string hard_score_path; // 0x28
         [MessagePackMember(9)]
-        public string lunatic_score_path; // 0x50
+        public string lunatic_score_path; // 0x2C
         [MessagePackMember(10)]
-        public int display_order; // 0x58
+        public int display_order; // 0x30
     }
 
     [Serializable]
     public class RhythmGameMusicTable : MasterTable<int, RhythmGameMusicRecord>
     {
-        // Fields
     }
 
     public class RhythmGameMusicMaster
     {
-        // Fields
     }
 
 }

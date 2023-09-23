@@ -10,26 +10,24 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int unit_id; // 0x14
+        public int unit_id; // 0xC
         [MessagePackMember(2)]
-        public int voice_type_id; // 0x18
+        public int voice_type_id; // 0x10
         [MessagePackMember(3)]
-        public string voice_text; // 0x20
+        public string voice_text; // 0x14
         [MessagePackMember(4)]
-        public string emotion; // 0x28
+        public string emotion; // 0x18
     }
 
     [Serializable]
     public class VoiceTable : MasterTable<long, VoiceRecord>
     {
-        // Fields
     }
 
     public class VoiceMaster
     {
-        // Fields
     }
 
 }

@@ -10,68 +10,66 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public string description; // 0x20
+        public string description; // 0x10
         [MessagePackMember(3)]
-        public int type; // 0x28
+        public int type; // 0x14
         [MessagePackMember(4)]
-        public int exp_id; // 0x2C
+        public int exp_id; // 0x18
         [MessagePackMember(5)]
-        public int level1_turn; // 0x30
+        public int level1_turn; // 0x1C
         [MessagePackMember(6)]
-        public int level2_turn; // 0x34
+        public int level2_turn; // 0x20
         [MessagePackMember(7)]
-        public int level3_turn; // 0x38
+        public int level3_turn; // 0x24
         [MessagePackMember(8)]
-        public int level4_turn; // 0x3C
+        public int level4_turn; // 0x28
         [MessagePackMember(9)]
-        public int level5_turn; // 0x40
+        public int level5_turn; // 0x2C
         [MessagePackMember(10)]
-        public int level6_turn; // 0x44
+        public int level6_turn; // 0x30
         [MessagePackMember(11)]
-        public int level7_turn; // 0x48
+        public int level7_turn; // 0x34
         [MessagePackMember(12)]
-        public int level8_turn; // 0x4C
+        public int level8_turn; // 0x38
         [MessagePackMember(13)]
-        public int level9_turn; // 0x50
+        public int level9_turn; // 0x3C
         [MessagePackMember(14)]
-        public int level10_turn; // 0x54
+        public int level10_turn; // 0x40
         [MessagePackMember(15)]
-        public int effect1_id; // 0x58
+        public int effect1_id; // 0x44
         [MessagePackMember(16)]
-        public int effect1_level_type; // 0x5C
+        public int effect1_level_type; // 0x48
         [MessagePackMember(17)]
-        public int effect1_level_value; // 0x60
+        public int effect1_level_value; // 0x4C
         [MessagePackMember(18)]
-        public int effect2_id; // 0x64
+        public int effect2_id; // 0x50
         [MessagePackMember(19)]
-        public int effect2_level_type; // 0x68
+        public int effect2_level_type; // 0x54
         [MessagePackMember(20)]
-        public int effect2_level_value; // 0x6C
+        public int effect2_level_value; // 0x58
         [MessagePackMember(21)]
-        public int effect3_id; // 0x70
+        public int effect3_id; // 0x5C
         [MessagePackMember(22)]
-        public int effect3_level_type; // 0x74
+        public int effect3_level_type; // 0x60
         [MessagePackMember(23)]
-        public int effect3_level_value; // 0x78
+        public int effect3_level_value; // 0x64
         [MessagePackMember(24)]
-        public string icon_filename; // 0x80
+        public string icon_filename; // 0x68
         [MessagePackMember(25)]
-        public string reincarnation_level_name; // 0x88
+        public string reincarnation_level_name; // 0x6C
     }
 
     [Serializable]
     public class SkillTable : MasterTable<int, SkillRecord>
     {
-        // Fields
     }
 
     public class SkillMaster
     {
-        // Fields
     }
 
 }

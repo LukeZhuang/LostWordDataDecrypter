@@ -10,32 +10,30 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int level_limitbreak; // 0x14
+        public int level_limitbreak; // 0xC
         [MessagePackMember(2)]
-        public int level_lower_limit; // 0x18
+        public int level_lower_limit; // 0x10
         [MessagePackMember(3)]
-        public int consume_same_unit_count; // 0x1C
+        public int consume_same_unit_count; // 0x14
         [MessagePackMember(4)]
-        public int consume_gold; // 0x20
+        public int consume_gold; // 0x18
         [MessagePackMember(5)]
-        public int level_max; // 0x24
+        public int level_max; // 0x1C
         [MessagePackMember(6)]
-        public int use_spellcard_count_max; // 0x28
+        public int use_spellcard_count_max; // 0x20
         [MessagePackMember(7)]
-        public float growth_rate; // 0x2C
+        public float growth_rate; // 0x24
     }
 
     [Serializable]
     public class UnitLevelLimitbreakGrowthTable : MasterTable<int, UnitLevelLimitbreakGrowthRecord>
     {
-        // Fields
     }
 
     public class UnitLevelLimitbreakGrowthMaster
     {
-        // Fields
     }
 
 }

@@ -10,24 +10,22 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int category; // 0x14
+        public int category; // 0xC
         [MessagePackMember(2)]
-        public string title; // 0x18
+        public string title; // 0x10
         [MessagePackMember(3)]
-        public string tips_text; // 0x20
+        public string tips_text; // 0x14
     }
 
     [Serializable]
     public class TipsTable : MasterTable<int, TipsRecord>
     {
-        // Fields
     }
 
     public class TipsMaster
     {
-        // Fields
     }
 
 }

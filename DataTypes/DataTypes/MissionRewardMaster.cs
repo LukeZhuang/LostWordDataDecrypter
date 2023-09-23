@@ -10,31 +10,29 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int mission_reward_group_id; // 0x14
+        public int mission_reward_group_id; // 0xC
         [MessagePackMember(2)]
-        public int object_type; // 0x18
+        public int object_type; // 0x10
         [MessagePackMember(3)]
-        public int object_id; // 0x1C
+        public int object_id; // 0x14
         [MessagePackMember(4)]
-        public int object_value; // 0x20
+        public int object_value; // 0x18
         [MessagePackMember(5)]
-        public int display_order; // 0x24
+        public int display_order; // 0x1C
         [MessagePackMember(6)]
-        public string custom_parameter; // 0x28
-        private int m_potential_limit_break; // 0x30
+        public string custom_parameter; // 0x20
+        private int m_potential_limit_break; // 0x24
     }
 
     [Serializable]
     public class MissionRewardTable : MasterTable<int, MissionRewardRecord>
     {
-        // Fields
     }
 
     public class MissionRewardMaster
     {
-        // Fields
     }
 
 }

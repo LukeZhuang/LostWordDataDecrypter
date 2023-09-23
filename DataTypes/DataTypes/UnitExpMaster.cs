@@ -10,28 +10,26 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int exp_id; // 0x14
+        public int exp_id; // 0xC
         [MessagePackMember(2)]
-        public int level; // 0x18
+        public int level; // 0x10
         [MessagePackMember(3)]
-        public int exp; // 0x1C
+        public int exp; // 0x14
         [MessagePackMember(4)]
-        public float growth_rate; // 0x20
+        public float growth_rate; // 0x18
         [MessagePackMember(5)]
-        public float spec_actualize_limit_rate; // 0x24
+        public float spec_actualize_limit_rate; // 0x1C
     }
 
     [Serializable]
     public class UnitExpTable : MasterTable<long, UnitExpRecord>
     {
-        // Fields
     }
 
     public class UnitExpMaster
     {
-        // Fields
     }
 
 }

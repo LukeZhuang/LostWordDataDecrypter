@@ -10,43 +10,42 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public int type; // 0x20
+        public int type; // 0x10
         [MessagePackMember(3)]
-        public int gacha_button_id1; // 0x24
+        public int gacha_button_id1; // 0x14
         [MessagePackMember(4)]
-        public int gacha_button_id2; // 0x28
+        public int gacha_button_id2; // 0x18
         [MessagePackMember(5)]
-        public int gacha_button_id3; // 0x2C
+        public int gacha_button_id3; // 0x1C
         [MessagePackMember(6)]
-        public int gacha_button_id4; // 0x30
+        public int gacha_button_id4; // 0x20
         [MessagePackMember(7)]
-        public string banner_image; // 0x38
+        public string banner_image; // 0x24
         [MessagePackMember(8)]
-        public int drop_category_group_id; // 0x40
+        public int drop_category_group_id; // 0x28
         [MessagePackMember(9)]
-        public int display_order; // 0x44
+        public int display_order; // 0x2C
         [MessagePackMember(10)]
-        public int gacha_point_id; // 0x48
+        public int gacha_point_id; // 0x30
         [MessagePackMember(11)]
-        public string mail_display_name; // 0x50
+        public string mail_display_name; // 0x34
         [MessagePackMember(12)]
-        public int gacha_rate_hidden; // 0x58
+        public int gacha_rate_hidden; // 0x38
         [MessagePackMember(13)]
-        public int gacha_point_hidden; // 0x5C
+        public int gacha_point_hidden; // 0x3C
         [MessagePackMember(14)]
-        public string start_at; // 0x60
+        public string start_at; // 0x40
         [MessagePackMember(15)]
-        public string end_at; // 0x68
+        public string end_at; // 0x44
     }
 
     [Serializable]
     public class GachaTable : MasterTable<int, GachaRecord>
     {
-        // Fields
     }
 
     public class GachaMaster

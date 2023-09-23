@@ -10,21 +10,20 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int arena_category; // 0x14
+        public int arena_category; // 0xC
         [MessagePackMember(2)]
-        public int type; // 0x18
+        public int type; // 0x10
         [MessagePackMember(3)]
-        public int enemy_count; // 0x1C
+        public int enemy_count; // 0x14
         [MessagePackMember(4)]
-        public float coefficient; // 0x20
+        public float coefficient; // 0x18
     }
 
     [Serializable]
     public class ArenaEnemyCountCoefTable : MasterTable<int, ArenaEnemyCountCoefRecord>
     {
-        // Fields
     }
 
     public class ArenaEnemyCountCoefMaster

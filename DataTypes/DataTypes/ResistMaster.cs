@@ -10,33 +10,32 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public string description; // 0x20
+        public string description; // 0x10
         [MessagePackMember(3)]
-        public int element1_resistance; // 0x28
+        public int element1_resistance; // 0x14
         [MessagePackMember(4)]
-        public int element2_resistance; // 0x2C
+        public int element2_resistance; // 0x18
         [MessagePackMember(5)]
-        public int element3_resistance; // 0x30
+        public int element3_resistance; // 0x1C
         [MessagePackMember(6)]
-        public int element4_resistance; // 0x34
+        public int element4_resistance; // 0x20
         [MessagePackMember(7)]
-        public int element5_resistance; // 0x38
+        public int element5_resistance; // 0x24
         [MessagePackMember(8)]
-        public int element6_resistance; // 0x3C
+        public int element6_resistance; // 0x28
         [MessagePackMember(9)]
-        public int element7_resistance; // 0x40
+        public int element7_resistance; // 0x2C
         [MessagePackMember(10)]
-        public int element8_resistance; // 0x44
+        public int element8_resistance; // 0x30
     }
 
     [Serializable]
     public class ResistTable : MasterTable<int, ResistRecord>
     {
-        // Fields
     }
 
     public class ResistMaster

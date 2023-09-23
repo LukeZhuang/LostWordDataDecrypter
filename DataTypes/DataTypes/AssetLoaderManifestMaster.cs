@@ -11,8 +11,8 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     public class AssetLoaderManifestMasterInfo
     {
         // Fields
-        public long EndAt; // 0x10
-        public int Id; // 0x18
+        public long EndAt; // 0x8
+        public int Id; // 0x10
     }
 
 }

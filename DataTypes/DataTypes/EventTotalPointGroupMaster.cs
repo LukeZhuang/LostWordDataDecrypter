@@ -10,26 +10,24 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int event_id; // 0x14
+        public int event_id; // 0xC
         [MessagePackMember(2)]
-        public int step_number; // 0x18
+        public int step_number; // 0x10
         [MessagePackMember(3)]
-        public int total_point; // 0x1C
+        public int total_point; // 0x14
         [MessagePackMember(4)]
-        public int icon_type; // 0x20
+        public int icon_type; // 0x18
     }
 
     [Serializable]
     public class EventTotalPointGroupTable : MasterTable<long, EventTotalPointGroupRecord>
     {
-        // Fields
     }
 
     public class EventTotalPointGroupMaster
     {
-        // Fields
     }
 
 }

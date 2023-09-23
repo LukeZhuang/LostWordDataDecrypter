@@ -10,26 +10,24 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public string text_key; // 0x10
+        public string text_key; // 0x8
         [MessagePackMember(1)]
-        public string japanese_value; // 0x18
+        public string japanese_value; // 0xC
         [MessagePackMember(2)]
-        public string english_value; // 0x20
+        public string english_value; // 0x10
         [MessagePackMember(3)]
-        public string chinese_value; // 0x28
+        public string chinese_value; // 0x14
         [MessagePackMember(4)]
-        public string french_value; // 0x30
+        public string french_value; // 0x18
     }
 
     [Serializable]
     public class CommonStringTable : MasterTable<string, CommonStringRecord>
     {
-        // Fields
     }
 
     public class CommonStringMaster
     {
-        // Fields
     }
 
 }

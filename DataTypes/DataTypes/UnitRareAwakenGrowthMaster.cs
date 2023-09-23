@@ -10,26 +10,24 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int rare; // 0x14
+        public int rare; // 0xC
         [MessagePackMember(2)]
-        public int consume_piece; // 0x18
+        public int consume_piece; // 0x10
         [MessagePackMember(3)]
-        public int spellcard_level; // 0x1C
+        public int spellcard_level; // 0x14
         [MessagePackMember(4)]
-        public float growth_rate; // 0x20
+        public float growth_rate; // 0x18
     }
 
     [Serializable]
     public class UnitRareAwakenGrowthTable : MasterTable<int, UnitRareAwakenGrowthRecord>
     {
-        // Fields
     }
 
     public class UnitRareAwakenGrowthMaster
     {
-        // Fields
     }
 
 }

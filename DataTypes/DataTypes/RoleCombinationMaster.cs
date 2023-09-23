@@ -10,36 +10,34 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public int role1; // 0x20
+        public int role1; // 0x10
         [MessagePackMember(3)]
-        public int role2; // 0x24
+        public int role2; // 0x14
         [MessagePackMember(4)]
-        public int role3; // 0x28
+        public int role3; // 0x18
         [MessagePackMember(5)]
-        public int role4; // 0x2C
+        public int role4; // 0x1C
         [MessagePackMember(6)]
-        public int role5; // 0x30
+        public int role5; // 0x20
         [MessagePackMember(7)]
-        public int role6; // 0x34
+        public int role6; // 0x24
         [MessagePackMember(8)]
-        public int role7; // 0x38
+        public int role7; // 0x28
         [MessagePackMember(9)]
-        public int role8; // 0x3C
+        public int role8; // 0x2C
     }
 
     [Serializable]
     public class RoleCombinationTable : MasterTable<int, RoleCombinationRecord>
     {
-        // Fields
     }
 
     public class RoleCombinationMaster
     {
-        // Fields
     }
 
 }

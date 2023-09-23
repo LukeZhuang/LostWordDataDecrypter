@@ -10,30 +10,28 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int event_id; // 0x14
+        public int event_id; // 0xC
         [MessagePackMember(2)]
-        public int battle_id; // 0x18
+        public int battle_id; // 0x10
         [MessagePackMember(3)]
-        public int bonus_rate; // 0x1C
+        public int bonus_rate; // 0x14
         [MessagePackMember(4)]
-        public int count; // 0x20
+        public int count; // 0x18
         [MessagePackMember(5)]
-        public string start_at; // 0x28
+        public string start_at; // 0x1C
         [MessagePackMember(6)]
-        public string end_at; // 0x30
+        public string end_at; // 0x20
     }
 
     [Serializable]
     public class EventPointBonusTable : MasterTable<long, EventPointBonusRecord>
     {
-        // Fields
     }
 
     public class EventPointBonusMaster
     {
-        // Fields
     }
 
 }

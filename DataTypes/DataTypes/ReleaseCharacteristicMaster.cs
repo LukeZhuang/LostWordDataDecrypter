@@ -10,34 +10,32 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string characteristic_name; // 0x18
+        public string characteristic_name; // 0xC
         [MessagePackMember(2)]
-        public string characteristic_description; // 0x20
+        public string characteristic_description; // 0x10
         [MessagePackMember(3)]
-        public int characteristic_type; // 0x28
+        public int characteristic_type; // 0x14
         [MessagePackMember(4)]
-        public int characteristic_effect_type; // 0x2C
+        public int characteristic_effect_type; // 0x18
         [MessagePackMember(5)]
-        public int characteristic_effect_subtype; // 0x30
+        public int characteristic_effect_subtype; // 0x1C
         [MessagePackMember(6)]
-        public int characteristic_rate; // 0x34
+        public int characteristic_rate; // 0x20
         [MessagePackMember(7)]
-        public int characteristic_effect_value; // 0x38
+        public int characteristic_effect_value; // 0x24
         [MessagePackMember(8)]
-        public string characteristic_icon_filename; // 0x40
+        public string characteristic_icon_filename; // 0x28
     }
 
     [Serializable]
     public class ReleaseCharacteristicTable : MasterTable<int, ReleaseCharacteristicRecord>
     {
-        // Fields
     }
 
     public class ReleaseCharacteristicMaster
     {
-        // Fields
     }
 
 }

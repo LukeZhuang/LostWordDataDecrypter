@@ -10,24 +10,22 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int group_no; // 0x14
+        public int group_no; // 0xC
         [MessagePackMember(2)]
-        public int object_type; // 0x18
+        public int object_type; // 0x10
         [MessagePackMember(3)]
-        public int object_value; // 0x1C
+        public int object_value; // 0x14
     }
 
     [Serializable]
     public class GachaBonusTable : MasterTable<int, GachaBonusRecord>
     {
-        // Fields
     }
 
     public class GachaBonusMaster
     {
-        // Fields
     }
 
 }

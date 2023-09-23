@@ -10,24 +10,22 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string background; // 0x18
+        public string background; // 0xC
         [MessagePackMember(2)]
-        public string start_at; // 0x20
+        public string start_at; // 0x10
         [MessagePackMember(3)]
-        public string end_at; // 0x28
+        public string end_at; // 0x14
     }
 
     [Serializable]
     public class HomeBackgroundTable : MasterTable<int, HomeBackgroundRecord>
     {
-        // Fields
     }
 
     public class HomeBackgroundMaster
     {
-        // Fields
     }
 
 }

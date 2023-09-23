@@ -10,26 +10,24 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int year; // 0x14
+        public int year; // 0xC
         [MessagePackMember(2)]
-        public int month; // 0x18
+        public int month; // 0x10
         [MessagePackMember(3)]
-        public int day_count; // 0x1C
+        public int day_count; // 0x14
         [MessagePackMember(4)]
-        public int reward_group_id; // 0x20
+        public int reward_group_id; // 0x18
     }
 
     [Serializable]
     public class LoginbonusTable : MasterTable<long, LoginbonusRecord>
     {
-        // Fields
     }
 
     public class LoginbonusMaster
     {
-        // Fields
     }
 
 }

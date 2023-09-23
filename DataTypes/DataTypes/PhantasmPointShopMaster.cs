@@ -10,22 +10,20 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int buy_count; // 0x14
+        public int buy_count; // 0xC
         [MessagePackMember(2)]
-        public int consume_orb; // 0x18
+        public int consume_orb; // 0x10
     }
 
     [Serializable]
     public class PhantasmPointShopTable : MasterTable<int, PhantasmPointShopRecord>
     {
-        // Fields
     }
 
     public class PhantasmPointShopMaster
     {
-        // Fields
     }
 
 }

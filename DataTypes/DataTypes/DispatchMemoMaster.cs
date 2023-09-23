@@ -10,22 +10,20 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int dispatch_id; // 0x14
+        public int dispatch_id; // 0xC
         [MessagePackMember(2)]
-        public string memo; // 0x18
+        public string memo; // 0x10
     }
 
     [Serializable]
     public class DispatchMemoTable : MasterTable<int, DispatchMemoRecord>
     {
-        // Fields
     }
 
     public class DispatchMemoMaster
     {
-        // Fields
     }
 
 }

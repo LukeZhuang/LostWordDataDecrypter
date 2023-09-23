@@ -10,24 +10,22 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int gacha_id; // 0x14
+        public int gacha_id; // 0xC
         [MessagePackMember(2)]
-        public int gacha_button_id; // 0x18
+        public int gacha_button_id; // 0x10
         [MessagePackMember(3)]
-        public int step_num; // 0x1C
+        public int step_num; // 0x14
     }
 
     [Serializable]
     public class StepUpGachaTable : MasterTable<int, StepUpGachaRecord>
     {
-        // Fields
     }
 
     public class StepUpGachaMaster
     {
-        // Fields
     }
 
 }

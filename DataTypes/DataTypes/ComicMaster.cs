@@ -10,36 +10,34 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string title; // 0x18
+        public string title; // 0xC
         [MessagePackMember(2)]
-        public string title_kana; // 0x20
+        public string title_kana; // 0x10
         [MessagePackMember(3)]
-        public string author_name; // 0x28
+        public string author_name; // 0x14
         [MessagePackMember(4)]
-        public string author_name_kana; // 0x30
+        public string author_name_kana; // 0x18
         [MessagePackMember(5)]
-        public string summary; // 0x38
+        public string summary; // 0x1C
         [MessagePackMember(6)]
-        public string thumbnail_file_path; // 0x40
+        public string thumbnail_file_path; // 0x20
         [MessagePackMember(7)]
-        public string comic_file_path; // 0x48
+        public string comic_file_path; // 0x24
         [MessagePackMember(8)]
-        public int max_page_num; // 0x50
+        public int max_page_num; // 0x28
         [MessagePackMember(9)]
-        public string release_date; // 0x58
+        public string release_date; // 0x2C
     }
 
     [Serializable]
     public class ComicTable : MasterTable<int, ComicRecord>
     {
-        // Fields
     }
 
     public class ComicMaster
     {
-        // Fields
     }
 
 }

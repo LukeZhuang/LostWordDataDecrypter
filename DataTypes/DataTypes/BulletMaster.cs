@@ -10,58 +10,56 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public string description; // 0x20
+        public string description; // 0x10
         [MessagePackMember(3)]
-        public int element; // 0x28
+        public int element; // 0x14
         [MessagePackMember(4)]
-        public int type; // 0x2C
+        public int type; // 0x18
         [MessagePackMember(5)]
-        public int category; // 0x30
+        public int category; // 0x1C
         [MessagePackMember(6)]
-        public float power; // 0x34
+        public float power; // 0x20
         [MessagePackMember(7)]
-        public int hit; // 0x38
+        public int hit; // 0x24
         [MessagePackMember(8)]
-        public int critical; // 0x3C
+        public int critical; // 0x28
         [MessagePackMember(9)]
-        public int bullet1_addon_id; // 0x40
+        public int bullet1_addon_id; // 0x2C
         [MessagePackMember(10)]
-        public int bullet1_addon_value; // 0x44
+        public int bullet1_addon_value; // 0x30
         [MessagePackMember(11)]
-        public int bullet2_addon_id; // 0x48
+        public int bullet2_addon_id; // 0x34
         [MessagePackMember(12)]
-        public int bullet2_addon_value; // 0x4C
+        public int bullet2_addon_value; // 0x38
         [MessagePackMember(13)]
-        public int bullet3_addon_id; // 0x50
+        public int bullet3_addon_id; // 0x3C
         [MessagePackMember(14)]
-        public int bullet3_addon_value; // 0x54
+        public int bullet3_addon_value; // 0x40
         [MessagePackMember(15)]
-        public int bullet1_extraeffect_id; // 0x58
+        public int bullet1_extraeffect_id; // 0x44
         [MessagePackMember(16)]
-        public int bullet1_extraeffect_success_rate; // 0x5C
+        public int bullet1_extraeffect_success_rate; // 0x48
         [MessagePackMember(17)]
-        public int bullet2_extraeffect_id; // 0x60
+        public int bullet2_extraeffect_id; // 0x4C
         [MessagePackMember(18)]
-        public int bullet2_extraeffect_success_rate; // 0x64
+        public int bullet2_extraeffect_success_rate; // 0x50
         [MessagePackMember(19)]
-        public int bullet3_extraeffect_id; // 0x68
+        public int bullet3_extraeffect_id; // 0x54
         [MessagePackMember(20)]
-        public int bullet3_extraeffect_success_rate; // 0x6C
+        public int bullet3_extraeffect_success_rate; // 0x58
     }
 
     [Serializable]
     public class BulletTable : MasterTable<int, BulletRecord>
     {
-        // Fields
     }
 
     public class BulletMaster
     {
-        // Fields
     }
 
 }

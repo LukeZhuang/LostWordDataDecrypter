@@ -10,30 +10,28 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int event_id; // 0x14
+        public int event_id; // 0xC
         [MessagePackMember(2)]
-        public int event_type; // 0x18
+        public int event_type; // 0x10
         [MessagePackMember(3)]
-        public string button_name; // 0x20
+        public string button_name; // 0x14
         [MessagePackMember(4)]
-        public string banner_image; // 0x28
+        public string banner_image; // 0x18
         [MessagePackMember(5)]
-        public string front_image; // 0x30
+        public string front_image; // 0x1C
         [MessagePackMember(6)]
-        public int display_order; // 0x38
+        public int display_order; // 0x20
     }
 
     [Serializable]
     public class EventMenuTable : MasterTable<long, EventMenuRecord>
     {
-        // Fields
     }
 
     public class EventMenuMaster
     {
-        // Fields
     }
 
 }

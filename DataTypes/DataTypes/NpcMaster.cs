@@ -10,38 +10,34 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int unit_id; // 0x14
+        public int unit_id; // 0xC
         [MessagePackMember(2)]
-        public int level; // 0x18
+        public int level; // 0x10
         [MessagePackMember(3)]
-        public int level_limitbreak; // 0x1C
+        public int level_limitbreak; // 0x14
         [MessagePackMember(4)]
-        public int rank; // 0x20
+        public int rank; // 0x18
         [MessagePackMember(5)]
-        public int rare; // 0x24
+        public int rare; // 0x1C
         [MessagePackMember(6)]
-        public int skill1_level; // 0x28
+        public int skill1_level; // 0x20
         [MessagePackMember(7)]
-        public int skill2_level; // 0x2C
+        public int skill2_level; // 0x24
         [MessagePackMember(8)]
-        public int skill3_level; // 0x30
+        public int skill3_level; // 0x28
         [MessagePackMember(9)]
-        public int costume_id; // 0x34
-        [MessagePackMember(10)]
-        public int is_irremovable; // 0x38
+        public int costume_id; // 0x2C
     }
 
     [Serializable]
     public class NpcTable : MasterTable<int, NpcRecord>
     {
-        // Fields
     }
 
     public class NpcMaster
     {
-        // Fields
     }
 
 }

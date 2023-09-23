@@ -10,26 +10,24 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int reincarnation_release_id; // 0x14
+        public int reincarnation_release_id; // 0xC
         [MessagePackMember(2)]
-        public int unit_id; // 0x18
+        public int unit_id; // 0x10
         [MessagePackMember(3)]
-        public int costume_id; // 0x1C
+        public int costume_id; // 0x14
         [MessagePackMember(4)]
-        public int motion; // 0x20
+        public int motion; // 0x18
     }
 
     [Serializable]
     public class UnitReincarnationMotionTable : MasterTable<long, UnitReincarnationMotionRecord>
     {
-        // Fields
     }
 
     public class UnitReincarnationMotionMaster
     {
-        // Fields
     }
 
 }

@@ -10,38 +10,37 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int type; // 0x14
+        public int type; // 0xC
         [MessagePackMember(2)]
-        public string name; // 0x18
+        public string name; // 0x10
         [MessagePackMember(3)]
-        public int event_id; // 0x20
+        public int event_id; // 0x14
         [MessagePackMember(4)]
-        public int complete_type; // 0x24
+        public int complete_type; // 0x18
         [MessagePackMember(5)]
-        public int complete_id; // 0x28
+        public int complete_id; // 0x1C
         [MessagePackMember(6)]
-        public int complete_value; // 0x2C
+        public int complete_value; // 0x20
         [MessagePackMember(7)]
-        public int reward_group1_id; // 0x30
+        public int reward_group1_id; // 0x24
         [MessagePackMember(8)]
-        public int reward_group2_id; // 0x34
+        public int reward_group2_id; // 0x28
         [MessagePackMember(9)]
-        public int reward_group3_id; // 0x38
+        public int reward_group3_id; // 0x2C
         [MessagePackMember(10)]
-        public int reward_group4_id; // 0x3C
+        public int reward_group4_id; // 0x30
         [MessagePackMember(11)]
-        public int display_order; // 0x40
+        public int display_order; // 0x34
         [MessagePackMember(12)]
-        public string param; // 0x48
-        private Dictionary<string, object> m_param; // 0x50
+        public string param; // 0x38
+        private Dictionary<string, object> m_param; // 0x3C
     }
 
     [Serializable]
     public class MissionTable : MasterTable<int, MissionRecord>
     {
-        // Fields
     }
 
     public class MissionMaster

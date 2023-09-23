@@ -10,26 +10,24 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int level; // 0x14
+        public int level; // 0xC
         [MessagePackMember(2)]
-        public int exp; // 0x18
+        public int exp; // 0x10
         [MessagePackMember(3)]
-        public int phantasm_point_max; // 0x1C
+        public int phantasm_point_max; // 0x14
         [MessagePackMember(4)]
-        public int gold_max; // 0x20
+        public int gold_max; // 0x18
     }
 
     [Serializable]
     public class PlayerExpTable : MasterTable<int, PlayerExpRecord>
     {
-        // Fields
     }
 
     public class PlayerExpMaster
     {
-        // Fields
     }
 
 }

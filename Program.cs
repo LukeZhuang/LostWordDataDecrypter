@@ -11,27 +11,22 @@ namespace LostWordDataDecrypter
 {
     internal class Program
     {
-        public const string DOWNLOAD_URL = "https://thcdn.gggamedownload.com/source/Master_v{0}/";
+        public const string DOWNLOAD_URL = "https://d3s38hlip7moa.cloudfront.net/master/{0}/{1}/";
         public const string ROOT_DIR = @".\";
 
         static void Main(string[] args)
         {
             string input;
-            Console.WriteLine("Please input the version number:");
+            Console.WriteLine("Please input the timestamp (example: \"20230724_111922\"):");
             input = Console.ReadLine();
-            uint verNum;
-            try
-            {
-                verNum = Convert.ToUInt32(input);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine(string.Format("The format of version number {0} is not correct!", input));
-                goto End;
-            }
+            string timestamp = input;
 
-            Console.WriteLine("Using master version: " + verNum);
-            string sourceDir = Path.Combine(ROOT_DIR, "ch_master_v" + verNum);
+            Console.WriteLine("Please input the hashcode (example: \"bHjw5eUQ\"):");
+            input = Console.ReadLine();
+            string hashcode = input;
+
+            Console.WriteLine("Using master version: " + timestamp + "/" + hashcode);
+            string sourceDir = Path.Combine(ROOT_DIR, "jp_master_" + timestamp + "_" + hashcode);
             if (!Directory.Exists(sourceDir))
             {
                 Console.WriteLine("creating output directory: " + sourceDir);
@@ -60,12 +55,12 @@ namespace LostWordDataDecrypter
                 {
                     using (var client = new WebClient())
                     {
-                        client.DownloadFile(string.Format(DOWNLOAD_URL, verNum) + "manifest.json", manifestFilePath);
+                        client.DownloadFile(string.Format(DOWNLOAD_URL, timestamp, hashcode) + "manifest.json", manifestFilePath);
                     }
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("Fail to download " + string.Format(DOWNLOAD_URL, verNum) + "manifest.json" + ", file does not exist!");
+                    Console.WriteLine("Fail to download " + string.Format(DOWNLOAD_URL, timestamp, hashcode) + "manifest.json" + ", file does not exist!");
                     goto End;
                 }
             }
@@ -108,7 +103,7 @@ namespace LostWordDataDecrypter
                     {
                         using (var client = new WebClient())
                         {
-                            client.DownloadFile(string.Format(DOWNLOAD_URL, verNum) + fileName, Path.Combine(sourceDir, fileName));
+                            client.DownloadFile(string.Format(DOWNLOAD_URL, timestamp, hashcode) + fileName, Path.Combine(sourceDir, fileName));
                         }
                     }
                     catch (Exception)

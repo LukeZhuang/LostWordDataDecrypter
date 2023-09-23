@@ -10,24 +10,22 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int arena_category; // 0x14
+        public int arena_category; // 0xC
         [MessagePackMember(2)]
-        public int enemy_level; // 0x18
+        public int enemy_level; // 0x10
         [MessagePackMember(3)]
-        public int total_life_point; // 0x1C
+        public int total_life_point; // 0x14
     }
 
     [Serializable]
     public class ArenaTotalLifePointTable : MasterTable<int, ArenaTotalLifePointRecord>
     {
-        // Fields
     }
 
     public class ArenaTotalLifePointMaster
     {
-        // Fields
     }
 
 }

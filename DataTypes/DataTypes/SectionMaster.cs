@@ -10,29 +10,28 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int chapter_id; // 0x14
+        public int chapter_id; // 0xC
         [MessagePackMember(2)]
-        public int mode; // 0x18
+        public int mode; // 0x10
         [MessagePackMember(3)]
-        public string title; // 0x20
+        public string title; // 0x14
         [MessagePackMember(4)]
-        public string sub_title; // 0x28
+        public string sub_title; // 0x18
         [MessagePackMember(5)]
-        public int number; // 0x30
+        public int number; // 0x1C
         [MessagePackMember(6)]
-        public int costume_id; // 0x34
+        public int costume_id; // 0x20
         [MessagePackMember(7)]
-        public int unit_speech_group_id; // 0x38
+        public int unit_speech_group_id; // 0x24
         [MessagePackMember(8)]
-        public int open_type; // 0x3C
+        public int open_type; // 0x28
     }
 
     [Serializable]
     public class SectionTable : MasterTable<int, SectionRecord>
     {
-        // Fields
     }
 
     public class SectionMaster

@@ -10,28 +10,26 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int day_count; // 0x14
+        public int day_count; // 0xC
         [MessagePackMember(2)]
-        public int rotate_no; // 0x18
+        public int rotate_no; // 0x10
         [MessagePackMember(3)]
-        public int object_type; // 0x1C
+        public int object_type; // 0x14
         [MessagePackMember(4)]
-        public int object_id; // 0x20
+        public int object_id; // 0x18
         [MessagePackMember(5)]
-        public int object_value; // 0x24
+        public int object_value; // 0x1C
     }
 
     [Serializable]
     public class ArenaDailyRotateRewardTable : MasterTable<int, ArenaDailyRotateRewardRecord>
     {
-        // Fields
     }
 
     public class ArenaDailyRotateRewardMaster
     {
-        // Fields
     }
 
 }

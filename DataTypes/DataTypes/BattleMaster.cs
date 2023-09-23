@@ -10,105 +10,103 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int difficulty; // 0x14
+        public int difficulty; // 0xC
         [MessagePackMember(2)]
-        public int wave_count; // 0x18
+        public int wave_count; // 0x10
         [MessagePackMember(3)]
-        public int wave1_enemy1_id; // 0x1C
+        public int wave1_enemy1_id; // 0x14
         [MessagePackMember(4)]
-        public int wave1_enemy2_id; // 0x20
+        public int wave1_enemy2_id; // 0x18
         [MessagePackMember(5)]
-        public int wave1_enemy3_id; // 0x24
+        public int wave1_enemy3_id; // 0x1C
         [MessagePackMember(6)]
-        public int wave2_enemy1_id; // 0x28
+        public int wave2_enemy1_id; // 0x20
         [MessagePackMember(7)]
-        public int wave2_enemy2_id; // 0x2C
+        public int wave2_enemy2_id; // 0x24
         [MessagePackMember(8)]
-        public int wave2_enemy3_id; // 0x30
+        public int wave2_enemy3_id; // 0x28
         [MessagePackMember(9)]
-        public int wave3_enemy1_id; // 0x34
+        public int wave3_enemy1_id; // 0x2C
         [MessagePackMember(10)]
-        public int wave3_enemy2_id; // 0x38
+        public int wave3_enemy2_id; // 0x30
         [MessagePackMember(11)]
-        public int wave3_enemy3_id; // 0x3C
+        public int wave3_enemy3_id; // 0x34
         [MessagePackMember(12)]
-        public string background; // 0x40
+        public string background; // 0x38
         [MessagePackMember(13)]
-        public int bgm; // 0x48
+        public int bgm; // 0x3C
         [MessagePackMember(14)]
-        public string last_wave_background; // 0x50
+        public string last_wave_background; // 0x40
         [MessagePackMember(15)]
-        public int last_wave_bgm; // 0x58
+        public int last_wave_bgm; // 0x44
         [MessagePackMember(16)]
-        public int player_exp; // 0x5C
+        public int player_exp; // 0x48
         [MessagePackMember(17)]
-        public int unit_exp; // 0x60
+        public int unit_exp; // 0x4C
         [MessagePackMember(18)]
-        public int gold_lower_limit; // 0x64
+        public int gold_lower_limit; // 0x50
         [MessagePackMember(19)]
-        public int gold_upper_limit; // 0x68
+        public int gold_upper_limit; // 0x54
         [MessagePackMember(20)]
-        public int drop_group1_id; // 0x6C
+        public int drop_group1_id; // 0x58
         [MessagePackMember(21)]
-        public int drop_group2_id; // 0x70
+        public int drop_group2_id; // 0x5C
         [MessagePackMember(22)]
-        public int drop_group3_id; // 0x74
+        public int drop_group3_id; // 0x60
         [MessagePackMember(23)]
-        public int drop_group4_id; // 0x78
+        public int drop_group4_id; // 0x64
         [MessagePackMember(24)]
-        public int challenge_id; // 0x7C
+        public int challenge_id; // 0x68
         [MessagePackMember(25)]
-        public int advantageous_role1; // 0x80
+        public int advantageous_role1; // 0x6C
         [MessagePackMember(26)]
-        public int advantageous_role2; // 0x84
+        public int advantageous_role2; // 0x70
         [MessagePackMember(27)]
-        public int advantageous_role3; // 0x88
+        public int advantageous_role3; // 0x74
         [MessagePackMember(28)]
-        public int advantageous_element1; // 0x8C
+        public int advantageous_element1; // 0x78
         [MessagePackMember(29)]
-        public int advantageous_element2; // 0x90
+        public int advantageous_element2; // 0x7C
         [MessagePackMember(30)]
-        public int advantageous_element3; // 0x94
+        public int advantageous_element3; // 0x80
         [MessagePackMember(31)]
-        public int advantageous_skill_info1_id; // 0x98
+        public int advantageous_skill_info1_id; // 0x84
         [MessagePackMember(32)]
-        public int advantageous_skill_info2_id; // 0x9C
+        public int advantageous_skill_info2_id; // 0x88
         [MessagePackMember(33)]
-        public int advantageous_skill_info3_id; // 0xA0
+        public int advantageous_skill_info3_id; // 0x8C
         [MessagePackMember(34)]
-        public int npc1_id; // 0xA4
+        public int npc1_id; // 0x90
         [MessagePackMember(35)]
-        public int npc2_id; // 0xA8
+        public int npc2_id; // 0x94
         [MessagePackMember(36)]
-        public int npc3_id; // 0xAC
+        public int npc3_id; // 0x98
         [MessagePackMember(37)]
-        public int npc4_id; // 0xB0
+        public int npc4_id; // 0x9C
         [MessagePackMember(38)]
-        public int npc5_id; // 0xB4
+        public int npc5_id; // 0xA0
         [MessagePackMember(39)]
-        public int npc6_id; // 0xB8
+        public int npc6_id; // 0xA4
         [MessagePackMember(40)]
-        public int rule; // 0xBC
+        public int rule; // 0xA8
         [MessagePackMember(41)]
-        public string rule_param_1; // 0xC0
+        public string rule_param_1; // 0xAC
         [MessagePackMember(42)]
-        public string rule_param_2; // 0xC8
+        public string rule_param_2; // 0xB0
         [MessagePackMember(43)]
-        public string rule_param_3; // 0xD0
+        public string rule_param_3; // 0xB4
         protected const int BATTLE_RECORD_COLUMN_COUNT = 44;
     }
 
     [Serializable]
     public class BattleTable : MasterTable<int, BattleRecord>
     {
-        // Fields
     }
 
     public class BattleMaster
     {
-        // Fields
     }
 
 }

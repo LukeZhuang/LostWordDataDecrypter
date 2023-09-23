@@ -10,66 +10,64 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string title; // 0x18
+        public string title; // 0xC
         [MessagePackMember(2)]
-        public int wave1_multiple_spirits_weekly_enemy1_master_id; // 0x20
+        public int wave1_multiple_spirits_weekly_enemy1_master_id; // 0x10
         [MessagePackMember(3)]
-        public int wave1_multiple_spirits_weekly_enemy2_master_id; // 0x24
+        public int wave1_multiple_spirits_weekly_enemy2_master_id; // 0x14
         [MessagePackMember(4)]
-        public int wave1_multiple_spirits_weekly_enemy3_master_id; // 0x28
+        public int wave1_multiple_spirits_weekly_enemy3_master_id; // 0x18
         [MessagePackMember(5)]
-        public int wave2_multiple_spirits_weekly_enemy1_master_id; // 0x2C
+        public int wave2_multiple_spirits_weekly_enemy1_master_id; // 0x1C
         [MessagePackMember(6)]
-        public int wave2_multiple_spirits_weekly_enemy2_master_id; // 0x30
+        public int wave2_multiple_spirits_weekly_enemy2_master_id; // 0x20
         [MessagePackMember(7)]
-        public int wave2_multiple_spirits_weekly_enemy3_master_id; // 0x34
+        public int wave2_multiple_spirits_weekly_enemy3_master_id; // 0x24
         [MessagePackMember(8)]
-        public int wave3_multiple_spirits_weekly_enemy1_master_id; // 0x38
+        public int wave3_multiple_spirits_weekly_enemy1_master_id; // 0x28
         [MessagePackMember(9)]
-        public int wave3_multiple_spirits_weekly_enemy2_master_id; // 0x3C
+        public int wave3_multiple_spirits_weekly_enemy2_master_id; // 0x2C
         [MessagePackMember(10)]
-        public int wave3_multiple_spirits_weekly_enemy3_master_id; // 0x40
+        public int wave3_multiple_spirits_weekly_enemy3_master_id; // 0x30
         [MessagePackMember(11)]
-        public int challenge_id; // 0x44
+        public int challenge_id; // 0x34
         [MessagePackMember(12)]
-        public string background; // 0x48
+        public string background; // 0x38
         [MessagePackMember(13)]
-        public int bgm; // 0x50
+        public int bgm; // 0x3C
         [MessagePackMember(14)]
-        public int last_wave_bgm; // 0x54
+        public int last_wave_bgm; // 0x40
         [MessagePackMember(15)]
-        public int special_rules_group_id; // 0x58
+        public int special_rules_group_id; // 0x44
         [MessagePackMember(16)]
-        public string thumbnail_path; // 0x60
+        public string thumbnail_path; // 0x48
         [MessagePackMember(17)]
-        public string reward_thumbnail_path; // 0x68
+        public string reward_thumbnail_path; // 0x4C
         [MessagePackMember(18)]
-        public int reward_object_type; // 0x70
+        public int reward_object_type; // 0x50
         [MessagePackMember(19)]
-        public int reward_object_id; // 0x74
+        public int reward_object_id; // 0x54
         [MessagePackMember(20)]
-        public int unit_id; // 0x78
+        public int unit_id; // 0x58
         [MessagePackMember(21)]
-        public int costume_id; // 0x7C
+        public int costume_id; // 0x5C
         [MessagePackMember(22)]
-        public string start_at; // 0x80
+        public string start_at; // 0x60
         [MessagePackMember(23)]
-        public string end_at; // 0x88
+        public string end_at; // 0x64
         [MessagePackMember(24)]
-        public int display_order; // 0x90
+        public int display_order; // 0x68
     }
 
     [Serializable]
     public class MultipleSpiritsWeeklyTable : MasterTable<int, MultipleSpiritsWeeklyRecord>
     {
-        // Fields
     }
 
     public class MultipleSpiritsWeeklyMaster
     {
-        // Fields
     }
 
 }

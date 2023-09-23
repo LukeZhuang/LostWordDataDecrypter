@@ -10,26 +10,24 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int rare; // 0x14
+        public int rare; // 0xC
         [MessagePackMember(2)]
-        public int level_limitbreak; // 0x18
+        public int level_limitbreak; // 0x10
         [MessagePackMember(3)]
-        public int reincarnation_stage; // 0x1C
+        public int reincarnation_stage; // 0x14
         [MessagePackMember(4)]
-        public int phantasm_cost; // 0x20
+        public int phantasm_cost; // 0x18
     }
 
     [Serializable]
     public class UnitPhantasmCostTable : MasterTable<long, UnitPhantasmCostRecord>
     {
-        // Fields
     }
 
     public class UnitPhantasmCostMaster
     {
-        // Fields
     }
 
 }

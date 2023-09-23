@@ -10,38 +10,35 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int type; // 0x14
+        public int type; // 0xC
         [MessagePackMember(2)]
-        public string title; // 0x18
+        public string title; // 0x10
         [MessagePackMember(3)]
-        public int number; // 0x20
+        public int number; // 0x14
         [MessagePackMember(4)]
-        public int costume_id; // 0x24
+        public int costume_id; // 0x18
         [MessagePackMember(5)]
-        public int unit_speech_group_id; // 0x28
+        public int unit_speech_group_id; // 0x1C
         [MessagePackMember(6)]
-        public int extra_costume_id; // 0x2C
+        public int extra_costume_id; // 0x20
         [MessagePackMember(7)]
-        public int extra_unit_speech_group_id; // 0x30
+        public int extra_unit_speech_group_id; // 0x24
         [MessagePackMember(8)]
-        public int open_type; // 0x34
+        public int open_type; // 0x28
         [MessagePackMember(9)]
-        public int event_id; // 0x38
+        public int event_id; // 0x2C
         [MessagePackMember(10)]
-        public string event_point_ids; // 0x40
+        public string event_point_ids; // 0x30
         [MessagePackMember(11)]
-        public string start_at; // 0x48
-        [MessagePackMember(12)]
-        public int last_episode; // 0x50
-        private List<int> _event_point_id_list; // 0x58
+        public string start_at; // 0x34
+        private List<int> _event_point_id_list; // 0x38
     }
 
     [Serializable]
     public class ChapterTable : MasterTable<int, ChapterRecord>
     {
-        // Fields
     }
 
     public class ChapterMaster

@@ -10,24 +10,22 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int person_id; // 0x14
+        public int person_id; // 0xC
         [MessagePackMember(2)]
-        public int target_person_id; // 0x18
+        public int target_person_id; // 0x10
         [MessagePackMember(3)]
-        public string description; // 0x20
+        public string description; // 0x14
     }
 
     [Serializable]
     public class PersonRelationTable : MasterTable<long, PersonRelationRecord>
     {
-        // Fields
     }
 
     public class PersonRelationMaster
     {
-        // Fields
     }
 
 }

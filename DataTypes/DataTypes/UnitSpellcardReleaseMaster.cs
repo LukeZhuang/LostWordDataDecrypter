@@ -9,95 +9,94 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     public class UnitSpellcardReleaseRecord : MasterRecord<int>
     {
         // Fields
-        private List<int> m_resetSkillIndexes; // 0x10
+        private List<int> m_resetSkillIndexes; // 0x8
         [MessagePackMember(0)]
-        public int id; // 0x18
+        public int id; // 0xC
         [MessagePackMember(1)]
-        public int unit_id; // 0x1C
+        public int unit_id; // 0x10
         [MessagePackMember(2)]
-        public int unit_reincarnation_release_master_id; // 0x20
+        public int unit_reincarnation_release_master_id; // 0x14
         [MessagePackMember(3)]
-        public int step_num; // 0x24
+        public int step_num; // 0x18
         [MessagePackMember(4)]
-        public int target_spellcard_index; // 0x28
+        public int target_spellcard_index; // 0x1C
         [MessagePackMember(5)]
-        public int release_type; // 0x2C
+        public int release_type; // 0x20
         [MessagePackMember(6)]
-        public int target_magazine_index; // 0x30
+        public int target_magazine_index; // 0x24
         [MessagePackMember(7)]
-        public int release_bullet_master_id; // 0x34
+        public int release_bullet_master_id; // 0x28
         [MessagePackMember(8)]
-        public string reset_skill_index_list; // 0x38
+        public string reset_skill_index_list; // 0x2C
         [MessagePackMember(9)]
-        public int release_spellcard_skill1_effect_id; // 0x40
+        public int release_spellcard_skill1_effect_id; // 0x30
         [MessagePackMember(10)]
-        public int release_spellcard_skill1_level_type; // 0x44
+        public int release_spellcard_skill1_level_type; // 0x34
         [MessagePackMember(11)]
-        public int release_spellcard_skill1_level_value; // 0x48
+        public int release_spellcard_skill1_level_value; // 0x38
         [MessagePackMember(12)]
-        public int release_spellcard_skill1_timing; // 0x4C
+        public int release_spellcard_skill1_timing; // 0x3C
         [MessagePackMember(13)]
-        public int release_spellcard_skill2_effect_id; // 0x50
+        public int release_spellcard_skill2_effect_id; // 0x40
         [MessagePackMember(14)]
-        public int release_spellcard_skill2_level_type; // 0x54
+        public int release_spellcard_skill2_level_type; // 0x44
         [MessagePackMember(15)]
-        public int release_spellcard_skill2_level_value; // 0x58
+        public int release_spellcard_skill2_level_value; // 0x48
         [MessagePackMember(16)]
-        public int release_spellcard_skill2_timing; // 0x5C
+        public int release_spellcard_skill2_timing; // 0x4C
         [MessagePackMember(17)]
-        public int release_spellcard_skill3_effect_id; // 0x60
+        public int release_spellcard_skill3_effect_id; // 0x50
         [MessagePackMember(18)]
-        public int release_spellcard_skill3_level_type; // 0x64
+        public int release_spellcard_skill3_level_type; // 0x54
         [MessagePackMember(19)]
-        public int release_spellcard_skill3_level_value; // 0x68
+        public int release_spellcard_skill3_level_value; // 0x58
         [MessagePackMember(20)]
-        public int release_spellcard_skill3_timing; // 0x6C
+        public int release_spellcard_skill3_timing; // 0x5C
         [MessagePackMember(21)]
-        public int release_spellcard_skill4_effect_id; // 0x70
+        public int release_spellcard_skill4_effect_id; // 0x60
         [MessagePackMember(22)]
-        public int release_spellcard_skill4_level_type; // 0x74
+        public int release_spellcard_skill4_level_type; // 0x64
         [MessagePackMember(23)]
-        public int release_spellcard_skill4_level_value; // 0x78
+        public int release_spellcard_skill4_level_value; // 0x68
         [MessagePackMember(24)]
-        public int release_spellcard_skill4_timing; // 0x7C
+        public int release_spellcard_skill4_timing; // 0x6C
         [MessagePackMember(25)]
-        public int release_spellcard_skill5_effect_id; // 0x80
+        public int release_spellcard_skill5_effect_id; // 0x70
         [MessagePackMember(26)]
-        public int release_spellcard_skill5_level_type; // 0x84
+        public int release_spellcard_skill5_level_type; // 0x74
         [MessagePackMember(27)]
-        public int release_spellcard_skill5_level_value; // 0x88
+        public int release_spellcard_skill5_level_value; // 0x78
         [MessagePackMember(28)]
-        public int release_spellcard_skill5_timing; // 0x8C
+        public int release_spellcard_skill5_timing; // 0x7C
         [MessagePackMember(29)]
-        public int slot1_object_type; // 0x90
+        public int slot1_object_type; // 0x80
         [MessagePackMember(30)]
-        public int slot1_object_id; // 0x94
+        public int slot1_object_id; // 0x84
         [MessagePackMember(31)]
-        public int slot1_object_value; // 0x98
+        public int slot1_object_value; // 0x88
         [MessagePackMember(32)]
-        public int slot2_object_type; // 0x9C
+        public int slot2_object_type; // 0x8C
         [MessagePackMember(33)]
-        public int slot2_object_id; // 0xA0
+        public int slot2_object_id; // 0x90
         [MessagePackMember(34)]
-        public int slot2_object_value; // 0xA4
+        public int slot2_object_value; // 0x94
         [MessagePackMember(35)]
-        public int slot3_object_type; // 0xA8
+        public int slot3_object_type; // 0x98
         [MessagePackMember(36)]
-        public int slot3_object_id; // 0xAC
+        public int slot3_object_id; // 0x9C
         [MessagePackMember(37)]
-        public int slot3_object_value; // 0xB0
+        public int slot3_object_value; // 0xA0
         [MessagePackMember(38)]
-        public int slot4_object_type; // 0xB4
+        public int slot4_object_type; // 0xA4
         [MessagePackMember(39)]
-        public int slot4_object_id; // 0xB8
+        public int slot4_object_id; // 0xA8
         [MessagePackMember(40)]
-        public int slot4_object_value; // 0xBC
+        public int slot4_object_value; // 0xAC
     }
 
     [Serializable]
     public class UnitSpellcardReleaseTable : MasterTable<int, UnitSpellcardReleaseRecord>
     {
-        // Fields
     }
 
     public class UnitSpellcardReleaseMaster

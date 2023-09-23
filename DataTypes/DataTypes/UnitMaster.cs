@@ -10,96 +10,92 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public string name_kana; // 0x20
+        public string name_kana; // 0x10
         [MessagePackMember(3)]
-        public string alias_name; // 0x28
+        public string alias_name; // 0x14
         [MessagePackMember(4)]
-        public string short_name; // 0x30
+        public string short_name; // 0x18
         [MessagePackMember(5)]
-        public int person_id; // 0x38
+        public int person_id; // 0x1C
         [MessagePackMember(6)]
-        public int album_id; // 0x3C
+        public int album_id; // 0x20
         [MessagePackMember(7)]
-        public int role; // 0x40
+        public int role; // 0x24
         [MessagePackMember(8)]
-        public int exp_id; // 0x44
+        public int exp_id; // 0x28
         [MessagePackMember(9)]
-        public string symbol_name; // 0x48
+        public string symbol_name; // 0x2C
         [MessagePackMember(10)]
-        public string symbol_title; // 0x50
+        public string symbol_title; // 0x30
         [MessagePackMember(11)]
-        public string symbol_description; // 0x58
+        public string symbol_description; // 0x34
         [MessagePackMember(12)]
-        public int life_point; // 0x60
+        public int life_point; // 0x38
         [MessagePackMember(13)]
-        public int yang_attack; // 0x64
+        public int yang_attack; // 0x3C
         [MessagePackMember(14)]
-        public int yang_defense; // 0x68
+        public int yang_defense; // 0x40
         [MessagePackMember(15)]
-        public int yin_attack; // 0x6C
+        public int yin_attack; // 0x44
         [MessagePackMember(16)]
-        public int yin_defense; // 0x70
+        public int yin_defense; // 0x48
         [MessagePackMember(17)]
-        public int speed; // 0x74
+        public int speed; // 0x4C
         [MessagePackMember(18)]
-        public int shot1_id; // 0x78
+        public int shot1_id; // 0x50
         [MessagePackMember(19)]
-        public int shot2_id; // 0x7C
+        public int shot2_id; // 0x54
         [MessagePackMember(20)]
-        public int spellcard1_id; // 0x80
+        public int spellcard1_id; // 0x58
         [MessagePackMember(21)]
-        public int spellcard2_id; // 0x84
+        public int spellcard2_id; // 0x5C
         [MessagePackMember(22)]
-        public int spellcard3_id; // 0x88
+        public int spellcard3_id; // 0x60
         [MessagePackMember(23)]
-        public int spellcard4_id; // 0x8C
+        public int spellcard4_id; // 0x64
         [MessagePackMember(24)]
-        public int spellcard5_id; // 0x90
+        public int spellcard5_id; // 0x68
         [MessagePackMember(25)]
-        public int skill1_id; // 0x94
+        public int skill1_id; // 0x6C
         [MessagePackMember(26)]
-        public int skill2_id; // 0x98
+        public int skill2_id; // 0x70
         [MessagePackMember(27)]
-        public int skill3_id; // 0x9C
+        public int skill3_id; // 0x74
         [MessagePackMember(28)]
-        public int resist_id; // 0xA0
+        public int resist_id; // 0x78
         [MessagePackMember(29)]
-        public int characteristic_id; // 0xA4
+        public int characteristic_id; // 0x7C
         [MessagePackMember(30)]
-        public int ability_id; // 0xA8
+        public int ability_id; // 0x80
         [MessagePackMember(31)]
-        public int recycle_id; // 0xAC
+        public int recycle_id; // 0x84
         [MessagePackMember(32)]
-        public int default_costume_id; // 0xB0
+        public int default_costume_id; // 0x88
         [MessagePackMember(33)]
-        public string drop_text; // 0xB8
+        public string drop_text; // 0x8C
         [MessagePackMember(34)]
-        public int limitbreak_item_id; // 0xC0
+        public int limitbreak_item_id; // 0x90
         [MessagePackMember(35)]
-        public int spellcard_bgm_id; // 0xC4
+        public int spellcard_bgm_id; // 0x94
         [MessagePackMember(36)]
-        public string name_sub; // 0xC8
+        public string name_sub; // 0x98
         [MessagePackMember(37)]
-        public string name_kana_sub; // 0xD0
+        public string name_kana_sub; // 0x9C
         [MessagePackMember(38)]
-        public string short_name_sub; // 0xD8
-        [MessagePackMember(39)]
-        public int is_show; // 0xE0
+        public string short_name_sub; // 0xA0
     }
 
     [Serializable]
     public class UnitTable : MasterTable<int, UnitRecord>
     {
-        // Fields
     }
 
     public class UnitMaster
     {
-        // Fields
     }
 
 }

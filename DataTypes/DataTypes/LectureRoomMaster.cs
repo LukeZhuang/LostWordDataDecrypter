@@ -10,26 +10,24 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int unit_count; // 0x14
+        public int unit_count; // 0xC
         [MessagePackMember(2)]
-        public int exp_rate; // 0x18
+        public int exp_rate; // 0x10
         [MessagePackMember(3)]
-        public int consume_time; // 0x1C
+        public int consume_time; // 0x14
         [MessagePackMember(4)]
-        public int consume_food; // 0x20
+        public int consume_food; // 0x18
     }
 
     [Serializable]
     public class LectureRoomTable : MasterTable<int, LectureRoomRecord>
     {
-        // Fields
     }
 
     public class LectureRoomMaster
     {
-        // Fields
     }
 
 }

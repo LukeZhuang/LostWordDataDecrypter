@@ -10,31 +10,30 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int type; // 0x14
+        public int type; // 0xC
         [MessagePackMember(2)]
-        public int appear_limit; // 0x18
+        public int appear_limit; // 0x10
         [MessagePackMember(3)]
-        public int open_dispatch_group_id; // 0x1C
+        public int open_dispatch_group_id; // 0x14
         [MessagePackMember(4)]
-        public int open_complete_count; // 0x20
+        public int open_complete_count; // 0x18
         [MessagePackMember(5)]
-        public int open_start_hour; // 0x24
+        public int open_start_hour; // 0x1C
         [MessagePackMember(6)]
-        public int open_end_hour; // 0x28
+        public int open_end_hour; // 0x20
         [MessagePackMember(7)]
-        public int close_complete_count; // 0x2C
+        public int close_complete_count; // 0x24
         [MessagePackMember(8)]
-        public int display_order; // 0x30
+        public int display_order; // 0x28
         [MessagePackMember(9)]
-        public string description; // 0x38
+        public string description; // 0x2C
     }
 
     [Serializable]
     public class DispatchGroupTable : MasterTable<int, DispatchGroupRecord>
     {
-        // Fields
     }
 
     public class DispatchGroupMaster

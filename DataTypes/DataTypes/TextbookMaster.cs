@@ -10,32 +10,30 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int item_id; // 0x14
+        public int item_id; // 0xC
         [MessagePackMember(2)]
-        public int skill_type; // 0x18
+        public int skill_type; // 0x10
         [MessagePackMember(3)]
-        public int exp; // 0x1C
+        public int exp; // 0x14
         [MessagePackMember(4)]
-        public int same_type_exp_rate; // 0x20
+        public int same_type_exp_rate; // 0x18
         [MessagePackMember(5)]
-        public int need_time; // 0x24
+        public int need_time; // 0x1C
         [MessagePackMember(6)]
-        public int shorten_time; // 0x28
+        public int shorten_time; // 0x20
         [MessagePackMember(7)]
-        public int auto_select_priority; // 0x2C
+        public int auto_select_priority; // 0x24
     }
 
     [Serializable]
     public class TextbookTable : MasterTable<int, TextbookRecord>
     {
-        // Fields
     }
 
     public class TextbookMaster
     {
-        // Fields
     }
 
 }

@@ -10,20 +10,18 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int icon_type; // 0x14
+        public int icon_type; // 0xC
     }
 
     [Serializable]
     public class DispatchRewardGroupTable : MasterTable<int, DispatchRewardGroupRecord>
     {
-        // Fields
     }
 
     public class DispatchRewardGroupMaster
     {
-        // Fields
     }
 
 }

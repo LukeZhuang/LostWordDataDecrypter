@@ -10,92 +10,90 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public string description; // 0x20
+        public string description; // 0x10
         [MessagePackMember(3)]
-        public int type; // 0x28
+        public int type; // 0x14
         [MessagePackMember(4)]
-        public int subtype; // 0x2C
+        public int subtype; // 0x18
         [MessagePackMember(5)]
-        public int range; // 0x30
+        public int range; // 0x1C
         [MessagePackMember(6)]
-        public int turn; // 0x34
+        public int turn; // 0x20
         [MessagePackMember(7)]
-        public int level1_value; // 0x38
+        public int level1_value; // 0x24
         [MessagePackMember(8)]
-        public int level1_success_rate; // 0x3C
+        public int level1_success_rate; // 0x28
         [MessagePackMember(9)]
-        public int level1_add_value; // 0x40
+        public int level1_add_value; // 0x2C
         [MessagePackMember(10)]
-        public int level2_value; // 0x44
+        public int level2_value; // 0x30
         [MessagePackMember(11)]
-        public int level2_success_rate; // 0x48
+        public int level2_success_rate; // 0x34
         [MessagePackMember(12)]
-        public int level2_add_value; // 0x4C
+        public int level2_add_value; // 0x38
         [MessagePackMember(13)]
-        public int level3_value; // 0x50
+        public int level3_value; // 0x3C
         [MessagePackMember(14)]
-        public int level3_success_rate; // 0x54
+        public int level3_success_rate; // 0x40
         [MessagePackMember(15)]
-        public int level3_add_value; // 0x58
+        public int level3_add_value; // 0x44
         [MessagePackMember(16)]
-        public int level4_value; // 0x5C
+        public int level4_value; // 0x48
         [MessagePackMember(17)]
-        public int level4_success_rate; // 0x60
+        public int level4_success_rate; // 0x4C
         [MessagePackMember(18)]
-        public int level4_add_value; // 0x64
+        public int level4_add_value; // 0x50
         [MessagePackMember(19)]
-        public int level5_value; // 0x68
+        public int level5_value; // 0x54
         [MessagePackMember(20)]
-        public int level5_success_rate; // 0x6C
+        public int level5_success_rate; // 0x58
         [MessagePackMember(21)]
-        public int level5_add_value; // 0x70
+        public int level5_add_value; // 0x5C
         [MessagePackMember(22)]
-        public int level6_value; // 0x74
+        public int level6_value; // 0x60
         [MessagePackMember(23)]
-        public int level6_success_rate; // 0x78
+        public int level6_success_rate; // 0x64
         [MessagePackMember(24)]
-        public int level6_add_value; // 0x7C
+        public int level6_add_value; // 0x68
         [MessagePackMember(25)]
-        public int level7_value; // 0x80
+        public int level7_value; // 0x6C
         [MessagePackMember(26)]
-        public int level7_success_rate; // 0x84
+        public int level7_success_rate; // 0x70
         [MessagePackMember(27)]
-        public int level7_add_value; // 0x88
+        public int level7_add_value; // 0x74
         [MessagePackMember(28)]
-        public int level8_value; // 0x8C
+        public int level8_value; // 0x78
         [MessagePackMember(29)]
-        public int level8_success_rate; // 0x90
+        public int level8_success_rate; // 0x7C
         [MessagePackMember(30)]
-        public int level8_add_value; // 0x94
+        public int level8_add_value; // 0x80
         [MessagePackMember(31)]
-        public int level9_value; // 0x98
+        public int level9_value; // 0x84
         [MessagePackMember(32)]
-        public int level9_success_rate; // 0x9C
+        public int level9_success_rate; // 0x88
         [MessagePackMember(33)]
-        public int level9_add_value; // 0xA0
+        public int level9_add_value; // 0x8C
         [MessagePackMember(34)]
-        public int level10_value; // 0xA4
+        public int level10_value; // 0x90
         [MessagePackMember(35)]
-        public int level10_success_rate; // 0xA8
+        public int level10_success_rate; // 0x94
         [MessagePackMember(36)]
-        public int level10_add_value; // 0xAC
+        public int level10_add_value; // 0x98
         [MessagePackMember(37)]
-        public string icon_filename; // 0xB0
+        public string icon_filename; // 0x9C
     }
 
     [Serializable]
     public class SkillEffectTable : MasterTable<int, SkillEffectRecord>
     {
-        // Fields
     }
 
     public class SkillEffectMaster
     {
-        // Fields
     }
 
 }

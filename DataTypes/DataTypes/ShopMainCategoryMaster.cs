@@ -10,30 +10,28 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public int shop_type; // 0x14
+        public int shop_type; // 0xC
         [MessagePackMember(2)]
-        public int main_category_type; // 0x18
+        public int main_category_type; // 0x10
         [MessagePackMember(3)]
-        public string display_name; // 0x20
+        public string display_name; // 0x14
         [MessagePackMember(4)]
-        public int display_order; // 0x28
+        public int display_order; // 0x18
         [MessagePackMember(5)]
-        public int daily_gift_flag; // 0x2C
+        public int daily_gift_flag; // 0x1C
         [MessagePackMember(6)]
-        public int delivery_flag; // 0x30
+        public int delivery_flag; // 0x20
     }
 
     [Serializable]
     public class ShopMainCategoryTable : MasterTable<int, ShopMainCategoryRecord>
     {
-        // Fields
     }
 
     public class ShopMainCategoryMaster
     {
-        // Fields
     }
 
 }

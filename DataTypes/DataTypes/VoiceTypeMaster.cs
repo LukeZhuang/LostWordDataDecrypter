@@ -10,19 +10,18 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     {
         // Fields
         [MessagePackMember(0)]
-        public int id; // 0x10
+        public int id; // 0x8
         [MessagePackMember(1)]
-        public string name; // 0x18
+        public string name; // 0xC
         [MessagePackMember(2)]
-        public int display_order; // 0x20
+        public int display_order; // 0x10
         [MessagePackMember(3)]
-        public int is_album_play; // 0x24
+        public int is_album_play; // 0x14
     }
 
     [Serializable]
     public class VoiceTypeTable : MasterTable<int, VoiceTypeRecord>
     {
-        // Fields
     }
 
     public class VoiceTypeMaster

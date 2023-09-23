@@ -9,34 +9,32 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     public class BgmRecord : MasterRecord<int>
     {
         // Fields
-        private HashSet<int> m_unitIDs; // 0x10
+        private HashSet<int> m_unitIDs; // 0x8
         [MessagePackMember(0)]
-        public int id; // 0x18
+        public int id; // 0xC
         [MessagePackMember(1)]
-        public string name; // 0x20
+        public string name; // 0x10
         [MessagePackMember(2)]
-        public string original_name; // 0x28
+        public string original_name; // 0x14
         [MessagePackMember(3)]
-        public string artist_name; // 0x30
+        public string artist_name; // 0x18
         [MessagePackMember(4)]
-        public int display_order; // 0x38
+        public int display_order; // 0x1C
         [MessagePackMember(5)]
-        public string jacket_image; // 0x40
+        public string jacket_image; // 0x20
         [MessagePackMember(6)]
-        public string detail_text; // 0x48
+        public string detail_text; // 0x24
         [MessagePackMember(7)]
-        public string unit_id; // 0x50
+        public string unit_id; // 0x28
     }
 
     [Serializable]
     public class BgmTable : MasterTable<int, BgmRecord>
     {
-        // Fields
     }
 
     public class BgmMaster
     {
-        // Fields
     }
 
 }
