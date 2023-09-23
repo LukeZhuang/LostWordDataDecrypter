@@ -21,15 +21,7 @@ namespace LostWordDataDecrypter
         private static byte[] TryDecrypt(string inputFilePath, string tableName)
         {
             byte[] originalBytes = File.ReadAllBytes(inputFilePath);
-            for (int key = -1; key <= 26; key++)
-            {
-                string encKey = (key == -1) ? "" : new string(Convert.ToChar('a' + key), 1);
-                byte[] decryptOutput = MasterDecrypter.Decrypt(originalBytes, tableName, encKey);
-                if (decryptOutput.Length == 0)
-                    continue;
-                return decryptOutput;
-            }
-            return new byte[0];
+            return MasterDecrypter.Decrypt(originalBytes);
         }
 
         public static DecryptStatus DecryptFile(string tableName, string inputDirectory, string outputDirectory, string originalFileName, 

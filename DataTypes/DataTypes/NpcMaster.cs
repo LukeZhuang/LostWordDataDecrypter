@@ -29,8 +29,6 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         public int skill3_level; // 0x30
         [MessagePackMember(9)]
         public int costume_id; // 0x34
-        [MessagePackMember(10)]
-        public int is_irremovable; // 0x38
     }
 
     [Serializable]

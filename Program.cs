@@ -13,10 +13,6 @@ namespace LostWordDataDecrypter
     {
         public const string DOWNLOAD_URL = "https://thcdn.gggamedownload.com/source/Master_v{0}/";
         public const string ROOT_DIR = @".\";
-        public const string INPUT_DIR = @"original_files";
-        public const string OUTPUT_DIR = @"output_files";
-
-
 
         static void Main(string[] args)
         {

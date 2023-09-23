@@ -31,12 +31,6 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         public int bonus_group_no; // 0x34
         [MessagePackMember(10)]
         public int decide_num; // 0x38
-        [MessagePackMember(11)]
-        public int consume_type3; // 0x3C
-        [MessagePackMember(12)]
-        public int consume_id3; // 0x40
-        [MessagePackMember(13)]
-        public int consume_value3; // 0x44
     }
 
     [Serializable]
