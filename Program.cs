@@ -5,79 +5,56 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Net;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 
 namespace LostWordDataDecrypter
 {
     internal class Program
     {
-        public const string DOWNLOAD_URL = "https://thcdn.gggamedownload.com/source/Master_v{0}/";
         public const string ROOT_DIR = @".\";
 
         static void Main(string[] args)
         {
             string input;
-            Console.WriteLine("Please input the version number:");
-            input = Console.ReadLine();
-            uint verNum;
-            try
-            {
-                verNum = Convert.ToUInt32(input);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine(string.Format("The format of version number {0} is not correct!", input));
-                goto End;
-            }
 
-            Console.WriteLine("Using master version: " + verNum);
-            string sourceDir = Path.Combine(ROOT_DIR, "ch_master_v" + verNum);
+            Console.WriteLine("Please enter the version name as the workspace directory: (any valid format, for example \"ch_master_v6008\")");
+            input = Console.ReadLine();
+            string sourceDir = Path.Combine(ROOT_DIR, input);
+            string destinationDir = Path.Combine(sourceDir, "output");
             if (!Directory.Exists(sourceDir))
             {
                 Console.WriteLine("creating output directory: " + sourceDir);
                 Directory.CreateDirectory(sourceDir);
             }
-
-            Console.WriteLine("Download files? (Y/N)");
-            bool downloadFile;
-            input = Console.ReadLine();
-            if (input.ToLower().Equals("y"))
-                downloadFile = true;
-            else if (input.ToLower().Equals("n"))
-                downloadFile = false;
             else
             {
-                Console.WriteLine("Invalid input!");
+                Console.WriteLine("Directory already exists!");
                 goto End;
             }
 
-            string manifestFilePath;
-            if (downloadFile)
+            Console.WriteLine("Please input the master url: (starts with \"https\", ends with \"/\")");
+            string download_url_prefix = Console.ReadLine();
+            if (!download_url_prefix.StartsWith("https") || !download_url_prefix.EndsWith("/"))
             {
-                Console.WriteLine("trying download manifest...");
-                manifestFilePath = Path.Combine(sourceDir, "manifest.json");
-                try
+                Console.WriteLine("Please check url format!");
+                goto End;
+            }
+
+            Console.WriteLine("trying download manifest...");
+            string manifestFilePath = Path.Combine(sourceDir, "manifest.json");
+            try
+            {
+                using (var client = new WebClient())
                 {
-                    using (var client = new WebClient())
-                    {
-                        client.DownloadFile(string.Format(DOWNLOAD_URL, verNum) + "manifest.json", manifestFilePath);
-                    }
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine("Fail to download " + string.Format(DOWNLOAD_URL, verNum) + "manifest.json" + ", file does not exist!");
-                    goto End;
+                    client.DownloadFile(download_url_prefix + "manifest.json", manifestFilePath);
                 }
             }
-            else
+            catch (Exception)
             {
-                manifestFilePath = GeneralHelper.AutoDetectManifestFile(sourceDir);
-                if (string.IsNullOrEmpty(manifestFilePath))
-                {
-                    Console.WriteLine("Cannot find valid manifest file");
-                    goto End;
-                }
-                Console.WriteLine("Find a manifest file: " + manifestFilePath);
+                Console.WriteLine("Fail to download " + download_url_prefix + "manifest.json" + ", file does not exist!");
+                goto End;
             }
 
             Dictionary<string, string> tableToFileName;
@@ -97,45 +74,30 @@ namespace LostWordDataDecrypter
                 goto End;
             }
             Console.WriteLine("Successfully get table info list!");
-
-            if (downloadFile)
+            
+            foreach (string tableName in tableToFileName.Keys)
             {
-                foreach (string tableName in tableToFileName.Keys)
+                string fileName = tableToFileName[tableName];
+                Console.WriteLine(string.Format("downloading table {0} file {1}", tableName, fileName));
+                try
                 {
-                    string fileName = tableToFileName[tableName];
-                    Console.WriteLine(string.Format("downloading table {0} file {1}", tableName, fileName));
-                    try
+                    using (var client = new WebClient())
                     {
-                        using (var client = new WebClient())
-                        {
-                            client.DownloadFile(string.Format(DOWNLOAD_URL, verNum) + fileName, Path.Combine(sourceDir, fileName));
-                        }
+                        client.DownloadFile(download_url_prefix + fileName, Path.Combine(sourceDir, fileName));
                     }
-                    catch (Exception)
-                    {
-                        Console.WriteLine("Fail to download table " + tableName + ", exit!");
-                        goto End;
-                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Fail to download table " + tableName + ", exit!");
+                    goto End;
                 }
             }
 
-            string destinationDir = Path.Combine(sourceDir, "output");
             if (!Directory.Exists(destinationDir))
                 Directory.CreateDirectory(destinationDir);
 
-            bool writeDecryptFile, writeCSVFile, writeJSONFile;
-
-            Console.WriteLine("write decrypted binary files? (Y/N)");
-            input = Console.ReadLine();
-            if (input.ToLower().Equals("y"))
-                writeDecryptFile = true;
-            else if (input.ToLower().Equals("n"))
-                writeDecryptFile = false;
-            else
-            {
-                Console.WriteLine("Invalid input!");
-                goto End;
-            }
+            bool writeDecryptFile = false;
+            bool writeCSVFile, writeJSONFile;
 
             Console.WriteLine("Choose output formats:");
             Console.WriteLine("1: only csv");
@@ -201,6 +163,10 @@ namespace LostWordDataDecrypter
             Console.WriteLine("Number of decrypting failed tables: " + decryptFail);
             Console.WriteLine("Number of deserializing failed tables (still created anonymous json): " + deserializeFail);
             Console.WriteLine("Number of deserializing failed tables (cannot create anonymous json): " + anonymousDeserializeFail);
+
+            // clean files
+            foreach (string file in Directory.GetFiles(sourceDir))
+                File.Delete(file);
 
         End:
             Console.WriteLine("\npress any key to exit the process...");
