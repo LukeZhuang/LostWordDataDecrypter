@@ -2,7 +2,7 @@ import pandas as pd
 import json
 import csv
 
-data_path = 'PictureTabeDiff.csv'
+data_path = 'PictureTableDiff.csv'
 target_path = './'
 source_path = "PictureSource.csv"
 
