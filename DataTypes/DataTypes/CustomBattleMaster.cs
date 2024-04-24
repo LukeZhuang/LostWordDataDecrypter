@@ -9,14 +9,14 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
     public class CustomBattleRecord : BattleRecord
     {
         // Fields
-        [MessagePackMember(44)]
-        public int type; // 0xD8
         [MessagePackMember(45)]
-        public int initial_barrier_count; // 0xDC
+        public int type; // 0xE0
         [MessagePackMember(46)]
-        public int initial_boost_power; // 0xE0
+        public int initial_barrier_count; // 0xE4
         [MessagePackMember(47)]
-        public float buff_effect_ratio; // 0xE4
+        public int initial_boost_power; // 0xE8
+        [MessagePackMember(48)]
+        public float buff_effect_ratio; // 0xEC
     }
 
     [Serializable]

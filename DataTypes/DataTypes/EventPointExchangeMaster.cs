@@ -44,6 +44,7 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         // Fields
         public const int GoodsTypeNormal = 0;
         public const int GoodsTypeDaily = 1;
+        public const int GoodsTypeLimited = 2;
     }
 
 }

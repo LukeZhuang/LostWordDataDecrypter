@@ -41,6 +41,8 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         public string start_at; // 0x60
         [MessagePackMember(15)]
         public string end_at; // 0x68
+        [MessagePackMember(16)]
+        public int is_beginner_only; // 0x70
     }
 
     [Serializable]

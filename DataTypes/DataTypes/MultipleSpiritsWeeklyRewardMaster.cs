@@ -29,6 +29,8 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         public int drop_group3_id; // 0x30
         [MessagePackMember(9)]
         public int drop_group4_id; // 0x34
+        [MessagePackMember(10)]
+        public int destiny_drop_group_id; // 0x38
     }
 
     [Serializable]

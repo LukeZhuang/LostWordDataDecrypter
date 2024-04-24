@@ -58,46 +58,48 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         [MessagePackMember(23)]
         public int drop_group4_id; // 0x78
         [MessagePackMember(24)]
-        public int challenge_id; // 0x7C
+        public int destiny_drop_group_id; // 0x7C
         [MessagePackMember(25)]
-        public int advantageous_role1; // 0x80
+        public int challenge_id; // 0x80
         [MessagePackMember(26)]
-        public int advantageous_role2; // 0x84
+        public int advantageous_role1; // 0x84
         [MessagePackMember(27)]
-        public int advantageous_role3; // 0x88
+        public int advantageous_role2; // 0x88
         [MessagePackMember(28)]
-        public int advantageous_element1; // 0x8C
+        public int advantageous_role3; // 0x8C
         [MessagePackMember(29)]
-        public int advantageous_element2; // 0x90
+        public int advantageous_element1; // 0x90
         [MessagePackMember(30)]
-        public int advantageous_element3; // 0x94
+        public int advantageous_element2; // 0x94
         [MessagePackMember(31)]
-        public int advantageous_skill_info1_id; // 0x98
+        public int advantageous_element3; // 0x98
         [MessagePackMember(32)]
-        public int advantageous_skill_info2_id; // 0x9C
+        public int advantageous_skill_info1_id; // 0x9C
         [MessagePackMember(33)]
-        public int advantageous_skill_info3_id; // 0xA0
+        public int advantageous_skill_info2_id; // 0xA0
         [MessagePackMember(34)]
-        public int npc1_id; // 0xA4
+        public int advantageous_skill_info3_id; // 0xA4
         [MessagePackMember(35)]
-        public int npc2_id; // 0xA8
+        public int npc1_id; // 0xA8
         [MessagePackMember(36)]
-        public int npc3_id; // 0xAC
+        public int npc2_id; // 0xAC
         [MessagePackMember(37)]
-        public int npc4_id; // 0xB0
+        public int npc3_id; // 0xB0
         [MessagePackMember(38)]
-        public int npc5_id; // 0xB4
+        public int npc4_id; // 0xB4
         [MessagePackMember(39)]
-        public int npc6_id; // 0xB8
+        public int npc5_id; // 0xB8
         [MessagePackMember(40)]
-        public int rule; // 0xBC
+        public int npc6_id; // 0xBC
         [MessagePackMember(41)]
-        public string rule_param_1; // 0xC0
+        public int rule; // 0xC0
         [MessagePackMember(42)]
-        public string rule_param_2; // 0xC8
+        public string rule_param_1; // 0xC8
         [MessagePackMember(43)]
-        public string rule_param_3; // 0xD0
-        protected const int BATTLE_RECORD_COLUMN_COUNT = 44;
+        public string rule_param_2; // 0xD0
+        [MessagePackMember(44)]
+        public string rule_param_3; // 0xD8
+        protected const int BATTLE_RECORD_COLUMN_COUNT = 45;
     }
 
     [Serializable]

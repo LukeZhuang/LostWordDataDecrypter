@@ -114,6 +114,7 @@
     <Compile Include="DataTypes\DataTypes\DailyQuestStageMaster.cs" />
     <Compile Include="DataTypes\DataTypes\DeliveryMaster.cs" />
     <Compile Include="DataTypes\DataTypes\DeliveryRewardMaster.cs" />
+    <Compile Include="DataTypes\DataTypes\DestinyPictureMaster.cs" />
     <Compile Include="DataTypes\DataTypes\DispatchDepertureMaster.cs" />
     <Compile Include="DataTypes\DataTypes\DispatchGroupMaster.cs" />
     <Compile Include="DataTypes\DataTypes\DispatchMaster.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="DataTypes\DataTypes\FortunePowderExchangeGoodsMaster.cs" />
     <Compile Include="DataTypes\DataTypes\FortunePowderExchangeMaster.cs" />
     <Compile Include="DataTypes\DataTypes\FreeItemMaster.cs" />
+    <Compile Include="DataTypes\DataTypes\FriendPointExchangeGoodsMaster.cs" />
     <Compile Include="DataTypes\DataTypes\FuDaiGiftWeightMaster.cs" />
     <Compile Include="DataTypes\DataTypes\FuDaiMaster.cs" />
     <Compile Include="DataTypes\DataTypes\GachaBonusMaster.cs" />
@@ -160,6 +162,7 @@
     <Compile Include="DataTypes\DataTypes\MissionMaster.cs" />
     <Compile Include="DataTypes\DataTypes\MissionRewardGroupMaster.cs" />
     <Compile Include="DataTypes\DataTypes\MissionRewardMaster.cs" />
+    <Compile Include="DataTypes\DataTypes\MissionTabMaster.cs" />
     <Compile Include="DataTypes\DataTypes\MultipleSpiritsWeeklyEnemyMaster.cs" />
     <Compile Include="DataTypes\DataTypes\MultipleSpiritsWeeklyMaster.cs" />
     <Compile Include="DataTypes\DataTypes\MultipleSpiritsWeeklyRewardMaster.cs" />
@@ -181,6 +184,7 @@
     <Compile Include="DataTypes\DataTypes\PhantasmPointShopMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PictureBookMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PictureBookTaskMaster.cs" />
+    <Compile Include="DataTypes\DataTypes\PictureCharacteristicGroupMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PictureEnhanceChemicalMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PictureExpansionMaster.cs" />
     <Compile Include="DataTypes\DataTypes\PicturePotentialLimitbreakMaster.cs" />
@@ -200,6 +204,7 @@
     <Compile Include="DataTypes\DataTypes\RhythmGameMusicMaster.cs" />
     <Compile Include="DataTypes\DataTypes\RoleCombinationMaster.cs" />
     <Compile Include="DataTypes\DataTypes\SceneUnitMaster.cs" />
+    <Compile Include="DataTypes\DataTypes\SeasonEnhancementMaster.cs" />
     <Compile Include="DataTypes\DataTypes\SectionMaster.cs" />
     <Compile Include="DataTypes\DataTypes\SettingMaster.cs" />
     <Compile Include="DataTypes\DataTypes\ShopMainCategoryMaster.cs" />

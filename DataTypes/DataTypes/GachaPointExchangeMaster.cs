@@ -25,6 +25,10 @@ namespace LostWordDataDecrypter.DataTypes.DataTypes
         public int is_pickup_only; // 0x28
         [MessagePackMember(7)]
         public int exchange_limit_count; // 0x2C
+        [MessagePackMember(8)]
+        public string start_at; // 0x30
+        [MessagePackMember(9)]
+        public string end_at; // 0x38
     }
 
     [Serializable]
