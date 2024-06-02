@@ -8,6 +8,7 @@ using System.Net;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
+using System.IO.Compression;
 
 namespace LostWordDataDecrypter
 {
@@ -54,7 +55,42 @@ namespace LostWordDataDecrypter
             catch (Exception)
             {
                 Console.WriteLine("Fail to download " + download_url_prefix + "manifest.json" + ", file does not exist!");
-                goto End;
+                Console.WriteLine("try manifest hash...");
+                const string manifest_hash = "7f5cb74af5d7f4b82200738fdbdc5a45";
+                string manifestGZipPath = Path.Combine(sourceDir, manifest_hash);
+                try
+                {
+                    using (var client = new WebClient())
+                    {
+                        client.DownloadFile(download_url_prefix + manifest_hash, manifestGZipPath);
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Fail to download " + download_url_prefix + manifest_hash + ", file does not exist!");
+                    goto End;
+                }
+                try
+                {
+                    FileInfo manifestGZip = new FileInfo(manifestGZipPath);
+                    using (FileStream originalFileStream = manifestGZip.OpenRead())
+                    {
+                        string currentFileName = manifestGZip.FullName;
+
+                        using (FileStream decompressedFileStream = File.Create(manifestFilePath))
+                        {
+                            using (GZipStream decompressionStream = new GZipStream(originalFileStream, CompressionMode.Decompress))
+                            {
+                                decompressionStream.CopyTo(decompressedFileStream);
+                            }
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Fail to decompress manifest file!");
+                    goto End;
+                }
             }
 
             Dictionary<string, string> tableToFileName;
